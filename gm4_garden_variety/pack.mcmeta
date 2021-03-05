@@ -1,0 +1,29 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": "A Gamemode 4 Module"
+    },
+    "module_name": "garden variety",
+    "module_id": "garden_variety",
+  "creation_meta":"Created using the Gamemode 4 Module Template Generator (gm4.co/modules/generator)",
+    "site_description": "Just try and find two trees that are the same!",
+    "site_categories": [],
+    "video_link": "YOUTUBE_VIDEO_URL",
+    "wiki_link": "https://wiki.gm4.co/wiki/Garden_Variety",
+    "required_modules": [
+        "",
+        ""
+    ],
+    "recommended_modules": [
+        "",
+        ""
+    ],
+    "credits": {
+        "Creator": [
+            [
+                "MichaelMiner137",
+                "https://twitter.com/MichaelMiner137"
+            ]
+        ]
+    }
+}
