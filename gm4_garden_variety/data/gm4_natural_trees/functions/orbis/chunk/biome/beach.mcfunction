@@ -1,0 +1,12 @@
+# checks if the orbis chunk should spawn a custom tree
+# @s = orbis chunk marker to generate a new chunk: @e[type=area_effect_cloud,tag=gm4_chunk,tag=!gm4_generated] 
+# at @s aligned at the negative-most chunk corner
+# run from gm4_natural_trees:orbis/chunk/generate
+
+scoreboard players set structure_height gm4_count 248
+
+# king palm tree
+execute if block ~ 31 ~ minecraft:stone positioned ~6 248 ~12 run function gm4_natural_trees:generate/palm_tree/king_palm/orbis/chunk/scan_column
+execute if block ~ 41 ~ minecraft:stone positioned ~9 248 ~4 run function gm4_natural_trees:generate/palm_tree/king_palm/orbis/chunk/scan_column
+
+

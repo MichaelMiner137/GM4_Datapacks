@@ -14,7 +14,6 @@ execute unless score garden_variety gm4_modules matches 1 run data modify storag
 scoreboard players set garden_variety gm4_modules 1
 
 schedule function gm4_garden_variety:main 10t
-schedule function gm4_garden_variety:tick 11t
 
 #$moduleUpdateList
 

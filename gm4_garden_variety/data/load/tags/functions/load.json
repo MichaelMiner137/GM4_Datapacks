@@ -1,6 +1,7 @@
 {
     "values": [
         "#load:gm4_fruiting_trees",
-        "#load:gm4_garden_variety"
+        "#load:gm4_garden_variety",
+        "#load:gm4_natural_trees"
     ]
 }
