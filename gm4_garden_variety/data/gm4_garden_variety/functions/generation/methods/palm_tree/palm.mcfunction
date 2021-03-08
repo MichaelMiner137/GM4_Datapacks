@@ -1,6 +1,6 @@
 # generates the tree's palm layers
 # @s = caranday palm palm AEC marker
-# run from gm4_garden_variety:generation/palm_tree/palm_spreader
+# run from gm4_garden_variety:generation/methods/palm_tree/palm_spreader
 
 ########## OPTIONAL MODIFIERS ##########
 
@@ -21,14 +21,14 @@ execute if score debug gm4_tree_data matches 1 at @s run particle dragon_breath 
 ########## CORE GENERATION ##########
 
 # generate additional features (generation)
-execute at @s run function #gm4_garden_variety:generation/palm_tree/palm_layer
+execute at @s run function #gm4_garden_variety:generation/methods/palm_tree/palm_layer
 
 # get initial rotation (generation)
 execute if score palm_layer_loop gm4_tree_data = palm_layers gm4_tree_data store result score current_palm_y_rot gm4_tree_data run data get entity @s Rotation[1]
 
 # generate palm segment and move forward (generation)
 scoreboard players set leaf_segment_loop gm4_tree_data 10
-execute at @s run function #gm4_garden_variety:generation/palm_tree/palm_segment
+execute at @s run function #gm4_garden_variety:generation/methods/palm_tree/palm_segment
 scoreboard players add current_palm_layers gm4_tree_data 1
 
 # modify y rotation (generation)
@@ -41,4 +41,4 @@ execute store result entity @s Rotation[1] float 1 run scoreboard players get cu
 # loop function until palm_layer_loop hits 0 (generation)
 scoreboard players remove palm_layer_loop gm4_tree_data 1
 execute if score palm_layer_loop gm4_tree_data matches 0 run kill @s
-execute if score palm_layer_loop gm4_tree_data matches 1.. run function gm4_garden_variety:generation/palm_tree/palm
+execute if score palm_layer_loop gm4_tree_data matches 1.. run function gm4_garden_variety:generation/methods/palm_tree/palm

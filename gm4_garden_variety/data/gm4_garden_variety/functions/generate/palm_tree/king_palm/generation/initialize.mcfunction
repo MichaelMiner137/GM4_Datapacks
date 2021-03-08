@@ -14,4 +14,4 @@ function gm4_garden_variety:generate/palm_tree/king_palm/generation/variables/pe
 
 # align and begin generation
 execute as @s align xyz positioned ~.5 ~ ~.5 run tp @s ~ ~ ~
-execute as @s at @s run function #gm4_garden_variety:generation/palm_tree/generate
+execute as @s at @s run function #gm4_garden_variety:generation/methods/palm_tree/generate

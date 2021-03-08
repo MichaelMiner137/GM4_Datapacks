@@ -1,6 +1,6 @@
 # generates the tree's trunk layers 
 # @s = TREE_TYPE trunk AEC marker
-# run from #gm4_garden_variety:generation/palm_tree/generate
+# run from #gm4_garden_variety:generation/methods/palm_tree/generate
 
 # set scores for the next part of generation
 scoreboard players operation trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data
@@ -14,5 +14,5 @@ scoreboard players operation leaf_start gm4_tree_data -= leaf_layer_start gm4_tr
 scoreboard players add leaf_start gm4_tree_data 1
 
 # begin generation 
-function gm4_garden_variety:generation/palm_tree/trunk
+function gm4_garden_variety:generation/methods/palm_tree/trunk
 

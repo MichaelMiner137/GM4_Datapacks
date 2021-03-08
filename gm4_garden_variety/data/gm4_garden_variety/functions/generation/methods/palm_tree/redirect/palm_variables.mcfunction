@@ -1,6 +1,6 @@
 # generates the tree's trunk layers
 # @s = caranday palm trunk AEC marker
-# run from gm4_garden_variety:generation/palm_tree/palm_spreader
+# run from gm4_garden_variety:generation/methods/palm_tree/palm_spreader
 
 execute if score king_palm gm4_tree_type matches 1 run function gm4_garden_variety:generate/palm_tree/king_palm/generation/variables/per_palm
 execute if score caranday_palm gm4_tree_type matches 1 run function gm4_garden_variety:generate/palm_trees/caranday_palm/generation/variables/per_palm

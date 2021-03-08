@@ -1,0 +1,24 @@
+# generates the tree's trunk layers 
+# @s = TREE_TYPE trunk AEC marker
+# run from gm4_garden_variety:generation/methods/palm_tree/trunk
+
+
+
+# find the trunk arc reduction factor (math)
+scoreboard players operation trunk_layer_eoc_taar gm4_tree_data = current_trunk_layer gm4_tree_data
+scoreboard players remove trunk_layer_eoc_taar gm4_tree_data 1
+scoreboard players operation trunk_layer_eoc_taar gm4_tree_data /= trunk_arc_addition_rate gm4_tree_data
+scoreboard players operation trunk_arc_addition_factor gm4_tree_data = trunk_arc_addition_amount gm4_tree_data
+scoreboard players operation trunk_arc_addition_factor gm4_tree_data *= trunk_layer_eoc_taar gm4_tree_data
+
+# identify every other layer by a factor of 2 (math)
+scoreboard players operation trunk_layer_eo2 gm4_tree_data = trunk_layer_loop gm4_tree_data
+scoreboard players operation trunk_layer_eo2 gm4_tree_data %= #2 gm4_math_num
+
+# get 1/2 of the trees layers (math)
+scoreboard players operation trunk_layers_half gm4_tree_data = trunk_layers gm4_tree_data
+scoreboard players operation trunk_layers_half gm4_tree_data /= #2 gm4_math_num
+
+
+
+

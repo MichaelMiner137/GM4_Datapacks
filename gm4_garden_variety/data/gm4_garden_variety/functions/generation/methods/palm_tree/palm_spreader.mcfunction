@@ -1,11 +1,11 @@
 # spawns the tree's palm markers
 # @s = TREE_TYPE palm spreader AEC marker
-# run from gm4_garden_variety:generation/palm_tree/leaf
+# run from gm4_garden_variety:generation/methods/palm_tree/leaf
 
 ########## INITIALIZATION ##########
 
 # generate palm variables 
-function #gm4_garden_variety:generation/palm_tree/palm_variables
+function #gm4_garden_variety:generation/methods/palm_tree/palm_variables
 
 # apply x rotation offset for each palm (generation)
 scoreboard players operation palm_rot_mod gm4_tree_data = palm_separation gm4_tree_data
@@ -49,10 +49,10 @@ scoreboard players set current_palm_layers gm4_tree_data 1
 # summon palm marker and begin generation (generation)
 execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["gm4_tree_palm"]}
 execute at @s run tp @e[type=area_effect_cloud,tag=gm4_tree_palm,limit=1,sort=nearest] @s
-execute as @e[type=area_effect_cloud,tag=gm4_tree_palm,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/palm_tree/palm
+execute as @e[type=area_effect_cloud,tag=gm4_tree_palm,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/methods/palm_tree/palm
 
 # loop function until spreader_loop hits 0 (generation)
 scoreboard players remove palm_spreader_loop gm4_tree_data 1
 execute if score palm_spreader_loop gm4_tree_data matches 0 run kill @s
-execute if score palm_spreader_loop gm4_tree_data matches 1.. run function gm4_garden_variety:generation/palm_tree/palm_spreader
+execute if score palm_spreader_loop gm4_tree_data matches 1.. run function gm4_garden_variety:generation/methods/palm_tree/palm_spreader
 
