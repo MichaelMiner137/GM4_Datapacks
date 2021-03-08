@@ -5,7 +5,7 @@
 ########## INITIALIZATION ##########
 
 # correct initial position and get initial rotation (generation)
-execute if score leaf_layer_loop gm4_tree_data = leaf_layers gm4_tree_data at @s run tp @s ^ ^ ^
+execute if score leaf_layer_loop gm4_tree_data = leaf_layers gm4_tree_data at @s run tp @s ^ ^ ^.1
 execute if score leaf_layer_loop gm4_tree_data = leaf_layers gm4_tree_data at @s store result score current_leaf_y_rot gm4_tree_data run data get entity @s Rotation[1]
 
 
@@ -42,7 +42,7 @@ execute if score adjusted_palm_amount gm4_tree_data >= minimum_palm_amount gm4_t
 # DEV
 execute if score debug gm4_tree_data matches 1 at @s run particle barrier ~ ~.5 ~-9
 execute if score debug gm4_tree_data matches 1 at @s run particle happy_villager ~ ~ ~10
-execute if score debug gm4_tree_data matches 1 at @s align xyz run particle barrier ~.5 ~.5 ~3.5
+
 
 
 ########## CORE GENERATION ##########

@@ -3,6 +3,7 @@ scoreboard objectives add gm4_tree_data dummy
 scoreboard objectives add gm4_tree_type dummy
 scoreboard objectives add gm4_tree_limit dummy
 scoreboard objectives add gm4_fruit_data dummy
+scoreboard objectives add gm4_trait_data dummy
 function gm4_garden_variety:init/static_variables
 function gm4_garden_variety:init/tree_limits
 function gm4_garden_variety:init/fruit_data
