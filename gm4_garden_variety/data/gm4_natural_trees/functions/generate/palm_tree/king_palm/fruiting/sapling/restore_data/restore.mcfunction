@@ -4,4 +4,14 @@
 # run from gm4_natural_trees:fruiting/sapling/restore_data/validate_species
 
 kill @e[type=item,nbt={Item:{id:"minecraft:birch_sapling",Count:1b}},nbt=!{Item:{tag:{}}},limit=1,dx=0]
-loot spawn ~0.5 ~0.5 ~0.5 loot gm4_garden_variety:items/sapling/king_palm
+loot spawn ~0.5 ~0.5 ~0.5 loot gm4_natural_trees:items/sapling/king_palm
+
+# decode and store score in item nbt
+function gm4_garden_variety:storage_data/decode
+execute positioned ~.5 ~ ~.5 as @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Age:0s}] run function gm4_garden_variety:storage_data/store/garden_variety_nbt
+data modify entity @s Item.tag.gm4_garden_variety set from storage gm4_garden_variety:data/scoreboard/garden_variety
+
+# modify item lore
+execute if score tagged gm4_gv_nbt_data matches 2 as @e[type=item,distance=..1,limit=1,sort=nearest,nbt={Age:0s}] run function gm4_garden_variety:storage_data/modify/item_lore/tagged_item
+
+

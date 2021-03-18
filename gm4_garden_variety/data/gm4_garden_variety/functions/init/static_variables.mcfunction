@@ -17,6 +17,7 @@ scoreboard players set #-20 gm4_math_num -20
 scoreboard players set #-10 gm4_math_num -10
 scoreboard players set #-1 gm4_math_num -1
 scoreboard players set #0 gm4_math_num 0
+scoreboard players set #1 gm4_math_num 1
 scoreboard players set #2 gm4_math_num 2
 scoreboard players set #3 gm4_math_num 3
 scoreboard players set #4 gm4_math_num 4
@@ -35,4 +36,10 @@ scoreboard players set #99 gm4_math_num 99
 scoreboard players set #100 gm4_math_num 100
 scoreboard players set #180 gm4_math_num 180
 scoreboard players set #360 gm4_math_num 360
+scoreboard players set #1000 gm4_math_num 1000
+scoreboard players set #10000 gm4_math_num 10000
+scoreboard players set #100000 gm4_math_num 100000
+scoreboard players set #1000000 gm4_math_num 1000000
+scoreboard players set #10000000 gm4_math_num 10000000
+scoreboard players set #100000000 gm4_math_num 100000000
 scoreboard players set #65536 gm4_math_num 65536 

@@ -1,3 +1,6 @@
+function gm4_natural_trees:init/tree_limits
+function gm4_natural_trees:init/fruit_data
+
 
 execute unless score natural_trees gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"natural trees"}
 scoreboard players set natural_trees gm4_modules 1

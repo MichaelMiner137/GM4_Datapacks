@@ -5,7 +5,6 @@
 
 # spawn apple
 execute if data entity @s[tag=gm4_ripe_king_palm_fruit] HandItems[0].id positioned ~0.5 ~1.5 ~0.5 run function gm4_natural_trees:generate/palm_tree/king_palm/fruiting/leaf/fruit/spawn_fruit
-loot spawn ~0.5 ~ ~0.5 loot gm4_natural_trees:blocks/fruit_leaf/king_palm
 
 # kill
 kill @s

@@ -7,9 +7,9 @@
 advancement grant @a[distance=..15] only gm4:palm_tree
 
 # set initial rotation from variables (generation)
-execute if score trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data store result entity @s Rotation[0] float 1 run scoreboard players get initial_trunk_x_rot gm4_tree_data
-execute if score trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data store result entity @s Rotation[1] float 1 run scoreboard players get initial_trunk_y_rot gm4_tree_data 
-execute if score trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data run scoreboard players operation current_trunk_y_rot gm4_tree_data = initial_trunk_y_rot gm4_tree_data 
+execute if score trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data store result entity @s Rotation[0] float 1 run scoreboard players get tree_x_rot gm4_tree_data
+execute if score trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data store result entity @s Rotation[1] float 1 run scoreboard players get tree_y_rot gm4_tree_data 
+execute if score trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data run scoreboard players operation current_trunk_y_rot gm4_tree_data = tree_y_rot gm4_tree_data 
 
 
 

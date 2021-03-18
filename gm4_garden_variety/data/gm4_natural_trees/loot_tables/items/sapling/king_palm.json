@@ -26,15 +26,15 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_garden_variety:{traits:{status:\"wild\",height:\"normal\",flexibility:\"normal\",foliage:\"normal\",fertility:\"normal\",fruiting:\"normal\"}}}"
+                            "tag": "{gm4_garden_variety:{analyzer:{analyzed:false,tagged:false},traits:{enabled:true,height:\"average\",flexibility:\"average\",foliage:\"average\",fertility:\"average\"}}}"
                         },
                         {
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                  "text": "Wild",
+                                  "text": "A wild tree found in nature",
                                   "color": "gray",
-                                  "italic": false
+                                  "italic": true
                                 }
                             ]
                         }
