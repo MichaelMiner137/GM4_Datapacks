@@ -3,6 +3,7 @@
 # run from gm4_natural_trees:generate/palm_tree/TREE_TYPE/fruiting/tree/generate & gm4_natural_trees:orbis/chunk/generate
 
 # decode
+execute if score seed_mode gm4_tree_data matches 0 run scoreboard players set @s gm4_trait_data 333321
 function gm4_garden_variety:storage_data/decode
 
 # summon trunk marker and begin generation

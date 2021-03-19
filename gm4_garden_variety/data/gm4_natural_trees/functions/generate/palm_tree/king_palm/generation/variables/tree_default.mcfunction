@@ -18,7 +18,9 @@ scoreboard players set trunk_layers_minimum gm4_tree_data 9
 scoreboard players set trunk_layers_range gm4_tree_data 3
 
 # arc rate for the trunk layers (1,0,0)
-scoreboard players set trunk_arc gm4_tree_data 1
+scoreboard players set minimum_trunk_arc gm4_tree_data -40
+scoreboard players set trunk_arc_rate gm4_tree_data 1
+scoreboard players set trunk_arc_amount gm4_tree_data 1
 scoreboard players set trunk_arc_addition_rate gm4_tree_data 0
 scoreboard players set trunk_arc_addition_amount gm4_tree_data 0
 
@@ -30,18 +32,12 @@ scoreboard players set trunk_arc_addition_amount gm4_tree_data 0
 scoreboard players set leaf_layers_minimum gm4_tree_data 2
 scoreboard players set leaf_layers_range gm4_tree_data 1
 
-# layer at which leafs start to generate on the trunk (2)
-scoreboard players set leaf_layer_start_minimum gm4_tree_data 2
-scoreboard players set leaf_layer_start_range gm4_tree_data 1
+# layer at which leafs start to generate on the trunk (1,2)
+scoreboard players set leaf_layer_start_minimum gm4_tree_data 1
+scoreboard players set leaf_layer_start_range gm4_tree_data 2
 
 # leaf layer progression mode (1) (0 = Spiral, 1 = Alternating, 2 = Random)
 scoreboard players set leaf_layer_rotation_mode gm4_tree_data 1
-
-# arc rate for the leaf layers (copies trunk)
-scoreboard players operation leaf_arc gm4_tree_data = trunk_arc gm4_tree_data
-scoreboard players operation leaf_arc_addition_rate gm4_tree_data = trunk_arc_addition_rate gm4_tree_data
-scoreboard players operation leaf_arc_addition_amount gm4_tree_data = trunk_arc_addition_amount gm4_tree_data
-
 
 
 
@@ -65,7 +61,7 @@ scoreboard players set palm_reduction_amount gm4_tree_data 0
 # amount of leaves that contain a sapling (1, 20)
 scoreboard players set sapling_leaves_minimum gm4_tree_data 1
 scoreboard players set sapling_leaves_range gm4_tree_data 1
-scoreboard players set sapling_leaves_block_chance gm4_tree_data 20
+scoreboard players set sapling_leaves_block_chance gm4_tree_data 10
 
 # amount of leaves that may contain fruit (1, 20%)
 scoreboard players set fruit_leaves_chance gm4_tree_data 5

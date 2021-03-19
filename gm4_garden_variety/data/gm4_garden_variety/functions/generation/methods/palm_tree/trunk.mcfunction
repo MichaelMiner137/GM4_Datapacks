@@ -41,9 +41,10 @@ scoreboard players add current_trunk_layer gm4_tree_data 1
 
 # modify y rotation
 scoreboard players operation trunk_y_rot_mod gm4_tree_data = current_trunk_y_rot gm4_tree_data
-scoreboard players operation trunk_y_rot_mod gm4_tree_data += trunk_arc gm4_tree_data
+scoreboard players operation trunk_y_rot_mod gm4_tree_data += trunk_arc_factor gm4_tree_data
 scoreboard players operation trunk_y_rot_mod gm4_tree_data += trunk_arc_addition_factor gm4_tree_data
 scoreboard players operation current_trunk_y_rot gm4_tree_data = trunk_y_rot_mod gm4_tree_data
+execute if score current_trunk_y_rot gm4_tree_data > minimum_trunk_arc gm4_tree_data run scoreboard players operation current_trunk_y_rot gm4_tree_data = minimum_trunk_arc gm4_tree_data
 execute store result entity @s Rotation[1] float 1 run scoreboard players get current_trunk_y_rot gm4_tree_data
 
 # loop function until layer_loop hits 0

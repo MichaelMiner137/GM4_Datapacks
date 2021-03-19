@@ -12,7 +12,7 @@ execute if data storage gm4_garden_variety:data/item/garden_variety Analyzer{ana
 execute if data storage gm4_garden_variety:data/item/garden_variety Analyzer{tagged:0b} run scoreboard players set tagged gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:data/item/garden_variety Analyzer{tagged:1b} run scoreboard players set tagged gm4_gv_nbt_data 2
 
-# is enabled
+# enabled
 execute if data storage gm4_garden_variety:data/item/garden_variety Traits{enabled:0b} run scoreboard players set enabled gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:data/item/garden_variety Traits{enabled:1b} run scoreboard players set enabled gm4_gv_nbt_data 2
 

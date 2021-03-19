@@ -2,9 +2,13 @@
 # @s = TREE_TYPE trunk AEC marker
 # run from gm4_garden_variety:generation/methods/palm_tree/trunk
 
+# find the trunk arc factor
+scoreboard players operation trunk_layer_eo_tar gm4_tree_data = current_trunk_layer gm4_tree_data
+scoreboard players operation trunk_layer_eo_tar gm4_tree_data %= trunk_arc_rate gm4_tree_data
+execute if score trunk_layer_eo_tar gm4_tree_data matches 1.. run scoreboard players set trunk_arc_factor gm4_tree_data 0
+execute if score trunk_layer_eo_tar gm4_tree_data matches 0 run scoreboard players operation trunk_arc_factor gm4_tree_data = trunk_arc_amount gm4_tree_data
 
-
-# find the trunk arc reduction factor (math)
+# find the trunk arc addition factor (math)
 scoreboard players operation trunk_layer_eoc_taar gm4_tree_data = current_trunk_layer gm4_tree_data
 scoreboard players remove trunk_layer_eoc_taar gm4_tree_data 1
 scoreboard players operation trunk_layer_eoc_taar gm4_tree_data /= trunk_arc_addition_rate gm4_tree_data

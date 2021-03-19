@@ -4,14 +4,6 @@
 
 
 
-# find the leaf arc reduction factor
-scoreboard players operation leaf_layer_eoc_laar gm4_tree_data = current_leaf_layer gm4_tree_data
-scoreboard players operation leaf_layer_eoc_laar gm4_tree_data += current_trunk_layer gm4_tree_data
-scoreboard players remove leaf_layer_eoc_laar gm4_tree_data 2
-scoreboard players operation leaf_layer_eoc_taar gm4_tree_data /= leaf_arc_addition_rate gm4_tree_data
-scoreboard players operation leaf_arc_addition_factor gm4_tree_data = leaf_arc_addition_amount gm4_tree_data
-scoreboard players operation leaf_arc_addition_factor gm4_tree_data *= leaf_layer_eoc_laar gm4_tree_data
-
 # count every other layer by a factor of 2
 scoreboard players operation leaf_layer_eoc2 gm4_tree_data = leaf_layer_loop gm4_tree_data
 scoreboard players operation leaf_layer_eoc2 gm4_tree_data /= #2 gm4_math_num

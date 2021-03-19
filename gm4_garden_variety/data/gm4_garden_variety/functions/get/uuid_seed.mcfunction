@@ -11,5 +11,3 @@ scoreboard players operation seed gm4_tree_data %= #65536 gm4_math_num
 # copy seed to current seed
 scoreboard players operation current_seed gm4_tree_data = seed gm4_tree_data
 
-# reset seed mode
-scoreboard players set seed_mode gm4_tree_data -1

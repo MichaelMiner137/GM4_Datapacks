@@ -4,15 +4,15 @@
 
 
 
-# is enabled
+# analyzed
 execute if score analyzed gm4_gv_nbt_data matches 1 run data modify storage gm4_garden_variety:data/scoreboard/garden_variety analyzer.analyzed set value 0b
 execute if score analyzed gm4_gv_nbt_data matches 2 run data modify storage gm4_garden_variety:data/scoreboard/garden_variety analyzer.analyzed set value 1b
 
-# is enabled
+# tagged
 execute if score tagged gm4_gv_nbt_data matches 1 run data modify storage gm4_garden_variety:data/scoreboard/garden_variety analyzer.tagged set value 0b
 execute if score tagged gm4_gv_nbt_data matches 2 run data modify storage gm4_garden_variety:data/scoreboard/garden_variety analyzer.tagged set value 1b
 
-# is enabled
+# enabled
 execute if score enabled gm4_gv_nbt_data matches 1 run data modify storage gm4_garden_variety:data/scoreboard/garden_variety traits.enabled set value 0b
 execute if score enabled gm4_gv_nbt_data matches 2 run data modify storage gm4_garden_variety:data/scoreboard/garden_variety traits.enabled set value 1b
 

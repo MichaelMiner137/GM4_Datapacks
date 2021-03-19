@@ -7,8 +7,12 @@
 scoreboard players operation decoding gm4_gv_nbt_data = @s gm4_trait_data
 scoreboard players operation traits gm4_trait_data = @s gm4_trait_data
 
-scoreboard players operation status gm4_gv_nbt_data = decoding gm4_gv_nbt_data
-scoreboard players operation status gm4_gv_nbt_data %= #10 gm4_math_num
+scoreboard players operation tagged gm4_gv_nbt_data = decoding gm4_gv_nbt_data
+scoreboard players operation tagged gm4_gv_nbt_data %= #10 gm4_math_num
+scoreboard players operation decoding gm4_gv_nbt_data /= #10 gm4_math_num
+
+scoreboard players operation enabled gm4_gv_nbt_data = decoding gm4_gv_nbt_data
+scoreboard players operation enabled gm4_gv_nbt_data %= #10 gm4_math_num
 scoreboard players operation decoding gm4_gv_nbt_data /= #10 gm4_math_num
 
 scoreboard players operation height gm4_gv_nbt_data = decoding gm4_gv_nbt_data

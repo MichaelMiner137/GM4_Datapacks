@@ -36,13 +36,6 @@ scoreboard players set leaf_segment_loop gm4_tree_data 10
 execute at @s run function #gm4_garden_variety:generation/methods/palm_tree/leaf_segment
 scoreboard players add current_leaf_layer gm4_tree_data 1
 
-# modify y rotation
-scoreboard players operation leaf_y_rot_mod gm4_tree_data = current_leaf_y_rot gm4_tree_data
-scoreboard players operation leaf_y_rot_mod gm4_tree_data += leaf_arc gm4_tree_data
-scoreboard players operation leaf_y_rot_mod gm4_tree_data += leaf_arc_addition_factor gm4_tree_data
-scoreboard players operation current_leaf_y_rot gm4_tree_data = leaf_y_rot_mod gm4_tree_data
-execute store result entity @s Rotation[1] float 1 run scoreboard players get current_leaf_y_rot gm4_tree_data
-
 # loop function until layer_loop hits 0
 scoreboard players remove leaf_layer_loop gm4_tree_data 1
 execute if score leaf_layer_loop gm4_tree_data matches 0 run kill @s
