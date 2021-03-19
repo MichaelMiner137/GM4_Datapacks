@@ -7,8 +7,9 @@
 scoreboard players remove structure_height gm4_count 1
 
 # succeed if sand below
-execute if block ~ ~-1 ~ minecraft:sand positioned ~ ~2 ~ if predicate gm4_fruiting_trees:5x5_clear positioned ~ ~-2 ~ run function gm4_natural_trees:generate/king_palm/orbis/chunk/spawn_tree
+execute if block ~ ~-1 ~ minecraft:sand run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["gm4_king_palm_sapling","gm4_king_palm_tree_new"],Duration:1}
+execute if block ~ ~-1 ~ minecraft:sand as @e[type=minecraft:area_effect_cloud,tag=gm4_king_palm_tree_new,limit=1] at @s align xyz run function gm4_natural_trees:generate/king_palm/orbis/generate_seed
 
 # next height
-execute if block ~ ~-1 ~ #gm4_fruiting_trees:tree_replaceable if score structure_height gm4_count matches 64.. positioned ~ ~-1 ~ run function gm4_natural_trees:generate/king_palm/orbis/chunk/scan_column
+execute if block ~ ~-1 ~ #gm4_fruiting_trees:tree_replaceable if score structure_height gm4_count matches 64.. positioned ~ ~-1 ~ run function gm4_natural_trees:generate/king_palm/orbis/scan_column
 

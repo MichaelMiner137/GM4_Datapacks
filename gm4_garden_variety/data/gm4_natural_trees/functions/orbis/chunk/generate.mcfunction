@@ -5,5 +5,6 @@
 
 scoreboard players set structure_height gm4_count 248
 
-# beach biome
-execute if score beach gm4_orbis_biome matches 1 if predicate gm4_garden_variety:biome/beach run function gm4_natural_trees:orbis/chunk/biome/beach
+# king palm tree
+execute if score beach gm4_orbis_biome matches 1 if predicate gm4_garden_variety:biome/beach if block ~ 31 ~ minecraft:stone positioned ~6 248 ~12 run function gm4_natural_trees:generate/king_palm/orbis/scan_column
+execute if score beach gm4_orbis_biome matches 1 if predicate gm4_garden_variety:biome/beach if block ~ 41 ~ minecraft:stone positioned ~9 248 ~4 run function gm4_natural_trees:generate/king_palm/orbis/scan_column
