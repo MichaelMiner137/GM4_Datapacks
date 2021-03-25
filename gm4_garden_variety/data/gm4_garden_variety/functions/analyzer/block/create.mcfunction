@@ -6,6 +6,9 @@ setblock ~ ~1 ~ air
 data merge block ~ ~ ~ {CustomName:'{"translate":"%1$s%3427655$s","with":["Analyzer",{"translate":"block.gm4.gv_analyzer"}]}'}
 data merge entity @s {CustomName:'"gm4_gv_analyzer"',ArmorItems:[{},{},{},{id:"minecraft:green_stained_glass",Count:1b,tag:{CustomModelData:1}}]}
 
+# get id
+execute store result score @s gm4_gv_entity_id run data get entity @s UUID[1]
+
 # Visuals
 playsound minecraft:block.beehive.enter block @a[distance=..5]
 

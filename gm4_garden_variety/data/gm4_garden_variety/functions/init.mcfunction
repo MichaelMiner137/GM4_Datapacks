@@ -5,8 +5,12 @@ scoreboard objectives add gm4_tree_limit dummy
 scoreboard objectives add gm4_fruit_data dummy
 scoreboard objectives add gm4_trait_data dummy
 scoreboard objectives add gm4_gv_nbt_data dummy
+scoreboard objectives add gm4_gv_arborist dummy
+scoreboard objectives add gm4_gv_trades dummy
+scoreboard objectives add gm4_gv_prev_xp dummy
 scoreboard objectives add gm4_gv_analyze dummy
 scoreboard objectives add gm4_gv_analyze_p dummy
+
 function gm4_garden_variety:init/static_variables
 execute store result score world_seed gm4_tree_data run seed
 
@@ -17,6 +21,7 @@ scoreboard players set garden_variety gm4_modules 1
 schedule function gm4_garden_variety:main 10t
 schedule function gm4_garden_variety:tick 11t
 schedule function gm4_garden_variety:second 12t
+schedule function gm4_garden_variety:10_seconds 13t
 
 #$moduleUpdateList
 

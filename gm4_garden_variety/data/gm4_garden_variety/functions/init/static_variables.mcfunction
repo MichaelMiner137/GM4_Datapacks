@@ -22,12 +22,16 @@ scoreboard players set #2 gm4_math_num 2
 scoreboard players set #3 gm4_math_num 3
 scoreboard players set #4 gm4_math_num 4
 scoreboard players set #5 gm4_math_num 5
+scoreboard players set #6 gm4_math_num 6
 scoreboard players set #7 gm4_math_num 7
 scoreboard players set #8 gm4_math_num 8
 scoreboard players set #9 gm4_math_num 9
 scoreboard players set #10 gm4_math_num 10
 scoreboard players set #15 gm4_math_num 15
+scoreboard players set #16 gm4_math_num 16
 scoreboard players set #20 gm4_math_num 20
+scoreboard players set #32 gm4_math_num 32
+scoreboard players set #64 gm4_math_num 64
 scoreboard players set #65 gm4_math_num 65
 scoreboard players set #70 gm4_math_num 70
 scoreboard players set #73 gm4_math_num 73
