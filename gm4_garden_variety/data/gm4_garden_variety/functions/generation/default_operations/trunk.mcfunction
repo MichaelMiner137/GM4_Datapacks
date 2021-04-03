@@ -17,11 +17,11 @@ scoreboard players operation trunk_arc_addition_factor gm4_tree_data *= trunk_la
 
 # identify every other layer by a factor of 2 (math)
 scoreboard players operation trunk_layer_eo2 gm4_tree_data = trunk_layer_loop gm4_tree_data
-scoreboard players operation trunk_layer_eo2 gm4_tree_data %= #2 gm4_math_num
+scoreboard players operation trunk_layer_eo2 gm4_tree_data %= #2 gm4_gv_math_num
 
 # get 1/2 of the trees layers (math)
 scoreboard players operation trunk_layers_half gm4_tree_data = trunk_layers gm4_tree_data
-scoreboard players operation trunk_layers_half gm4_tree_data /= #2 gm4_math_num
+scoreboard players operation trunk_layers_half gm4_tree_data /= #2 gm4_gv_math_num
 
 
 

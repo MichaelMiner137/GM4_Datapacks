@@ -1,4 +1,3 @@
-function gm4_natural_trees:init/tree_limits
 function gm4_natural_trees:init/fruit_data
 
 

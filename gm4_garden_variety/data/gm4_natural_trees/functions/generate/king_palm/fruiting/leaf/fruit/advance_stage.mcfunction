@@ -5,6 +5,6 @@
 
 # set the visual stage of the fruit depending the score
 
-execute if score @s gm4_fruit_age = #king_palm_fruit_stage_1_start gm4_fruit_data run function gm4_natural_trees:generate/king_palm/fruiting/leaf/fruit/set_stage/1
-execute if score @s gm4_fruit_age = #king_palm_fruit_stage_2_start gm4_fruit_data run function gm4_natural_trees:generate/king_palm/fruiting/leaf/fruit/set_stage/2
-execute if score @s gm4_fruit_age = #king_palm_fruit_stage_0_start gm4_fruit_data run function gm4_natural_trees:generate/king_palm/fruiting/leaf/fruit/set_stage/0
+execute if score @s gm4_fruit_age = #king_palm_fruit_stage_1_start gm4_gv_math_num run function gm4_natural_trees:generate/king_palm/fruiting/leaf/fruit/set_stage/1
+execute if score @s gm4_fruit_age = #king_palm_fruit_stage_2_start gm4_gv_math_num run function gm4_natural_trees:generate/king_palm/fruiting/leaf/fruit/set_stage/2
+execute if score @s gm4_fruit_age = #king_palm_fruit_stage_0_start gm4_gv_math_num run function gm4_natural_trees:generate/king_palm/fruiting/leaf/fruit/set_stage/0

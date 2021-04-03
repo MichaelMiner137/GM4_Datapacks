@@ -9,8 +9,8 @@ data remove storage gm4_garden_variety:data/arborist/next_trade Recipes
 
 # pick item to buy
 scoreboard players operation trade_buy_item gm4_gv_trades = current_seed gm4_tree_data
-scoreboard players operation trade_buy_item gm4_gv_trades %= #6 gm4_math_num
-function gm4_garden_variety:get/next_seed_value
+scoreboard players operation trade_buy_item gm4_gv_trades %= #6 gm4_gv_math_num
+function gm4_garden_variety:arborist/get/next_seed_value
 
 # set item to buy
 execute if score trade_buy_item gm4_gv_trades matches 0 run data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.buy.id set value "minecraft:oak_sapling"
@@ -28,8 +28,8 @@ execute if score trade_buy_item gm4_gv_trades matches 4 run data modify storage 
 
 # pick item to buy
 scoreboard players operation trade_buyb_item gm4_gv_trades = current_seed gm4_tree_data
-scoreboard players operation trade_buyb_item gm4_gv_trades %= #6 gm4_math_num
-function gm4_garden_variety:get/next_seed_value
+scoreboard players operation trade_buyb_item gm4_gv_trades %= #6 gm4_gv_math_num
+function gm4_garden_variety:arborist/get/next_seed_value
 execute if score trade_buyb_item gm4_gv_trades = trade_buy_item gm4_gv_trades run scoreboard players add trade_buyb_item gm4_gv_trades 1
 execute if score trade_buyb_item gm4_gv_trades matches 6.. run scoreboard players remove trade_buyb_item gm4_gv_trades 5
 
@@ -49,8 +49,8 @@ execute if score trade_buyb_item gm4_gv_trades matches 4 run data modify storage
 
 # pick item to sell
 scoreboard players operation trade_sell_item gm4_gv_trades = current_seed gm4_tree_data
-scoreboard players operation trade_sell_item gm4_gv_trades %= #6 gm4_math_num
-function gm4_garden_variety:get/next_seed_value
+scoreboard players operation trade_sell_item gm4_gv_trades %= #6 gm4_gv_math_num
+function gm4_garden_variety:arborist/get/next_seed_value
 execute if score trade_sell_item gm4_gv_trades = trade_buy_item gm4_gv_trades run scoreboard players add trade_sell_item gm4_gv_trades 1
 execute if score trade_sell_item gm4_gv_trades = trade_buyb_item gm4_gv_trades run scoreboard players add trade_sell_item gm4_gv_trades 1
 execute if score trade_sell_item gm4_gv_trades matches 6.. run scoreboard players remove trade_sell_item gm4_gv_trades 5

@@ -6,7 +6,7 @@
 
 # identify every other layer by a factor of 2 (math)
 scoreboard players operation palm_layer_eo2 gm4_tree_data = palm_layer_eo2 gm4_tree_data
-scoreboard players operation palm_layer_eo2 gm4_tree_data %= #2 gm4_math_num
+scoreboard players operation palm_layer_eo2 gm4_tree_data %= #2 gm4_gv_math_num
 
 # find the palm arc reduction factor (math)
 scoreboard players operation palm_layer_eoc_paar gm4_tree_data = current_palm_layers gm4_tree_data

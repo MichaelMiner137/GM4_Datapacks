@@ -16,7 +16,7 @@ scoreboard players operation palm_offet gm4_tree_data %= palm_offet_range gm4_tr
 scoreboard players operation palm_offet gm4_tree_data += palm_offet_minimum gm4_tree_data
 execute if score palm_offet gm4_tree_data = matches 1000.. run scoreboard players set palm_offet gm4_tree_data 0
 function gm4_garden_variety:get/random_sign
-scoreboard players operation palm_offet gm4_tree_data *= random_sign gm4_math_num
+scoreboard players operation palm_offet gm4_tree_data *= random_sign gm4_gv_math_num
 function gm4_garden_variety:get/next_seed_value
 
 # length of each palm (layer based)

@@ -4,7 +4,7 @@
 # run from gm4_natural_trees:trees/TREE_TYPE/fruiting/leaf/fruit/advance_stage
 
 # set leaf's next stage change age
-scoreboard players operation @s gm4_fruit_stage = #king_palm_fruit_stage_0_start gm4_fruit_data
+scoreboard players operation @s gm4_fruit_stage = #king_palm_fruit_stage_0_start gm4_gv_math_num
 
 # visuals
 playsound minecraft:block.beehive.drip block @a[distance=..8] ~ ~ ~ 0.3 1.4

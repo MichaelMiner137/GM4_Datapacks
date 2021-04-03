@@ -1,8 +1,6 @@
-scoreboard objectives add gm4_math_num dummy
+scoreboard objectives add gm4_gv_math_num dummy
 scoreboard objectives add gm4_tree_data dummy
 scoreboard objectives add gm4_tree_type dummy
-scoreboard objectives add gm4_tree_limit dummy
-scoreboard objectives add gm4_fruit_data dummy
 scoreboard objectives add gm4_trait_data dummy
 scoreboard objectives add gm4_gv_nbt_data dummy
 scoreboard objectives add gm4_gv_arborist dummy
@@ -20,8 +18,8 @@ scoreboard players set garden_variety gm4_modules 1
 
 schedule function gm4_garden_variety:main 10t
 schedule function gm4_garden_variety:tick 11t
-schedule function gm4_garden_variety:second 12t
-schedule function gm4_garden_variety:10_seconds 13t
+schedule function gm4_garden_variety:1s 12t
+schedule function gm4_garden_variety:10s 13t
 
 #$moduleUpdateList
 

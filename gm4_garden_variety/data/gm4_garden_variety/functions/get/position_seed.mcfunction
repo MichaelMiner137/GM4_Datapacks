@@ -14,7 +14,7 @@ scoreboard players operation seed gm4_tree_data *= seed_mod gm4_tree_data
 scoreboard players operation seed gm4_tree_data *= world_seed gm4_tree_data
 
 # convert seed to 16 bit
-scoreboard players operation seed gm4_tree_data %= #65536 gm4_math_num
+scoreboard players operation seed gm4_tree_data %= #65536 gm4_gv_math_num
 
 # copy seed to current seed
 scoreboard players operation current_seed gm4_tree_data = seed gm4_tree_data

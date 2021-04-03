@@ -16,7 +16,7 @@ function gm4_garden_variety:get/next_seed_value
 scoreboard players operation tree_y_rot gm4_tree_data = current_seed gm4_tree_data
 scoreboard players operation tree_y_rot gm4_tree_data %= tree_y_rot_range gm4_tree_data
 scoreboard players operation tree_y_rot gm4_tree_data += tree_y_rot_minimum gm4_tree_data
-execute if score tree_y_rot gm4_tree_data matches 1.. run scoreboard players operation tree_y_rot gm4_tree_data *= #-1 gm4_math_num
+execute if score tree_y_rot gm4_tree_data matches 1.. run scoreboard players operation tree_y_rot gm4_tree_data *= #-1 gm4_gv_math_num
 execute if score tree_y_rot gm4_tree_data = matches 1000.. run scoreboard players set tree_y_rot gm4_tree_data 0
 function gm4_garden_variety:get/next_seed_value
 
