@@ -37,8 +37,7 @@ data remove storage gm4_garden_variety:data/analyzer/modify Items[{Slot:1b}].tag
 data remove storage gm4_garden_variety:data/analyzer/modify Items[{Slot:1b}].tag.display.Lore[1]
 data remove storage gm4_garden_variety:data/analyzer/modify Items[{Slot:1b}].tag.display.Lore[1]
 data remove storage gm4_garden_variety:data/analyzer/modify Items[{Slot:1b}].tag.display.Lore[1]
-# remove analyzed tag
-data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:1b}].tag.gm4_garden_variety.analyzer.analyzed set value 0b
+# remove tagged tag
 data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:1b}].tag.gm4_garden_variety.analyzer.tagged set value 0b
 
 ### slot 2 ### (name tag)

@@ -26,7 +26,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_garden_variety:{analyzer:{analyzed:false,tagged:false},traits:{enabled:true,height:\"average\",flexibility:\"average\",foliage:\"average\",fertility:\"average\"}}}"
+                            "tag": "{gm4_garden_variety:{analyzer:{tagged:false},traits:{enabled:true,height:\"average\",flexibility:\"average\",foliage:\"average\",fertility:\"average\"}}}"
                         },
                         {
                             "function": "minecraft:set_lore",

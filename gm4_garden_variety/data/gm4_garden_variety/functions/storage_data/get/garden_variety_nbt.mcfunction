@@ -4,10 +4,6 @@
 
 
 
-# analyzed
-execute if data storage gm4_garden_variety:data/item/garden_variety Analyzer{analyzed:0b} run scoreboard players set analyzed gm4_gv_nbt_data 1
-execute if data storage gm4_garden_variety:data/item/garden_variety Analyzer{analyzed:1b} run scoreboard players set analyzed gm4_gv_nbt_data 2
-
 # tagged
 execute if data storage gm4_garden_variety:data/item/garden_variety Analyzer{tagged:0b} run scoreboard players set tagged gm4_gv_nbt_data 1
 execute if data storage gm4_garden_variety:data/item/garden_variety Analyzer{tagged:1b} run scoreboard players set tagged gm4_gv_nbt_data 2

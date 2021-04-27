@@ -39,8 +39,7 @@ data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag
 # append trait lore
 function gm4_garden_variety:storage_data/modify/trait_lore
 data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.display.Lore append from storage gm4_garden_variety:data/modify/lore Lore[]
-# add analyzed tag
-data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.gm4_garden_variety.analyzer.analyzed set value 1b
+# add tagged tag
 data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.gm4_garden_variety.analyzer.tagged set value 1b
 
 
