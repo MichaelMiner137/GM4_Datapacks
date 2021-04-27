@@ -6,22 +6,22 @@
         {
           "type": "minecraft:loot_table",
           "weight": 4,
-          "name": "gm4_garden_variety:arborist/trades/level_2/sell_tools/sell/tools_other"
+          "name": "gm4_garden_variety:arborist/trades/sell_tools/sell/tools_other"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 7,
-          "name": "gm4_garden_variety:arborist/trades/level_2/sell_tools/sell/tools_iron"
+          "name": "gm4_garden_variety:arborist/trades/sell_tools/sell/tools_iron"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "gm4_garden_variety:arborist/trades/level_2/sell_tools/sell/tools_diamond"
+          "name": "gm4_garden_variety:arborist/trades/sell_tools/sell/tools_diamond"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "name": "gm4_garden_variety:arborist/trades/level_2/sell_tools/sell/signs"
+          "name": "gm4_garden_variety:arborist/trades/sell_tools/sell/signs"
         }
       ]
     }

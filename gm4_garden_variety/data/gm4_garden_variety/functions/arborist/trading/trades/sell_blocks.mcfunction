@@ -11,33 +11,30 @@ data remove storage gm4_garden_variety:data/arborist/next_trade Recipes
 ### sell ###
 
 # set trade item
-loot replace entity @s weapon loot gm4_garden_variety:arborist/trades/level_1/sell_food/sell
+loot replace entity @s weapon loot gm4_garden_variety:arborist/trades/sell_blocks/sell
 data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.sell set from entity @s HandItems[0]
-
-# update last sell item
-data modify storage gm4_garden_variety:data/arborist/last_sell Recipes.sell set from storage gm4_garden_variety:data/arborist/next_trade Recipes.sell
 
 
 ### buy ###
 
 # set trade item
-loot replace entity @s weapon loot gm4_garden_variety:arborist/trades/level_1/sell_food/buy
+loot replace entity @s weapon loot gm4_garden_variety:arborist/trades/sell_blocks/buy
 data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.buy set from entity @s HandItems[0]
 
 
 ### finalize ###
 
 # set other trade data
-data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.xp set value 1
+data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.xp set value 5
 data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.maxUses set value 8
 data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.priceMultiplier set value 1f
 
-# store trades into 
+# store trades into nbt
 data modify entity @s Offers.Recipes append from storage gm4_garden_variety:data/arborist/next_trade Recipes
 
 # update debug storage
-data modify storage gm4_garden_variety:debug/arborist trades.level_1.sell_food append from storage gm4_garden_variety:data/arborist/next_trade Recipes.sell.id
+data modify storage gm4_garden_variety:debug/arborist trades.level_2.sell_blocks append from storage gm4_garden_variety:data/arborist/next_trade Recipes.sell.id
 
 # loop
 scoreboard players remove trade_amount gm4_gv_trades 1
-execute if score trade_amount gm4_gv_trades matches 1.. run function gm4_garden_variety:arborist/trading/trades/level_1/sell_food
+execute if score trade_amount gm4_gv_trades matches 1.. run function gm4_garden_variety:arborist/trading/trades/sell_blocks

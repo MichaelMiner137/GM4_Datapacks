@@ -11,17 +11,13 @@ data remove storage gm4_garden_variety:data/arborist/next_trade Recipes
 ### sell ###
 
 # set trade item
-loot replace entity @s weapon loot gm4_garden_variety:arborist/trades/level_1/buy_saplings/sell
+loot replace entity @s weapon loot gm4_garden_variety:arborist/trades/buy_materials/sell
 data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.sell set from entity @s HandItems[0]
-
-# update last sell item
-data modify storage gm4_garden_variety:data/arborist/last_sell Recipes.sell set from storage gm4_garden_variety:data/arborist/next_trade Recipes.sell
-
 
 ### buy ###
 
 # set trade item
-loot replace entity @s weapon loot gm4_garden_variety:arborist/trades/level_1/buy_saplings/buy
+loot replace entity @s weapon loot gm4_garden_variety:arborist/trades/buy_materials/buy
 data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.buy set from entity @s HandItems[0]
 
 
@@ -36,8 +32,8 @@ data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.priceMul
 data modify entity @s Offers.Recipes append from storage gm4_garden_variety:data/arborist/next_trade Recipes
 
 # update debug storage
-data modify storage gm4_garden_variety:debug/arborist trades.level_1.buy_saplings append from storage gm4_garden_variety:data/arborist/next_trade Recipes.buy.id
+data modify storage gm4_garden_variety:debug/arborist trades.level_1.buy_materials append from storage gm4_garden_variety:data/arborist/next_trade Recipes.buy.id
 
 # loop
 scoreboard players remove trade_amount gm4_gv_trades 1
-execute if score trade_amount gm4_gv_trades matches 1.. run function gm4_garden_variety:arborist/trading/trades/level_1/buy_saplings
+execute if score trade_amount gm4_gv_trades matches 1.. run function gm4_garden_variety:arborist/trading/trades/buy_materials
