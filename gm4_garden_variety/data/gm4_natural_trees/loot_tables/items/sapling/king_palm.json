@@ -32,7 +32,7 @@
                             "function": "minecraft:set_lore",
                             "lore": [
                                 {
-                                  "text": "A wild tree found in nature",
+                                  "text": "A wild sapling found in nature",
                                   "color": "gray",
                                   "italic": true
                                 }

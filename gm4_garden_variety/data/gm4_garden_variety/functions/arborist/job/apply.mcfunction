@@ -1,17 +1,30 @@
 # run from TODO
 
 
+# reset debug storage
+data remove storage gm4_garden_variety:debug/arborist trades
+
+# display particles
+particle minecraft:happy_villager ~ ~1 ~ .3 .5 .3 .1 10
 
 # add tag
 tag @s add gm4_gv_arborist
-tag @s add gm4_gv_level_2
 
 # set nbt data
-data modify entity @s CustomName set value '{"text":"Arborist"}'
-data modify entity @s VillagerData set value {level:2,profession:"minecraft:nitwit",type:"minecraft:swamp",Xp:10}
+data modify entity @s VillagerData.profession set value "minecraft:nitwit"
 data modify entity @s Offers.Recipes set value []
 
+# set random name
+loot replace entity @s weapon loot gm4_garden_variety:arborist/names
+data modify entity @s CustomName set from entity @s HandItems[{id:"minecraft:oak_sapling"}].tag.display.Name
+
+# set restock amounts
 scoreboard players set @s gm4_gv_trades 2 
 
-function gm4_garden_variety:arborist/trading/leveling/level_1-2
+# give level 1 trades
+execute at @s run function gm4_garden_variety:arborist/leveling/level_1
+
+
+
+
 

@@ -19,7 +19,7 @@ tag @s add gm4_gv_analyzing
 scoreboard players add @s gm4_gv_analyze 1
 
 # audio
-playsound minecraft:block.grass.break block @a[distance=..5]
+playsound minecraft:block.grass.break block @a[distance=..10]
 particle block birch_sapling ~ ~1.2 ~ 0 0 0 .1 3
 
 # complete

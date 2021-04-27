@@ -1,6 +1,6 @@
 # run from TODO
 
-playsound minecraft:entity.villager.work_farmer ambient @a[distance=..10]
+playsound minecraft:entity.villager.work_farmer neutral @a[distance=..20]
 particle minecraft:block oak_sapling ~ ~1 ~ 0 0 0 1 3
 
 # restock

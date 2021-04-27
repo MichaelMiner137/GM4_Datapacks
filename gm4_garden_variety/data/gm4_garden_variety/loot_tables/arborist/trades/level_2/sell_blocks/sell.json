@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "gm4_garden_variety:arborist/trades/level_2/sell_blocks/sell/logs"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 5,
+          "name": "gm4_garden_variety:arborist/trades/level_2/sell_blocks/sell/leaves"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 5,
+          "name": "gm4_garden_variety:arborist/trades/level_2/sell_blocks/sell/soils"
+        }
+      ]
+    }
+  ]
+}
