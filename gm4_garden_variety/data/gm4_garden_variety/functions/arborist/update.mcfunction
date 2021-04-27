@@ -33,20 +33,8 @@ execute if entity @s[tag=gm4_gv_level_4] if score xp_value gm4_gv_arborist match
 execute if entity @s[tag=gm4_gv_level_4] if score xp_value gm4_gv_arborist matches 250.. run function gm4_garden_variety:arborist/leveling/level_5
 
 # look at work site
-
-
-
-
-
-# look at job site ##### DEV TEST #####
 execute if score look_at_job_site gm4_gv_arborist matches 0 if entity @s[tag=gm4_gv_looking_at_job_site] run tag @s remove gm4_gv_looking_at_job_site
 execute store success score look_at_job_site gm4_gv_arborist if entity @a[distance=..2,nbt={SelectedItem:{id:"minecraft:smoker"}}] 
-execute if score look_at_job_site gm4_gv_arborist matches 1 if entity @s[tag=!gm4_gv_looking_at_job_site] run tag @s add gm4_gv_looking_at_job_site
-
-execute if score look_at_job_site gm4_gv_arborist matches 1 if entity @s[tag=gm4_gv_looking_at_job_site] run data modify entity @s NoAI set value 1
-execute if score look_at_job_site gm4_gv_arborist matches 1 if entity @s[tag=gm4_gv_looking_at_job_site] run execute if entity @s as @e[tag=gm4_gv_analyzer,tag=!gm4_gv_disable_job_site,distance=..15] if score @s gm4_gv_job_id = current_id gm4_gv_job_id run tag @s add gm4_gv_look_here
-execute if score look_at_job_site gm4_gv_arborist matches 1 if entity @s[tag=gm4_gv_looking_at_job_site] run execute facing entity @e[tag=gm4_gv_analyzer,tag=gm4_gv_look_here] eyes run tp @s ~ ~ ~ ~ ~
-execute if score look_at_job_site gm4_gv_arborist matches 1 if entity @s[tag=gm4_gv_looking_at_job_site] run tag @e[tag=gm4_gv_analyzer,tag=gm4_gv_look_here,distance=..15] remove gm4_gv_look_here
-
+execute if score look_at_job_site gm4_gv_arborist matches 1 if entity @s[tag=!gm4_gv_looking_at_job_site] run function gm4_garden_variety:arborist/job/look_at_job_site
 execute if score look_at_job_site gm4_gv_arborist matches 0 if entity @s[tag=gm4_gv_looking_at_job_site] run data modify entity @s NoAI set value 0
 
