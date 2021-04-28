@@ -8,7 +8,7 @@ tag @s remove gm4_gv_level_2
 tag @s add gm4_gv_level_3
 
 # get seed and register trades
-function gm4_garden_variety:arborist/get/random_seed
+function gm4_garden_variety:data/generate/seed/uuid_time
 function #gm4_garden_variety:arborist/register_trades/natural
 function #gm4_garden_variety:arborist/register_trades/decorative
 

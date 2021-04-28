@@ -12,8 +12,8 @@ data modify block ~ ~ ~ CookTime set value 0s
 tag @s remove gm4_gv_analyzing
 
 # get trait data
-data modify storage gm4_garden_variety:data/item/garden_variety Traits set from storage gm4_garden_variety:data/analyzer Items[{Slot:1b}].tag.gm4_garden_variety.traits
-function gm4_garden_variety:storage_data/get/garden_variety_nbt
+data modify storage gm4_garden_variety:data/garden_variety_nbt traits set from storage gm4_garden_variety:data/analyzer Items[{Slot:1b}].tag.gm4_garden_variety.traits
+function gm4_garden_variety:data/convert/gv_nbt_to_scores
 
 # copy nbt to storage
 data modify storage gm4_garden_variety:data/analyzer/modify Items set from block ~ ~ ~ Items
@@ -30,8 +30,8 @@ data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:0b}].Slo
 # delete all lore
 data remove storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.display.Lore
 # append trait lore
-function gm4_garden_variety:storage_data/modify/trait_lore
-data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.display.Lore append from storage gm4_garden_variety:data/modify/lore Lore[]
+function gm4_garden_variety:data/get/lore/traits
+data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.display.Lore append from storage gm4_garden_variety:data/trait_lore Lore[]
 # add used tag
 data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.gm4_garden_variety.analyzer.used set value 1b
 

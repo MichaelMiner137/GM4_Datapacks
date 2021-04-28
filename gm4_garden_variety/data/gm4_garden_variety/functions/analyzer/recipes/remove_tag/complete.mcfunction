@@ -12,8 +12,8 @@ data modify block ~ ~ ~ CookTime set value 0s
 tag @s remove gm4_gv_analyzing
 
 # get trait data
-data modify storage gm4_garden_variety:data/item/garden_variety Traits set from storage gm4_garden_variety:data/analyzer Items[{Slot:1b}].tag.gm4_garden_variety.traits
-function gm4_garden_variety:storage_data/get/garden_variety_nbt
+data modify storage gm4_garden_variety:data/garden_variety_nbt traits set from storage gm4_garden_variety:data/analyzer Items[{Slot:1b}].tag.gm4_garden_variety.traits
+function gm4_garden_variety:data/convert/gv_nbt_to_scores
 
 # set output item [required before storage]
 replaceitem block ~ ~ ~ container.2 minecraft:name_tag
@@ -44,8 +44,8 @@ data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:1b}].tag
 # set amount
 execute store result storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].Count byte 1 run scoreboard players get slot_1_amount gm4_gv_analyze
 # append trait lore
-function gm4_garden_variety:storage_data/modify/trait_lore
-data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.display.Lore append from storage gm4_garden_variety:data/modify/lore Lore[]
+function gm4_garden_variety:data/get/lore/traits
+data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.display.Lore append from storage gm4_garden_variety:data/trait_lore Lore[]
 data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.gm4_garden_variety.analyzer.used set value 1b
 
 

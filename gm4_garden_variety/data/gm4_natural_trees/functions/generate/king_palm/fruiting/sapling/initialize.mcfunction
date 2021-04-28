@@ -7,4 +7,4 @@ summon area_effect_cloud ~0.5 ~ ~0.5 {Radius:0f,Age:-2147483648,Duration:2147483
 scoreboard players set @e[type=area_effect_cloud,tag=gm4_king_palm_sapling,dx=0] gm4_sap_growth 2
 
 # encode trait scores into scoreboard
-execute as @e[type=area_effect_cloud,distance=..1,limit=1,nbt={Age:-2147483648},tag=gm4_king_palm_sapling] run function gm4_garden_variety:storage_data/encode
+execute as @e[type=area_effect_cloud,distance=..1,limit=1,nbt={Age:-2147483648},tag=gm4_king_palm_sapling] run function gm4_garden_variety:data/convert/gv_scores_to_string

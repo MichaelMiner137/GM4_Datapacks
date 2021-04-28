@@ -1,6 +1,6 @@
 # generates a new seed using the tree's uuid
 # @s = custom tree marker
-# run from #gm4_garden_variety:get/random_seed
+# run from TODO
 
 # get current time
 execute store result score current_time gm4_gv_arborist run time query daytime

@@ -1,6 +1,6 @@
 # generates a random sign using the tree's seed
 # @s = any equation that needs a random sign (-/+)
-# run from #gm4_garden_variety:get/random_sign
+# run from #gm4_garden_variety:data/get/random_sign
 
 # generate random sign based on current seed
 function gm4_garden_variety:get/next_seed_value

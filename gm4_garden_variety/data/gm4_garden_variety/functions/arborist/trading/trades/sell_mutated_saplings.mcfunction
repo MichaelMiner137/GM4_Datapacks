@@ -22,13 +22,13 @@ data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.sell set
 # pick random trait to modify
 scoreboard players operation random_trait gm4_gv_trades = current_seed gm4_tree_data
 scoreboard players operation random_trait gm4_gv_trades %= #4 gm4_gv_math_num
-function gm4_garden_variety:arborist/get/next_seed_value
+function gm4_garden_variety:data/get/next_seed_value
 
 # pick random trait value
 scoreboard players operation random_trait_value gm4_gv_trades = current_seed gm4_tree_data
 execute if score random_trait gm4_gv_trades matches 0..2 run scoreboard players operation random_trait_value gm4_gv_trades %= #4 gm4_gv_math_num
 execute if score random_trait gm4_gv_trades matches 3 run scoreboard players operation random_trait_value gm4_gv_trades %= #2 gm4_gv_math_num
-function gm4_garden_variety:arborist/get/next_seed_value
+function gm4_garden_variety:data/get/next_seed_value
 
 # modify trait value
 execute if score random_trait gm4_gv_trades matches 0 if score random_trait_value gm4_gv_trades matches 0 run data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.sell.tag.gm4_garden_variety.traits.height set value "shortest"
@@ -56,7 +56,7 @@ scoreboard players operation trade_buy_amount gm4_gv_trades = current_seed gm4_t
 scoreboard players operation trade_buy_amount gm4_gv_trades %= trade_buy_amount_max gm4_gv_trades
 scoreboard players operation trade_buy_amount gm4_gv_trades += trade_buy_amount_min gm4_gv_trades
 
-function gm4_garden_variety:arborist/get/next_seed_value
+function gm4_garden_variety:data/get/next_seed_value
 execute store result storage gm4_garden_variety:data/arborist/next_trade Recipes.buy.Count byte 1 run scoreboard players get trade_buy_amount gm4_gv_trades
 
 ### finalize ###

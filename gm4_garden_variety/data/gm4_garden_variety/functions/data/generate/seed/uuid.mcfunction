@@ -1,6 +1,6 @@
 # generates a new seed using the tree's uuid
 # @s = custom tree marker
-# run from #gm4_garden_variety:get/random_seed
+# run from TODO
 
 # set seed based on uuid
 execute store result score seed gm4_tree_data run data get entity @s UUID[0]

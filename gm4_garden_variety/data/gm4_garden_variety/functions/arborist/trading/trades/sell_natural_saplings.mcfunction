@@ -28,7 +28,7 @@ scoreboard players operation trade_buy_amount gm4_gv_trades = current_seed gm4_t
 scoreboard players operation trade_buy_amount gm4_gv_trades %= trade_buy_amount_max gm4_gv_trades
 scoreboard players operation trade_buy_amount gm4_gv_trades += trade_buy_amount_min gm4_gv_trades
 
-function gm4_garden_variety:arborist/get/next_seed_value
+function gm4_garden_variety:data/get/next_seed_value
 execute store result storage gm4_garden_variety:data/arborist/next_trade Recipes.buy.Count byte 1 run scoreboard players get trade_buy_amount gm4_gv_trades
 
 ### finalize ###

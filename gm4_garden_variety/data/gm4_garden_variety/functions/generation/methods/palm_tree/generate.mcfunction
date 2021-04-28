@@ -15,7 +15,7 @@ scoreboard players add leaf_start gm4_tree_data 1
 
 # summon nametag
 execute if score tagged gm4_gv_nbt_data matches 2 run summon item ~ ~ ~ {Tags:["gm4_gv_add_trait_lore"],Item:{id:"minecraft:name_tag",Count:1b}}
-execute if score tagged gm4_gv_nbt_data matches 2 as @e[type=item,distance=..1,limit=1,sort=nearest,tag=gm4_gv_add_trait_lore] run function gm4_garden_variety:storage_data/modify/item_lore/add_traits
+execute if score tagged gm4_gv_nbt_data matches 2 as @e[type=item,distance=..1,limit=1,sort=nearest,tag=gm4_gv_add_trait_lore] run function gm4_garden_variety:data/modify/item/add_trait_lore
 
 # remove tagged nbt
 scoreboard players set tagged gm4_gv_nbt_data 0

@@ -1,6 +1,6 @@
 # generates a new seed using the tree's position
 # @s = custom tree marker
-# run from #gm4_garden_variety:get/position_seed
+# run from #gm4_garden_variety:data/generate/position_seed
 
 # set seed based on coordinates and world seed
 scoreboard players set seed gm4_tree_data 1

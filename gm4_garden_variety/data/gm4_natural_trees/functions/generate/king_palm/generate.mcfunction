@@ -4,7 +4,7 @@
 
 # decode
 execute if score seed_mode gm4_tree_data matches 0 run scoreboard players set @s gm4_trait_data 333321
-function gm4_garden_variety:storage_data/decode
+function gm4_garden_variety:data/convert/gv_string_to_scores
 
 # delete sapling
 fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings

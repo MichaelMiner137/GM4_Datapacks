@@ -17,11 +17,10 @@ execute store result score world_seed gm4_tree_data run seed
 execute unless score garden_variety gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"garden variety"}
 scoreboard players set garden_variety gm4_modules 1
 
-schedule function gm4_garden_variety:main 10t
-schedule function gm4_garden_variety:tick 11t
-schedule function gm4_garden_variety:1s 12t
-schedule function gm4_garden_variety:3s 13t
-schedule function gm4_garden_variety:10s 14t
+schedule function gm4_garden_variety:clock/tick 11t
+schedule function gm4_garden_variety:clock/1s 12t
+schedule function gm4_garden_variety:clock/3s 13t
+schedule function gm4_garden_variety:clock/10s 14t
 
 #$moduleUpdateList
 
