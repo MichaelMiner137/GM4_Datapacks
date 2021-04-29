@@ -36,4 +36,4 @@ execute if score current_leaf_layer gm4_tree_data matches 2 run scoreboard playe
 function gm4_natural_trees:generate/king_palm/generation/variables/palm_trait_override
 
 # convert user variables to generation variables
-function gm4_garden_variety:generation/variables/palm
+function gm4_garden_variety:generation/variables/initial/palm

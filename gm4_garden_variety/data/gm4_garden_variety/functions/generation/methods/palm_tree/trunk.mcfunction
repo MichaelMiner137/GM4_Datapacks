@@ -6,28 +6,25 @@
 
 advancement grant @a[distance=..15] only gm4:palm_tree
 
-# set initial rotation from variables (generation)
+# debug storage
+data modify storage gm4_garden_variety:debug/generation path append value T
+execute if score debug_generation gm4_tree_data matches 1 at @s if score trunk_layer_loop gm4_tree_data matches 1.. run particle barrier ~ ~.5 ~-8
+execute if score debug_generation gm4_tree_data matches 1 at @s run particle soul_fire_flame ~ ~ ~10 0 0 0 0 1
+
+# set initial rotation from variables
 execute if score trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data store result entity @s Rotation[0] float 1 run scoreboard players get tree_x_rot gm4_tree_data
 execute if score trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data store result entity @s Rotation[1] float 1 run scoreboard players get tree_y_rot gm4_tree_data 
 execute if score trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data run scoreboard players operation current_trunk_y_rot gm4_tree_data = tree_y_rot gm4_tree_data 
 
-
-
-########## ADDITIONAL FEATURES ##########
-
 # default variables used in other equations
-function gm4_garden_variety:generation/default_operations/trunk
+function gm4_garden_variety:generation/variables/layer/trunk
+
+
+
+########## GENERATION ##########
 
 # generate additional features on current layer
 execute at @s run function #gm4_garden_variety:generation/methods/palm_tree/trunk_layer
-
-# DEV - visual display
-execute if score debug gm4_tree_data matches 1 at @s if score trunk_layer_loop gm4_tree_data matches 1.. run particle barrier ~ ~.5 ~-8
-execute if score debug gm4_tree_data matches 1 at @s run particle soul_fire_flame ~ ~ ~10 0 0 0 0 1
-
-
-
-########## CORE GENERATION ##########
 
 # summon leaf marker and begin generation
 execute if score leaf_start gm4_tree_data = current_trunk_layer gm4_tree_data at @s run summon area_effect_cloud ~ ~ ~ {Tags:["gm4_tree_leaf"]}
@@ -47,9 +44,9 @@ scoreboard players operation current_trunk_y_rot gm4_tree_data = trunk_y_rot_mod
 execute if score current_trunk_y_rot gm4_tree_data > minimum_trunk_arc gm4_tree_data run scoreboard players operation current_trunk_y_rot gm4_tree_data = minimum_trunk_arc gm4_tree_data
 execute store result entity @s Rotation[1] float 1 run scoreboard players get current_trunk_y_rot gm4_tree_data
 
-# loop function until layer_loop hits 0
+# loop function until layer_loop hits -1
 scoreboard players remove trunk_layer_loop gm4_tree_data 1
-execute if score trunk_layer_loop gm4_tree_data matches -1 run kill @s
+execute if score trunk_layer_loop gm4_tree_data matches -1 run kill @s[type=!player]
 execute if score trunk_layer_loop gm4_tree_data matches 0.. run function gm4_garden_variety:generation/methods/palm_tree/trunk
 
 

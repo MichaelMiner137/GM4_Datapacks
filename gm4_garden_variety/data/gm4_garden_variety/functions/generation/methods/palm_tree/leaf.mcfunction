@@ -4,27 +4,24 @@
 
 ########## INITIALIZATION ##########
 
-# correct initial position and get initial rotation (generation)
+# debug storage
+data modify storage gm4_garden_variety:debug/generation path append value " L "
+execute if score debug_generation gm4_tree_data matches 1 at @s run particle barrier ~ ~.5 ~-9
+execute if score debug_generation gm4_tree_data matches 1 at @s run particle happy_villager ~ ~ ~10
+
+# correct initial position and get initial rotation
 execute if score leaf_layer_loop gm4_tree_data = leaf_layers gm4_tree_data at @s run tp @s ^ ^ ^.1
 execute if score leaf_layer_loop gm4_tree_data = leaf_layers gm4_tree_data at @s store result score current_leaf_y_rot gm4_tree_data run data get entity @s Rotation[1]
 
-
-
-########## ADDITIONAL FEATURES ##########
-
 # default variables used in other equations
-function gm4_garden_variety:generation/default_operations/leaf
+function gm4_garden_variety:generation/variables/layer/leaf
+
+
+
+########## GENERATION ##########
 
 # generate additional features on current layer
 execute at @s run function #gm4_garden_variety:generation/methods/palm_tree/leaf_layer
-
-# DEV - visual display
-execute if score debug gm4_tree_data matches 1 at @s run particle barrier ~ ~.5 ~-9
-execute if score debug gm4_tree_data matches 1 at @s run particle happy_villager ~ ~ ~10
-
-
-
-########## CORE GENERATION ##########
 
 # summon palm spreader marker and begin generation
 scoreboard players operation palm_spreader_loop gm4_tree_data = adjusted_palm_amount gm4_tree_data

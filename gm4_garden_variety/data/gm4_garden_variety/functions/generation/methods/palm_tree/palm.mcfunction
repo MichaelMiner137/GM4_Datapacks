@@ -4,25 +4,23 @@
 
 ########## INITIALIZATION ##########
 
+# debug
+data modify storage gm4_garden_variety:debug/generation path append value P
+execute if score debug_generation gm4_tree_data matches 1 at @s run particle dragon_breath ~ ~ ~10
+
 # get initial rotation
 execute if score palm_layer_loop gm4_tree_data = palm_layers gm4_tree_data store result score current_palm_y_rot gm4_tree_data run data get entity @s Rotation[1]
 
-
-
-########## ADDITIONAL FEATURES ##########
-
 # default variables used in other equations
-function gm4_garden_variety:generation/default_operations/palm
+function gm4_garden_variety:generation/variables/layer/palm
+
+
+
+
+########## GENERATION ##########
 
 # generate additional features on current layer
 execute at @s run function #gm4_garden_variety:generation/methods/palm_tree/palm_layer
-
-# DEV - visual display
-execute if score debug gm4_tree_data matches 1 at @s run particle dragon_breath ~ ~ ~10
-
-
-
-########## CORE GENERATION ##########
 
 # generate palm segment and move forward
 scoreboard players set leaf_segment_loop gm4_tree_data 10

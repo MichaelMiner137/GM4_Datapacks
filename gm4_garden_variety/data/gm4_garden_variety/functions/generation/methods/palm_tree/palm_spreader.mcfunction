@@ -4,18 +4,19 @@
 
 
 
-########## ADDITIONAL FEATURES ##########
+########## INITIALIZATION ##########
+
+# debug storage
+data modify storage gm4_garden_variety:debug/generation path append value " PS "
+execute if score debug_generation gm4_tree_data matches 1 at @s positioned ~ ~ ~10 run particle dolphin ^ ^ ^1 0 0 0 0 1
+execute if score debug_generation gm4_tree_data matches 1 at @s run particle dolphin ~ ~ ~10 0 0 0 0 1
 
 # default variables used in other equations
-function gm4_garden_variety:generation/default_operations/palm_spreader
-
-# DEV - visual display
-execute if score debug gm4_tree_data matches 1 at @s positioned ~ ~ ~10 run particle dolphin ^ ^ ^1 0 0 0 0 1
-execute if score debug gm4_tree_data matches 1 at @s run particle dolphin ~ ~ ~10 0 0 0 0 1
+function gm4_garden_variety:generation/variables/layer/palm_spreader
 
 
 
-########## CORE GENERATION ##########
+########## GENERATION ##########
 
 # generate palm variables 
 function #gm4_garden_variety:generation/methods/palm_tree/palm_variables

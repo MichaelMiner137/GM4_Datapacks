@@ -76,4 +76,4 @@ scoreboard players set fruit_leaves_range gm4_tree_data 1
 function gm4_natural_trees:generate/king_palm/generation/variables/tree_trait_override
 
 # convert user variables to generation variables
-function gm4_garden_variety:generation/variables/tree
+function gm4_garden_variety:generation/variables/initial/tree

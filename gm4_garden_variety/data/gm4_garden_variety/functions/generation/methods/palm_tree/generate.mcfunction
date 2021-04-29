@@ -2,6 +2,10 @@
 # @s = TREE_TYPE trunk AEC marker
 # run from gm4_MODULE_ID:generate/TREE_TYPE/initialize
 
+# debug storage
+data remove storage gm4_garden_variety:debug/generation path
+data modify storage gm4_garden_variety:debug/generation path append value "G "
+
 # set scores for the next part of generation
 scoreboard players operation trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data
 scoreboard players operation leaf_layer_loop gm4_tree_data = leaf_layers gm4_tree_data
@@ -23,3 +27,5 @@ scoreboard players set tagged gm4_gv_nbt_data 0
 # begin generation 
 function gm4_garden_variety:generation/methods/palm_tree/trunk
 
+# after generation
+tellraw @a[tag=gm4_gv_debug_generation] {"nbt":"path","storage":"gm4_garden_variety:debug/generation","interpret":true}
