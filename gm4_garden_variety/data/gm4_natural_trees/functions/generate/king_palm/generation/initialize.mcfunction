@@ -7,11 +7,7 @@ scoreboard players reset * gm4_tree_type
 scoreboard players set king_palm gm4_tree_type 1 
 
 # generate seed
-execute if score seed_mode gm4_tree_data matches 0 as @s run function gm4_garden_variety:data/generate/seed/position
-execute if score seed_mode gm4_tree_data matches 1 as @s run function gm4_garden_variety:data/generate/seed/uuid
-
-# reset seed mode
-scoreboard players set seed_mode gm4_tree_data 1
+function gm4_garden_variety:data/generate/seed/based_on_mode
 
 # set tree variables
 function gm4_natural_trees:generate/king_palm/generation/variables/tree_default

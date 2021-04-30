@@ -59,9 +59,9 @@ execute if score foliage gm4_gv_nbt_data matches 5 run scoreboard players add le
 ########## FERTILITY ##########
 # sterile (2)
 execute if score fertility gm4_gv_nbt_data matches 2 run scoreboard players set sapling_leaves_minimum gm4_tree_data 0
-execute if score fertility gm4_gv_nbt_data matches 2 run scoreboard players set fruit_leaves_chance gm4_tree_data 0
+execute if score fertility gm4_gv_nbt_data matches 2 run scoreboard players set fruit_leaves_block_chance gm4_tree_data 0
 # fertile (4)
 execute if score fertility gm4_gv_nbt_data matches 4 run scoreboard players set sapling_leaves_block_chance gm4_tree_data 10
-execute if score fertility gm4_gv_nbt_data matches 4 run scoreboard players set fruit_leaves_chance gm4_tree_data 3
+execute if score fertility gm4_gv_nbt_data matches 4 run scoreboard players set fruit_leaves_block_chance gm4_tree_data 3
 execute if score fertility gm4_gv_nbt_data matches 4 run scoreboard players add fruit_leaves_minimum gm4_tree_data 1
 execute if score fertility gm4_gv_nbt_data matches 4 run scoreboard players add fruit_leaves_range gm4_tree_data 1

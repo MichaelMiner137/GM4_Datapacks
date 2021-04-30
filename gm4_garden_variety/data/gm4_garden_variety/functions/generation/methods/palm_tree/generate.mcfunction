@@ -4,7 +4,10 @@
 
 # debug storage
 data remove storage gm4_garden_variety:debug/generation path
-data modify storage gm4_garden_variety:debug/generation path append value "G "
+data modify storage gm4_garden_variety:debug/generation path append value "G: "
+
+# convert user variables to generation variables
+function gm4_garden_variety:generation/variables/initial/tree
 
 # set scores for the next part of generation
 scoreboard players operation trunk_layer_loop gm4_tree_data = trunk_layers gm4_tree_data
@@ -22,7 +25,7 @@ execute if score tagged gm4_gv_nbt_data matches 2 run summon item ~ ~ ~ {Tags:["
 execute if score tagged gm4_gv_nbt_data matches 2 as @e[type=item,distance=..1,limit=1,sort=nearest,tag=gm4_gv_add_trait_lore] run function gm4_garden_variety:data/modify/item/add_trait_lore
 
 # remove tagged nbt
-scoreboard players set tagged gm4_gv_nbt_data 0
+scoreboard players set tagged gm4_gv_nbt_data 1
 
 # begin generation 
 function gm4_garden_variety:generation/methods/palm_tree/trunk

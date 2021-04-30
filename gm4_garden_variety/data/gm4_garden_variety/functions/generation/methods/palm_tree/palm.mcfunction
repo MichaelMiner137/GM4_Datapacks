@@ -2,10 +2,12 @@
 # @s = caranday palm palm AEC marker
 # run from gm4_garden_variety:generation/methods/palm_tree/palm_spreader
 
+
+
 ########## INITIALIZATION ##########
 
 # debug
-data modify storage gm4_garden_variety:debug/generation path append value P
+data modify storage gm4_garden_variety:debug/generation path append value "."
 execute if score debug_generation gm4_tree_data matches 1 at @s run particle dragon_breath ~ ~ ~10
 
 # get initial rotation

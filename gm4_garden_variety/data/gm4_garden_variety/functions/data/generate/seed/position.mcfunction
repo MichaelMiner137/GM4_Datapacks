@@ -4,12 +4,12 @@
 
 # set seed based on coordinates and world seed
 scoreboard players set seed gm4_tree_data 1
-data modify storage gm4_garden_variety:temp/position Pos set from entity @s Pos
-execute store result score seed_mod gm4_tree_data run data get storage gm4_garden_variety:temp/position Pos[0]
+data modify storage gm4_garden_variety:data/position Pos set from entity @s Pos
+execute store result score seed_mod gm4_tree_data run data get storage gm4_garden_variety:data/position Pos[0]
 scoreboard players operation seed gm4_tree_data *= seed_mod gm4_tree_data
-execute store result score seed_mod gm4_tree_data run data get storage gm4_garden_variety:temp/position Pos[1]
+execute store result score seed_mod gm4_tree_data run data get storage gm4_garden_variety:data/position Pos[1]
 scoreboard players operation seed gm4_tree_data *= seed_mod gm4_tree_data
-execute store result score seed_mod gm4_tree_data run data get storage gm4_garden_variety:temp/position Pos[2]
+execute store result score seed_mod gm4_tree_data run data get storage gm4_garden_variety:data/position Pos[2]
 scoreboard players operation seed gm4_tree_data *= seed_mod gm4_tree_data
 scoreboard players operation seed gm4_tree_data *= world_seed gm4_tree_data
 

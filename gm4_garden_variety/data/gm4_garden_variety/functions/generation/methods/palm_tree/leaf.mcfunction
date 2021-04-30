@@ -2,10 +2,12 @@
 # @s = TREE_TYPE leaf AEC marker
 # run from gm4_garden_variety:generation/methods/palm_tree/trunk
 
+
+
 ########## INITIALIZATION ##########
 
 # debug storage
-data modify storage gm4_garden_variety:debug/generation path append value " L "
+data modify storage gm4_garden_variety:debug/generation path append value " L:"
 execute if score debug_generation gm4_tree_data matches 1 at @s run particle barrier ~ ~.5 ~-9
 execute if score debug_generation gm4_tree_data matches 1 at @s run particle happy_villager ~ ~ ~10
 

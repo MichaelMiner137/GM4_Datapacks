@@ -4,5 +4,7 @@
 
 # cycle to next current seed
 scoreboard players operation current_seed gm4_tree_data /= #10 gm4_gv_math_num
+execute if score current_seed gm4_tree_data matches ..99 run scoreboard players operation previous_current_seed gm4_tree_data = current_seed gm4_tree_data
 execute if score current_seed gm4_tree_data matches ..99 run scoreboard players operation current_seed gm4_tree_data = seed gm4_tree_data
+execute if score current_seed gm4_tree_data = seed gm4_tree_data run scoreboard players operation current_seed gm4_tree_data *= previous_current_seed gm4_tree_data
 

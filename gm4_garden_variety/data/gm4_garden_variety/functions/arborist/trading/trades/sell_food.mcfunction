@@ -14,9 +14,6 @@ data remove storage gm4_garden_variety:data/arborist/next_trade Recipes
 loot replace entity @s weapon loot gm4_garden_variety:arborist/trades/sell_food/sell
 data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.sell set from entity @s HandItems[0]
 
-# update last sell item
-data modify storage gm4_garden_variety:data/arborist/last_sell Recipes.sell set from storage gm4_garden_variety:data/arborist/next_trade Recipes.sell
-
 
 ### buy ###
 

@@ -3,10 +3,10 @@
 
 
 # get nbt
-data modify storage gm4_garden_variety:temp/villager NBT set from entity @s 
+data modify storage gm4_garden_variety:data/villager NBT set from entity @s 
 
 # check if job should be locked
-execute store result score xp_value gm4_gv_arborist run data get storage gm4_garden_variety:temp/villager NBT.Xp
+execute store result score xp_value gm4_gv_arborist run data get storage gm4_garden_variety:data/villager NBT.Xp
 execute if entity @s[tag=!gm4_gv_locked_job] if score xp_value gm4_gv_arborist matches 1.. run tag @s add gm4_gv_locked_job
 
 # set current id
@@ -22,7 +22,7 @@ execute if score current_time gm4_gv_arborist matches 1750..2000 run scoreboard 
 execute if score current_time gm4_gv_arborist matches 2000..6000 run function gm4_garden_variety:arborist/working
 
 # level up villager
-execute store result score xp_value gm4_gv_arborist run data get storage gm4_garden_variety:temp/villager NBT.Xp
+execute store result score xp_value gm4_gv_arborist run data get storage gm4_garden_variety:data/villager NBT.Xp
 execute if entity @s[tag=gm4_gv_level_1] if score xp_value gm4_gv_arborist matches 10.. run particle dust 0.529 0.871 0.384 1 ~ ~1 ~ .3 .4 .3 .1 10
 execute if entity @s[tag=gm4_gv_level_1] if score xp_value gm4_gv_arborist matches 10.. run function gm4_garden_variety:arborist/leveling/level_2
 execute if entity @s[tag=gm4_gv_level_2] if score xp_value gm4_gv_arborist matches 70.. run particle dust 0.529 0.871 0.384 1 ~ ~1 ~ .3 .4 .3 .1 10

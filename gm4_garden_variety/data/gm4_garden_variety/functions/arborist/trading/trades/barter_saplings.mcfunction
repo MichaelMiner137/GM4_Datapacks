@@ -13,25 +13,27 @@ summon armor_stand ~ ~ ~ {Small:1b,Invulnerable:1b,Invisible:0b,Silent:1b,Tags:[
 ### sell ###
 
 # set trade item
-data modify entity @e[type=armor_stand,tag=gm4_arborist_trade,limit=1,sort=nearest] HandItems[0] set from storage gm4_garden_variety:data/arborist/last_sell Recipes.sell
-execute as @e[type=minecraft:armor_stand,tag=gm4_arborist_trade,sort=nearest] run loot replace entity @s weapon.mainhand loot gm4_garden_variety:arborist/trades/barter_saplings/sell
-data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.sell set from entity @e[type=armor_stand,tag=gm4_arborist_trade,limit=1,sort=nearest] HandItems[0]
+data modify entity @s HandItems[1] set from storage gm4_garden_variety:data/arborist/last_sell Recipes.sell
+execute as @s run loot replace entity @s weapon.mainhand loot gm4_garden_variety:arborist/trades/barter_saplings/sell
+data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.sell set from entity @s HandItems[0]
 
+# clear hand slot
+data modify entity @s HandItems[1] set value {}
 
 ### buy ###
 
 # set trade item
-data modify entity @e[type=armor_stand,tag=gm4_arborist_trade,limit=1,sort=nearest] ArmorItems[0] set from storage gm4_garden_variety:data/arborist/next_trade Recipes.sell
-execute as @e[type=minecraft:armor_stand,tag=gm4_arborist_trade,sort=nearest] run loot replace entity @s weapon.mainhand loot gm4_garden_variety:arborist/trades/barter_saplings/buy
-data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.buy set from entity @e[type=armor_stand,tag=gm4_arborist_trade,limit=1,sort=nearest] HandItems[0]
+data modify entity @s ArmorItems[0] set from storage gm4_garden_variety:data/arborist/next_trade Recipes.sell
+execute as @s run loot replace entity @s weapon.mainhand loot gm4_garden_variety:arborist/trades/barter_saplings/buy
+data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.buy set from entity @s HandItems[0]
 
 
 ### buyb ###
 
 # set trade item
-data modify entity @e[type=armor_stand,tag=gm4_arborist_trade,limit=1,sort=nearest] ArmorItems[1] set from storage gm4_garden_variety:data/arborist/next_trade Recipes.buy
-execute as @e[type=minecraft:armor_stand,tag=gm4_arborist_trade,sort=nearest] run loot replace entity @s weapon.mainhand loot gm4_garden_variety:arborist/trades/barter_saplings/buyb
-data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.buyB set from entity @e[type=armor_stand,tag=gm4_arborist_trade,limit=1,sort=nearest] HandItems[0]
+data modify entity @s ArmorItems[1] set from storage gm4_garden_variety:data/arborist/next_trade Recipes.buy
+execute as @s run loot replace entity @s weapon.mainhand loot gm4_garden_variety:arborist/trades/barter_saplings/buyb
+data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.buyB set from entity @s HandItems[0]
 data modify storage gm4_garden_variety:test test set from storage gm4_garden_variety:data/arborist/next_trade Recipes.buyb
 
 

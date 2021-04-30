@@ -4,11 +4,11 @@
 # run from gm4_natural_trees:generate/palm_tree/TREE_TYPE/orbis/scan_column
 
 # store tree coordinates
-data modify storage gm4_garden_variety:temp/sapling/position Pos set from entity @s Pos
-execute store result score $loc_x_bits gm4_tree_data run data get storage gm4_garden_variety:temp/sapling/position Pos[0]
-execute store result score $loc_y_bits gm4_tree_data run data get storage gm4_garden_variety:temp/sapling/position Pos[1]
-execute store result score $loc_z_bits gm4_tree_data run data get storage gm4_garden_variety:temp/sapling/position Pos[2]
-data remove storage gm4_garden_variety:temp/sapling/position Pos
+data modify storage gm4_garden_variety:data/sapling/position Pos set from entity @s Pos
+execute store result score $loc_x_bits gm4_tree_data run data get storage gm4_garden_variety:data/sapling/position Pos[0]
+execute store result score $loc_y_bits gm4_tree_data run data get storage gm4_garden_variety:data/sapling/position Pos[1]
+execute store result score $loc_z_bits gm4_tree_data run data get storage gm4_garden_variety:data/sapling/position Pos[2]
+data remove storage gm4_garden_variety:data/sapling/position Pos
 
 # debug message
 scoreboard players add king_palm_tree_count gm4_orbis_config 1

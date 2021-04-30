@@ -2,6 +2,8 @@
 # @s = TREE_TYPE trunk AEC marker
 # run from #gm4_garden_variety:generation/methods/palm_tree/initialize
 
+
+
 ########## INITIALIZATION ##########
 
 advancement grant @a[distance=..15] only gm4:palm_tree

@@ -7,7 +7,8 @@
 ########## INITIALIZATION ##########
 
 # debug storage
-data modify storage gm4_garden_variety:debug/generation path append value " PS "
+execute if score palm_spreader_loop gm4_tree_data = adjusted_palm_amount gm4_tree_data run data modify storage gm4_garden_variety:debug/generation path append value "PS>"
+data modify storage gm4_garden_variety:debug/generation path append value "P"
 execute if score debug_generation gm4_tree_data matches 1 at @s positioned ~ ~ ~10 run particle dolphin ^ ^ ^1 0 0 0 0 1
 execute if score debug_generation gm4_tree_data matches 1 at @s run particle dolphin ~ ~ ~10 0 0 0 0 1
 

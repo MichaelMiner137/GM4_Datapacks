@@ -69,7 +69,7 @@ function gm4_garden_variety:data/get/next_seed_value
 
 # amount of leaves that may contain fruit
 scoreboard players operation fruit_leaves_chance_success gm4_tree_data = current_seed gm4_tree_data
-scoreboard players operation fruit_leaves_chance_success gm4_tree_data %= fruit_leaves_chance gm4_tree_data
+scoreboard players operation fruit_leaves_chance_success gm4_tree_data %= fruit_leaves_block_chance gm4_tree_data
 execute if score fruit_leaves_chance_success gm4_tree_data matches 1.. run scoreboard players set fruit_leaves gm4_tree_data 0
 #
 execute if score fruit_leaves_chance_success gm4_tree_data matches 0 run scoreboard players operation fruit_leaves gm4_tree_data = current_seed gm4_tree_data

@@ -59,14 +59,16 @@ scoreboard players set palm_reduction_amount gm4_tree_data 0
 ########## DECORATION ##########
 
 # amount of leaves that contain a sapling (1, 20)
+scoreboard players set sapling_leaves_start_layer gm4_tree_data 1
 scoreboard players set sapling_leaves_minimum gm4_tree_data 1
 scoreboard players set sapling_leaves_range gm4_tree_data 1
 scoreboard players set sapling_leaves_block_chance gm4_tree_data 10
 
-# amount of leaves that may contain fruit (1, 20%)
-scoreboard players set fruit_leaves_chance gm4_tree_data 5
+# amount of leaves that may contain fruit (1, 25%)
+scoreboard players set fruit_leaves_start_height gm4_tree_data 3
 scoreboard players set fruit_leaves_minimum gm4_tree_data 1
-scoreboard players set fruit_leaves_range gm4_tree_data 1
+scoreboard players set fruit_leaves_range gm4_tree_data 2
+scoreboard players set fruit_leaves_block_chance gm4_tree_data 3
 
 
 
