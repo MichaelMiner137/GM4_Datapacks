@@ -1,7 +1,7 @@
 # run from TODO
 
 # restock randomizer
-scoreboard players operation restock_check gm4_gv_arborist = current_seed gm4_tree_data 
+scoreboard players operation restock_check gm4_gv_arborist = current_seed gm4_gv_gen_data 
 scoreboard players operation restock_check gm4_gv_arborist %= #10 gm4_gv_math_num 
 function gm4_garden_variety:data/get/next_seed_value
 

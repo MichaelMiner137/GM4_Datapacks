@@ -1,5 +1,6 @@
 {
     "values":[
-        "gm4_natural_trees:fruiting/leaf/validate_species"
+        "gm4_natural_trees:fruiting/leaf/validate_species",
+        "gm4_garden_variety:fruiting/leaf/validate_species"
     ]
 }

@@ -1,6 +1,6 @@
 # generates the tree's leaf layers
 # @s = TREE_TYPE leaf AEC marker
-# run from gm4_garden_variety:generation/methods/palm_tree/trunk
+# run from gm4_garden_variety:generation/trees/palm_tree/trunk
 
 
 

@@ -1,5 +1,5 @@
 scoreboard objectives add gm4_gv_math_num dummy
-scoreboard objectives add gm4_tree_data dummy
+scoreboard objectives add gm4_gv_gen_data dummy
 scoreboard objectives add gm4_tree_type dummy
 scoreboard objectives add gm4_trait_data dummy
 scoreboard objectives add gm4_gv_nbt_data dummy
@@ -11,16 +11,18 @@ scoreboard objectives add gm4_gv_analyze_p dummy
 scoreboard objectives add gm4_gv_job_id dummy
 
 function gm4_garden_variety:init/static_variables
-execute store result score world_seed gm4_tree_data run seed
+function gm4_garden_variety:init/fruit_data
+execute store result score world_seed gm4_gv_gen_data run seed
 
 
 execute unless score garden_variety gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"garden variety"}
 scoreboard players set garden_variety gm4_modules 1
 
 schedule function gm4_garden_variety:clock/tick 11t
-schedule function gm4_garden_variety:clock/1s 12t
-schedule function gm4_garden_variety:clock/3s 13t
-schedule function gm4_garden_variety:clock/10s 14t
+schedule function gm4_garden_variety:clock/16t 12t
+schedule function gm4_garden_variety:clock/1s 13t
+schedule function gm4_garden_variety:clock/3s 14t
+schedule function gm4_garden_variety:clock/10s 15t
 
 #$moduleUpdateList
 

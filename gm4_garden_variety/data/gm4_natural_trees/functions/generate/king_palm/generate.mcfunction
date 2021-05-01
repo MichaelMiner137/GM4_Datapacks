@@ -3,7 +3,7 @@
 # run from gm4_natural_trees:generate/palm_tree/TREE_TYPE/fruiting/tree/generate & gm4_natural_trees:orbis/chunk/generate
 
 # decode
-execute unless score @s gm4_trait_data matches 1.. if score seed_mode gm4_tree_data matches 0 run scoreboard players set @s gm4_trait_data 333321
+execute unless score @s gm4_trait_data matches 1.. if score seed_mode gm4_gv_gen_data matches 0 run scoreboard players set @s gm4_trait_data 333321
 execute if score @s gm4_trait_data matches 1.. run function gm4_garden_variety:data/convert/gv_string_to_scores
 
 # delete sapling

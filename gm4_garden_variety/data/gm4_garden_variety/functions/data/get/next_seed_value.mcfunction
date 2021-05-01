@@ -3,9 +3,11 @@
 # run from #gm4_garden_variety:
 
 # reset seed use
-scoreboard players add seed_uses gm4_tree_data 1
+scoreboard players add seed_uses gm4_gv_gen_data 1
 
 # cycle to next current seed
-scoreboard players operation current_seed gm4_tree_data = seed gm4_tree_data
-scoreboard players operation current_seed gm4_tree_data /= seed_uses gm4_tree_data
+scoreboard players operation current_seed gm4_gv_gen_data = seed gm4_gv_gen_data
+scoreboard players operation current_seed gm4_gv_gen_data *= seed gm4_gv_gen_data
+scoreboard players operation current_seed gm4_gv_gen_data /= seed_uses gm4_gv_gen_data
+
 

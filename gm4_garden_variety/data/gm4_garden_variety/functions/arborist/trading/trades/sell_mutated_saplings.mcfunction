@@ -20,12 +20,12 @@ data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.sell set
 ### modify ###
 
 # pick random trait to modify
-scoreboard players operation random_trait gm4_gv_trades = current_seed gm4_tree_data
+scoreboard players operation random_trait gm4_gv_trades = current_seed gm4_gv_gen_data
 scoreboard players operation random_trait gm4_gv_trades %= #4 gm4_gv_math_num
 function gm4_garden_variety:data/get/next_seed_value
 
 # pick random trait value
-scoreboard players operation random_trait_value gm4_gv_trades = current_seed gm4_tree_data
+scoreboard players operation random_trait_value gm4_gv_trades = current_seed gm4_gv_gen_data
 execute if score random_trait gm4_gv_trades matches 0..2 run scoreboard players operation random_trait_value gm4_gv_trades %= #4 gm4_gv_math_num
 execute if score random_trait gm4_gv_trades matches 3 run scoreboard players operation random_trait_value gm4_gv_trades %= #2 gm4_gv_math_num
 function gm4_garden_variety:data/get/next_seed_value
@@ -52,7 +52,7 @@ data modify storage gm4_garden_variety:data/arborist/next_trade Recipes.sell.tag
 # set buy range
 execute store result score trade_buy_amount_min gm4_gv_trades run data get storage gm4_garden_variety:data/arborist/random_trade_data armor_stand_data.HandItems[0].Count
 execute store result score trade_buy_amount_max gm4_gv_trades run data get storage gm4_garden_variety:data/arborist/random_trade_data armor_stand_data.HandItems[1].Count
-scoreboard players operation trade_buy_amount gm4_gv_trades = current_seed gm4_tree_data
+scoreboard players operation trade_buy_amount gm4_gv_trades = current_seed gm4_gv_gen_data
 scoreboard players operation trade_buy_amount gm4_gv_trades %= trade_buy_amount_max gm4_gv_trades
 scoreboard players operation trade_buy_amount gm4_gv_trades += trade_buy_amount_min gm4_gv_trades
 

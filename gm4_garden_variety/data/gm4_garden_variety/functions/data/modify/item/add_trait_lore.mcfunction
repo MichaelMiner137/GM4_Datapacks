@@ -12,3 +12,5 @@ data modify storage gm4_garden_variety:data/modify Item.tag.display.Lore append 
 data modify storage gm4_garden_variety:data/modify Item.tag.gm4_garden_variety.analyzer.used set value 1b
 # copy storage into item nbt
 data modify entity @s Item set from storage gm4_garden_variety:data/modify Item
+# remove tag
+tag @s remove gm4_gv_add_trait_lore
