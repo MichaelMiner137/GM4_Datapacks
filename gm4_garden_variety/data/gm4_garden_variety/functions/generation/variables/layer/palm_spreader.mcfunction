@@ -4,7 +4,7 @@
 
 
 
-# calculate x rotation offset for each palm (spiral, alternating & random) (math)
+# calculate x rotation offset for each palm (spiral, alternating & random)
 scoreboard players operation leaf_layer_rot_spiral_mod gm4_tree_data = leaf_layer_spiral gm4_tree_data
 scoreboard players operation leaf_layer_rot_spiral_mod gm4_tree_data *= current_leaf_layer gm4_tree_data
 scoreboard players operation leaf_layer_rot_alternate_mod gm4_tree_data = palm_separation gm4_tree_data
@@ -12,9 +12,15 @@ scoreboard players operation leaf_layer_rot_alternate_mod gm4_tree_data /= #2 gm
 scoreboard players operation leaf_layer_rot_alternate_mod gm4_tree_data *= leaf_layer_eoc2 gm4_tree_data
 scoreboard players operation leaf_layer_rot_random_mod gm4_tree_data = current_seed gm4_tree_data
 scoreboard players operation leaf_layer_rot_random_mod gm4_tree_data /= #360 gm4_gv_math_num
+function gm4_garden_variety:data/get/next_seed_value
 
-# apply x rotation offset for each palm (math)
+# get x rotation offset for each palm based on mode
 execute if score leaf_layer_rotation_mode gm4_tree_data matches 0 run scoreboard players operation palm_rot_mod_2 gm4_tree_data = leaf_layer_rot_spiral_mod gm4_tree_data
 execute if score leaf_layer_rotation_mode gm4_tree_data matches 1 run scoreboard players operation palm_rot_mod_2 gm4_tree_data = leaf_layer_rot_alternate_mod gm4_tree_data
 execute if score leaf_layer_rotation_mode gm4_tree_data matches 2 run scoreboard players operation palm_rot_mod_2 gm4_tree_data = leaf_layer_rot_random_mod gm4_tree_data
 
+# get initial x rotation offset for each palm
+scoreboard players operation palm_rot_mod gm4_tree_data = palm_separation gm4_tree_data
+scoreboard players operation palm_rot_mod gm4_tree_data *= palm_spreader_loop gm4_tree_data
+scoreboard players operation palm_rot_mod gm4_tree_data += palm_offet gm4_tree_data
+scoreboard players operation palm_rot_mod gm4_tree_data += palm_rot_mod_2 gm4_tree_data

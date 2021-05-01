@@ -3,7 +3,7 @@
 # run from gm4_garden_variety:generation/methods/palm_tree/leaf_segment
 
 # move forward
-execute at @s run tp @s ~ ~.1 ~
+execute at @s run tp @s ~ ~.5 ~
 
 # loop function until segment_loop hits 0
 scoreboard players remove leaf_segment_loop gm4_tree_data 1

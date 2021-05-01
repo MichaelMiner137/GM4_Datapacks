@@ -6,7 +6,6 @@ scoreboard players operation fruit_success gm4_tree_data %= fruit_leaves_block_c
 function gm4_garden_variety:data/get/next_seed_value
 
 
-
 execute if score fruit_success gm4_tree_data matches 0 run scoreboard players operation fruit_side gm4_tree_data = current_seed gm4_tree_data
 execute if score fruit_success gm4_tree_data matches 0 run scoreboard players operation fruit_side gm4_tree_data %= #4 gm4_gv_math_num
 execute if score fruit_success gm4_tree_data matches 0 run scoreboard players add fruit_side gm4_tree_data 1

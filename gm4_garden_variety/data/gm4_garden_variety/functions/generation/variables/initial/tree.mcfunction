@@ -38,12 +38,18 @@ scoreboard players operation leaf_layers gm4_tree_data += leaf_layers_minimum gm
 execute if score leaf_layers gm4_tree_data = matches 1000.. run scoreboard players set leaf_layers gm4_tree_data 0
 function gm4_garden_variety:data/get/next_seed_value
 
-# layer at which leafs start to generate on the trunk (2)       *implementation varies per tree
+# layer at which leafs start to generate on the trunk
 scoreboard players operation leaf_layer_start gm4_tree_data = current_seed gm4_tree_data
 scoreboard players operation leaf_layer_start gm4_tree_data %= leaf_layer_start_range gm4_tree_data
 scoreboard players operation leaf_layer_start gm4_tree_data += leaf_layer_start_minimum gm4_tree_data
 execute if score leaf_layer_start gm4_tree_data = matches 1000.. run scoreboard players set leaf_layer_start gm4_tree_data 0
 function gm4_garden_variety:data/get/next_seed_value
+
+# trunk layer at which leaves will begin generating
+execute if score leaf_layer_start_side gm4_tree_data matches 1 run scoreboard players operation leaf_start gm4_tree_data = trunk_layers gm4_tree_data
+execute if score leaf_layer_start_side gm4_tree_data matches 1 run scoreboard players operation leaf_start gm4_tree_data -= leaf_layer_start gm4_tree_data
+execute if score leaf_layer_start_side gm4_tree_data matches 1 run scoreboard players add leaf_start gm4_tree_data 1
+execute if score leaf_layer_start_side gm4_tree_data matches 0 run scoreboard players operation leaf_start gm4_tree_data = leaf_layer_start gm4_tree_data
 
 
 

@@ -8,12 +8,11 @@
 
 # debug
 data modify storage gm4_garden_variety:debug/generation path append value "."
-execute if score debug_generation gm4_tree_data matches 1 at @s run particle dragon_breath ~ ~ ~10
 
 # get initial rotation
 execute if score palm_layer_loop gm4_tree_data = palm_layers gm4_tree_data store result score current_palm_y_rot gm4_tree_data run data get entity @s Rotation[1]
 
-# default variables used in other equations
+# update variables for layer
 function gm4_garden_variety:generation/variables/layer/palm
 
 
@@ -21,13 +20,26 @@ function gm4_garden_variety:generation/variables/layer/palm
 
 ########## GENERATION ##########
 
+# generate palm segment and move forward (first half)
+scoreboard players operation palm_segment_loop gm4_tree_data = palm_segments gm4_tree_data
+scoreboard players operation palm_segment_loop gm4_tree_data /= #2 gm4_gv_math_num
+execute at @s run function #gm4_garden_variety:generation/methods/palm_tree/palm_segment
+
 # generate additional features on current layer
 execute at @s run function #gm4_garden_variety:generation/methods/palm_tree/palm_layer
 
-# generate palm segment and move forward
-scoreboard players set leaf_segment_loop gm4_tree_data 10
+# debug
+execute if score debug_generation gm4_tree_data matches 1 at @s run particle dragon_breath ~ ~ ~10
+
+# generate palm segment and move forward (second half)
+scoreboard players operation palm_segment_loop gm4_tree_data = palm_segments gm4_tree_data
+scoreboard players operation palm_segment_loop gm4_tree_data /= #2 gm4_gv_math_num
 execute at @s run function #gm4_garden_variety:generation/methods/palm_tree/palm_segment
-scoreboard players add current_palm_layers gm4_tree_data 1
+scoreboard players add current_palm_layer gm4_tree_data 1
+
+
+
+########## FINALIZE ##########
 
 # modify y rotation
 scoreboard players operation palm_y_rot_mod gm4_tree_data = current_palm_y_rot gm4_tree_data
