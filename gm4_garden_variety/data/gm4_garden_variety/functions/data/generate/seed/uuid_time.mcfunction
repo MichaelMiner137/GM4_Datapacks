@@ -12,3 +12,5 @@ scoreboard players operation seed gm4_tree_data += current_time gm4_gv_arborist
 # copy seed to current seed
 scoreboard players operation current_seed gm4_tree_data = seed gm4_tree_data
 
+# reset seed use
+scoreboard players set seed_uses gm4_tree_data 0

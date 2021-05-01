@@ -1,0 +1,10 @@
+# places fruit leaf
+# run from gm4_natural_trees:generate/king_palm/generation/decoration/fruit_leaf/attempt
+
+# debug
+data modify storage gm4_garden_variety:debug/generation path append value "f"
+
+# place fruit
+scoreboard players remove fruit_leaves gm4_tree_data 1
+setblock ~ ~ ~ birch_leaves keep
+execute positioned ~ ~-1 ~ run function gm4_natural_trees:generate/king_palm/fruiting/leaf/fruit/generate

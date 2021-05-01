@@ -60,7 +60,7 @@ scoreboard players operation current_trunk_y_rot gm4_tree_data = trunk_y_rot_mod
 execute if score current_trunk_y_rot gm4_tree_data > minimum_trunk_arc gm4_tree_data run scoreboard players operation current_trunk_y_rot gm4_tree_data = minimum_trunk_arc gm4_tree_data
 execute store result entity @s Rotation[1] float 1 run scoreboard players get current_trunk_y_rot gm4_tree_data
 
-# loop function until layer_loop hits -1
+# loop function until layer_loop hits 0
 scoreboard players remove trunk_layer_loop gm4_tree_data 1
 execute if score trunk_layer_loop gm4_tree_data matches 0 run kill @s[type=!player]
 execute if score trunk_layer_loop gm4_tree_data matches 1.. run function gm4_garden_variety:generation/methods/palm_tree/trunk

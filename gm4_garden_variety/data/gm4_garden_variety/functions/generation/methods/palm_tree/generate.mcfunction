@@ -18,6 +18,13 @@ scoreboard players operation leaf_layer_loop gm4_tree_data = leaf_layers gm4_tre
 scoreboard players set current_trunk_layer gm4_tree_data 1
 scoreboard players set current_leaf_layer gm4_tree_data 1
 
+# check clearance
+scoreboard players set clearance_check gm4_tree_data 1
+scoreboard players operation clearance_check_loop gm4_tree_data = trunk_layers gm4_tree_data
+execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["gm4_tree_clearance_checker"]}
+execute at @s run tp @e[type=area_effect_cloud,tag=gm4_tree_clearance_checker,limit=1,sort=nearest] @s
+execute at @s run execute as @e[type=area_effect_cloud,tag=gm4_tree_clearance_checker,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/methods/palm_tree/clearance/check
+
 
 
 ########## PRE GENERATION ##########
@@ -34,7 +41,8 @@ scoreboard players set tagged gm4_gv_nbt_data 1
 ########## GENERATION ##########
 
 # begin generation 
-function gm4_garden_variety:generation/methods/palm_tree/trunk
+execute if score clearance_check gm4_tree_data matches 1 run function gm4_garden_variety:generation/methods/palm_tree/trunk
 
-# after generation
+# debug
+execute unless score clearance_check gm4_tree_data matches 1 run data modify storage gm4_garden_variety:debug/generation path append value "Failed"
 tellraw @a[tag=gm4_gv_debug_generation] {"nbt":"path","storage":"gm4_garden_variety:debug/generation","interpret":true}

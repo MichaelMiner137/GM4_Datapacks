@@ -65,3 +65,4 @@ execute if score fertility gm4_gv_nbt_data matches 4 run scoreboard players set 
 execute if score fertility gm4_gv_nbt_data matches 4 run scoreboard players set fruit_leaves_block_chance gm4_tree_data 3
 execute if score fertility gm4_gv_nbt_data matches 4 run scoreboard players add fruit_leaves_minimum gm4_tree_data 1
 execute if score fertility gm4_gv_nbt_data matches 4 run scoreboard players add fruit_leaves_range gm4_tree_data 1
+

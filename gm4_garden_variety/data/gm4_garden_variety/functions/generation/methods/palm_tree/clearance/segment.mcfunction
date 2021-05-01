@@ -1,0 +1,18 @@
+# generate the tree's palm segments (about 1 block)
+# @s = TREE_TYPE palm AEC marker
+# run from gm4_garden_variety:generation/methods/palm_tree/palm_segment
+
+# debug
+execute if score debug_generation gm4_tree_data matches 1 at @s run particle happy_villager
+
+# check blocks
+execute unless block ~ ~ ~ #gm4_fruiting_trees:tree_part run scoreboard players set clearance_check gm4_tree_data 0
+
+# move forward
+execute at @s run tp @s ^ ^ ^.1
+
+# loop function until segment_loop hits 0
+scoreboard players remove clearance_check_segment_loop gm4_tree_data 1
+execute if score clearance_check_segment_loop gm4_tree_data matches 1.. run function gm4_garden_variety:generation/methods/palm_tree/clearance/segment
+
+
