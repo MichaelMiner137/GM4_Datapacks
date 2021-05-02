@@ -30,6 +30,10 @@ scoreboard players operation *encoding gm4_gv_nbt_data = fertility gm4_gv_nbt_da
 scoreboard players operation *encoding gm4_gv_nbt_data *= #100000 gm4_gv_math_num
 scoreboard players operation traits gm4_trait_data += *encoding gm4_gv_nbt_data
 
+scoreboard players operation *encoding gm4_gv_nbt_data = abnormality gm4_gv_nbt_data
+scoreboard players operation *encoding gm4_gv_nbt_data *= #1000000 gm4_gv_math_num
+scoreboard players operation traits gm4_trait_data += *encoding gm4_gv_nbt_data
+
 scoreboard players operation @s gm4_trait_data = traits gm4_trait_data
 
 

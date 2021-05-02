@@ -31,3 +31,7 @@ scoreboard players operation fertility gm4_gv_nbt_data = *decoding gm4_gv_nbt_da
 scoreboard players operation fertility gm4_gv_nbt_data %= #10 gm4_gv_math_num
 scoreboard players operation *decoding gm4_gv_nbt_data /= #10 gm4_gv_math_num
 
+scoreboard players operation abnormality gm4_gv_nbt_data = *decoding gm4_gv_nbt_data
+scoreboard players operation abnormality gm4_gv_nbt_data %= #10 gm4_gv_math_num
+scoreboard players operation *decoding gm4_gv_nbt_data /= #10 gm4_gv_math_num
+
