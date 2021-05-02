@@ -1,5 +1,5 @@
 # generates variables for each palm based on the current seed
-# run from gm4_garden_variety:generation/variables/per_palm
+# run from gm4_garden_variety:generation/trees/variables/per_palm
 
 
 ########## PALM ##########
@@ -33,7 +33,7 @@ execute if score current_leaf_layer gm4_gv_gen_data matches 2 run scoreboard pla
 ########## FINALIZE ##########
 
 # apply trait override variables
-function gm4_natural_trees:generate/king_palm/generation/variables/palm_trait_override
+function gm4_natural_trees:generate/king_palm/generation/trees/variables/palm_trait_override
 
 # convert input variables to generation variables
-function gm4_garden_variety:generation/variables/initial/palm
+function gm4_garden_variety:generation/trees/variables/initial/palm

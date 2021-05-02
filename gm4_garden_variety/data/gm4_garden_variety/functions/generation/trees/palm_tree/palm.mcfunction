@@ -13,7 +13,7 @@ data modify storage gm4_garden_variety:debug/generation path append value "."
 execute if score palm_layer_loop gm4_gv_gen_data = palm_layers gm4_gv_gen_data store result score current_palm_y_rot gm4_gv_gen_data run data get entity @s Rotation[1]
 
 # update variables for layer
-function gm4_garden_variety:generation/variables/layer/palm
+function gm4_garden_variety:generation/trees/variables/layer/palm
 
 
 

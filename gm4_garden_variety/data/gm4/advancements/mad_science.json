@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "cauldron",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Mad Scientist",
+        {"translate": "advancement.gm4.garden_variety.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Obtain a fully Mutated Sapling",
+        {"translate": "advancement.gm4.garden_variety.description"}
+      ],
+      "color": "gray"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "parent": "gm4:discover_mutation",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

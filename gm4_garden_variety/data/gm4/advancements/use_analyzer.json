@@ -1,26 +1,26 @@
 {
   "display": {
     "icon": {
-      "item": "bee_nest",
+      "item": "glass_pane",
       "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Sweet Tree",
+        "Analyzer Go Brrr",
         {"translate": "advancement.gm4.garden_variety.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Grow a tree with a bee nest.",
+        "Use an Analyzer",
         {"translate": "advancement.gm4.garden_variety.description"}
       ],
       "color": "gray"
     }
   },
-  "parent": "gm4:root",
+  "parent": "gm4:encounter_tree",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

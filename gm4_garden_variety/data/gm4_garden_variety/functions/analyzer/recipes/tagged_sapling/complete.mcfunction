@@ -7,7 +7,7 @@
 
 # initialize
 playsound minecraft:block.note_block.bell block @a[distance=..10]
-advancement grant @a[distance=..10] only gm4:analyzer
+advancement grant @a[distance=..10] only gm4:use_analyzer
 data modify block ~ ~ ~ CookTime set value 0s
 tag @s remove gm4_gv_analyzing
 

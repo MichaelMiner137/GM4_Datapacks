@@ -1,26 +1,27 @@
 {
   "display": {
     "icon": {
-      "item": "birch_sapling",
+      "item": "paper",
       "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Getting Tropical",
+        "Something Seems Off...",
         {"translate": "advancement.gm4.garden_variety.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Grow a Palm tree.",
+        "Discover a Mutation",
         {"translate": "advancement.gm4.garden_variety.description"}
       ],
       "color": "gray"
-    }
+    },
+    "frame": "goal"
   },
-  "parent": "gm4:root",
+  "parent": "gm4:use_analyzer",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

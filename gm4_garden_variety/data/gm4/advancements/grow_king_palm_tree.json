@@ -1,26 +1,26 @@
 {
   "display": {
     "icon": {
-      "item": "glass_pane",
+      "item": "birch_sapling",
       "nbt": "{CustomModelData:1}"
     },
     "title": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Analyzer go brrr",
+        "My One And Only",
         {"translate": "advancement.gm4.garden_variety.title"}
       ]
     },
     "description": {
       "translate": "%1$s%3427655$s",
       "with": [
-        "Use an Analyzer on a new sapling.",
+        "Grow a King Palm Tree",
         {"translate": "advancement.gm4.garden_variety.description"}
       ],
       "color": "gray"
     }
   },
-  "parent": "gm4:root",
+  "parent": "gm4:grow_palm_tree",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

@@ -36,16 +36,12 @@ execute if score tagged gm4_gv_nbt_data matches 2 as @e[type=item,distance=..1,l
 # remove tagged nbt
 scoreboard players set tagged gm4_gv_nbt_data 1
 
-# convert soil
-execute if score enable_soil_conversion gm4_gv_gen_data matches 1 run function gm4_garden_variety:generation/soil_conversion/initialize
-
 
 
 ########## GENERATION ##########
 
 # begin generation 
-execute if score clearance_check gm4_gv_gen_data matches 1 run function gm4_garden_variety:generation/trees/palm_tree/trunk
+function gm4_garden_variety:generation/trees/palm_tree/trunk
 
 # debug
-execute unless score clearance_check gm4_gv_gen_data matches 1 run data modify storage gm4_garden_variety:debug/generation path append value "Failed"
 tellraw @a[tag=gm4_gv_debug_generation] {"nbt":"path","storage":"gm4_garden_variety:debug/generation","interpret":true}

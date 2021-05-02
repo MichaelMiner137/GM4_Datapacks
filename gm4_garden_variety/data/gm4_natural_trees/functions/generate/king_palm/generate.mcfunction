@@ -6,6 +6,9 @@
 execute unless score @s gm4_trait_data matches 1.. if score seed_mode gm4_gv_gen_data matches 0 run scoreboard players set @s gm4_trait_data 333321
 execute if score @s gm4_trait_data matches 1.. run function gm4_garden_variety:data/convert/gv_string_to_scores
 
+# advancement
+advancement grant @a[distance=..15] only gm4:grow_king_palm_tree
+
 # delete sapling
 fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings
 

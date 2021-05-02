@@ -14,7 +14,7 @@ execute if score leaf_layer_loop gm4_gv_gen_data = leaf_layers gm4_gv_gen_data a
 execute if score leaf_layer_loop gm4_gv_gen_data = leaf_layers gm4_gv_gen_data at @s store result score current_leaf_y_rot gm4_gv_gen_data run data get entity @s Rotation[1]
 
 # update variables for layer
-function gm4_garden_variety:generation/variables/layer/leaf
+function gm4_garden_variety:generation/trees/variables/layer/leaf
 
 
 

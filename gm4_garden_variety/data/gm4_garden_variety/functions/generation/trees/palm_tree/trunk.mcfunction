@@ -7,7 +7,7 @@
 ########## INITIALIZATION ##########
 
 # give advancement
-advancement grant @a[distance=..15] only gm4:palm_tree
+advancement grant @a[distance=..15] only gm4:grow_palm_tree
 
 # debug
 data modify storage gm4_garden_variety:debug/generation path append value T
@@ -18,7 +18,7 @@ execute if score trunk_layer_loop gm4_gv_gen_data = trunk_layers gm4_gv_gen_data
 execute if score trunk_layer_loop gm4_gv_gen_data = trunk_layers gm4_gv_gen_data run scoreboard players operation current_trunk_y_rot gm4_gv_gen_data = tree_y_rot gm4_gv_gen_data 
 
 # update variables for layer
-function gm4_garden_variety:generation/variables/layer/trunk
+function gm4_garden_variety:generation/trees/variables/layer/trunk
 
 
 

@@ -13,7 +13,7 @@ execute if score debug_generation gm4_gv_gen_data matches 1 at @s positioned ~ ~
 execute if score debug_generation gm4_gv_gen_data matches 1 at @s run particle dolphin ~ ~ ~10 0 0 0 0 1
 
 # update variables for layer
-function gm4_garden_variety:generation/variables/layer/palm_spreader
+function gm4_garden_variety:generation/trees/variables/layer/palm_spreader
 
 
 
