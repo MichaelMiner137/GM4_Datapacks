@@ -9,7 +9,7 @@
 # debug storage
 data remove storage gm4_garden_variety:debug/generation path
 data modify storage gm4_garden_variety:debug/generation path append value "G: "
-execute if score debug_generation gm4_gv_gen_data matches 1 run particle barrier ~ ~.5 ~-7
+execute if score debug_generation gm4_gv_gen_data matches 1 run particle barrier ~ ~ ~-7
 execute if score debug_generation gm4_gv_gen_data matches 1 at @s align xyz positioned ~.5 ~.5 ~.5 run particle barrier ~7 ~ ~
 
 # prepare variables for generation

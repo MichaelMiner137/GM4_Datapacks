@@ -7,4 +7,4 @@ data modify storage gm4_garden_variety:debug/generation path append value "f"
 # place fruit
 scoreboard players remove fruit_leaves gm4_gv_gen_data 1
 setblock ~ ~ ~ birch_leaves keep
-execute positioned ~ ~-1 ~ run function gm4_garden_variety:generation/fruiting/leaves/red_berry/generate
+execute positioned ~ ~-1 ~ run function gm4_garden_variety:generation/fruit_leaves/red_berry/generate

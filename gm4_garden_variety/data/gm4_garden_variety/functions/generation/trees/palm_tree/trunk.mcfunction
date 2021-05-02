@@ -38,7 +38,7 @@ execute if score trunk_layer_loop gm4_gv_gen_data matches 1.. at @s run function
 execute at @s run function #gm4_garden_variety:generation/trees/palm_tree/trunk_layer
 
 # debug
-execute if score debug_generation gm4_gv_gen_data matches 1 at @s run particle barrier ~ ~.5 ~-8
+execute if score debug_generation gm4_gv_gen_data matches 1 at @s run particle barrier ~ ~ ~-8
 execute if score debug_generation gm4_gv_gen_data matches 1 at @s run particle soul_fire_flame ~ ~ ~10 0 0 0 0 1
 execute if score debug_generation gm4_gv_gen_data matches 1 at @s align xyz positioned ~.5 ~.5 ~.5 run particle barrier ~8 ~ ~
 

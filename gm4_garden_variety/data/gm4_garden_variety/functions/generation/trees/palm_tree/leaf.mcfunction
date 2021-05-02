@@ -34,9 +34,9 @@ execute at @s run function #gm4_garden_variety:generation/trees/palm_tree/leaf_s
 execute at @s run function #gm4_garden_variety:generation/trees/palm_tree/leaf_layer
 
 # debug
-execute if score debug_generation gm4_gv_gen_data matches 1 at @s run particle barrier ~ ~.5 ~-9
+execute if score debug_generation gm4_gv_gen_data matches 1 at @s run particle barrier ~ ~ ~-9
 execute if score debug_generation gm4_gv_gen_data matches 1 at @s run particle happy_villager ~ ~ ~10
-execute if score debug_generation gm4_gv_gen_data matches 1 at @s align xyz positioned ~.5 ~.5 ~.5 run particle barrier ~10 ~ ~
+execute if score debug_generation gm4_gv_gen_data matches 1 at @s align xyz positioned ~.5 ~.5 ~.5 run particle barrier ~9 ~ ~
 
 # generate leaf layer and move forward (second half)
 scoreboard players operation leaf_segment_loop gm4_gv_gen_data = leaf_segments gm4_gv_gen_data
