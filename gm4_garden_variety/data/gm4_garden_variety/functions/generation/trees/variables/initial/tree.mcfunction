@@ -74,8 +74,12 @@ execute if score sapling_leaves gm4_gv_gen_data = matches 1000.. run scoreboard 
 function gm4_garden_variety:data/get/next_seed_value
 
 # amount of leaves that may contain fruit
+scoreboard players operation fruit_leaves_success gm4_gv_gen_data = current_seed gm4_gv_gen_data
+scoreboard players operation fruit_leaves_success gm4_gv_gen_data %= fruit_leaves_chance gm4_gv_gen_data
+function gm4_garden_variety:data/get/next_seed_value
 scoreboard players operation fruit_leaves gm4_gv_gen_data = current_seed gm4_gv_gen_data
 scoreboard players operation fruit_leaves gm4_gv_gen_data %= fruit_leaves_range gm4_gv_gen_data
 scoreboard players operation fruit_leaves gm4_gv_gen_data += fruit_leaves_minimum gm4_gv_gen_data
 execute if score fruit_leaves gm4_gv_gen_data = matches 1000.. run scoreboard players set fruit_leaves gm4_gv_gen_data 0
 function gm4_garden_variety:data/get/next_seed_value
+execute unless score fruit_leaves_success gm4_gv_gen_data matches 0 run scoreboard players set fruit_leaves gm4_gv_gen_data 0

@@ -75,10 +75,11 @@ scoreboard players set sapling_leaves_range gm4_gv_gen_data 1
 scoreboard players set sapling_leaves_block_chance gm4_gv_gen_data 10
 
 # amount of leaves that may contain fruit (1, 25%)
+scoreboard players set fruit_leaves_chance gm4_gv_gen_data 4
+scoreboard players set fruit_leaves_minimum gm4_gv_gen_data 1
+scoreboard players set fruit_leaves_range gm4_gv_gen_data 2
 scoreboard players set trunk_fruit_start_height gm4_gv_gen_data 3
-scoreboard players set trunk_fruit_minimum gm4_gv_gen_data 1
-scoreboard players set trunk_fruit_range gm4_gv_gen_data 2
-scoreboard players set trunk_fruit_block_chance gm4_gv_gen_data 3
+scoreboard players set trunk_fruit_block_chance gm4_gv_gen_data 2
 scoreboard players set trunk_fruit_per_layer gm4_gv_gen_data 2
 
 # soil conversion

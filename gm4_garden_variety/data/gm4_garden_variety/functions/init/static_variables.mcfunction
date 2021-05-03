@@ -35,6 +35,7 @@ scoreboard players set #64 gm4_gv_math_num 64
 scoreboard players set #65 gm4_gv_math_num 65
 scoreboard players set #70 gm4_gv_math_num 70
 scoreboard players set #73 gm4_gv_math_num 73
+scoreboard players set #90 gm4_gv_math_num 90
 scoreboard players set #97 gm4_gv_math_num 97
 scoreboard players set #99 gm4_gv_math_num 99
 scoreboard players set #100 gm4_gv_math_num 100

@@ -6,5 +6,5 @@ data modify storage gm4_garden_variety:debug/generation path append value "f"
 
 # place fruit
 scoreboard players remove fruit_leaves gm4_gv_gen_data 1
-execute positioned ~ ~-1 ~ run function #gm4_garden_variety:generation/other_features/trunk_fruit/place
+function #gm4_garden_variety:generation/other_features/trunk_fruit/place
 

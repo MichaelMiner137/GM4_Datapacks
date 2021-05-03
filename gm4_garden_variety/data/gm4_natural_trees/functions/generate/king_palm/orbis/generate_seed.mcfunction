@@ -18,7 +18,7 @@ execute if score structure_debug gm4_orbis_config matches 1 run tellraw @a[gamem
 scoreboard players set seed_mode gm4_gv_gen_data 0
 
 # spawn tree
-function gm4_natural_trees:generate/king_palm/generate
+function gm4_natural_trees:generate/king_palm/generation/initialize
 
 # remove new tree marker (used for targeting of initialize onto freshly spawned AECs that should be grown instantly, e.g. in gm4_garden_variety:chunk/spawn_tree)
 tag @s remove gm4_king_palm_tree_new
