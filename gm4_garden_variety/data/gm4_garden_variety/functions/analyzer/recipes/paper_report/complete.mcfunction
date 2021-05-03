@@ -5,19 +5,7 @@
 
 ##### INITIALIZE #####
 
-# initialize
-playsound minecraft:block.note_block.bell block @a[distance=..10]
-advancement grant @a[distance=..10] only gm4:use_analyzer
-data modify block ~ ~ ~ CookTime set value 0s
-tag @s remove gm4_gv_analyzing
-
-# get trait data
-data modify storage gm4_garden_variety:data/garden_variety_nbt traits set from storage gm4_garden_variety:data/analyzer Items[{Slot:1b}].tag.gm4_garden_variety.traits
-function gm4_garden_variety:data/convert/gv_nbt_to_scores
-
-# copy nbt to storage
-data modify storage gm4_garden_variety:data/analyzer/modify Items set from block ~ ~ ~ Items
-
+function gm4_garden_variety:analyzer/recipes/complete
 
 
 ##### SLOT MODIFICATIONS #####

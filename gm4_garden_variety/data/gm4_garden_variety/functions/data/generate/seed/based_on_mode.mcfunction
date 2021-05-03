@@ -3,9 +3,11 @@
 # run from TODO
 
 # generate seed
-execute if score seed_mode gm4_gv_gen_data matches 0 as @s run function gm4_garden_variety:data/generate/seed/position
-execute if score seed_mode gm4_gv_gen_data matches 1 as @s run function gm4_garden_variety:data/generate/seed/uuid
-execute if score seed_mode gm4_gv_gen_data matches 2 as @s run function gm4_garden_variety:data/generate/seed/uuid_time
+execute if score seed_mode_orbis gm4_gv_gen_data matches 1 as @s run function gm4_garden_variety:data/generate/seed/position
+execute if score seed_mode_sapling gm4_gv_gen_data matches 1 as @s run function gm4_garden_variety:data/generate/seed/uuid_time
+execute if score seed_mode_command gm4_gv_gen_data matches 1 as @s run function gm4_garden_variety:data/generate/seed/position
 
 # reset seed mode
-scoreboard players set seed_mode gm4_gv_gen_data 0
+scoreboard players set seed_mode_orbis gm4_gv_gen_data 0
+scoreboard players set seed_mode_sapling gm4_gv_gen_data 0
+scoreboard players set seed_mode_command gm4_gv_gen_data 0

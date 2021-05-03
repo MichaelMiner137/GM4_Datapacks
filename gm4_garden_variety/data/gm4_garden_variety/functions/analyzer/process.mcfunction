@@ -24,7 +24,7 @@ execute unless data storage gm4_garden_variety:data/analyzer Items[{Slot:2b}] if
 execute unless data storage gm4_garden_variety:data/analyzer Items[{Slot:2b}] if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b,id:"minecraft:book",Count:1b}] if data storage gm4_garden_variety:data/analyzer Items[{Slot:1b}] run function gm4_garden_variety:analyzer/recipes/book_report/analyzing
 execute if score slot_0_amount gm4_gv_analyze >= slot_1_amount gm4_gv_analyze unless data storage gm4_garden_variety:data/analyzer Items[{Slot:2b}] if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b,id:"minecraft:name_tag"}] if data storage gm4_garden_variety:data/analyzer Items[{Slot:1b}].tag.gm4_garden_variety.analyzer{tagged:0b} run function gm4_garden_variety:analyzer/recipes/tagged_sapling/analyzing
 execute unless data storage gm4_garden_variety:data/analyzer Items[{Slot:2b}] if data storage gm4_garden_variety:data/analyzer Items[{Slot:0b,id:"minecraft:shears"}] if data storage gm4_garden_variety:data/analyzer Items[{Slot:1b}].tag.gm4_garden_variety.analyzer{tagged:1b} run function gm4_garden_variety:analyzer/recipes/remove_tag/analyzing
-execute if score @s gm4_gv_analyze_p matches 196.. run function gm4_garden_variety:analyzer/recipes/complete
+
 
 # enable / disable job site
 tag @s remove gm4_gv_disable_job_site

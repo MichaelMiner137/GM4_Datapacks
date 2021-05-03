@@ -18,13 +18,6 @@ scoreboard players operation leaf_layer_loop gm4_gv_gen_data = leaf_layers gm4_g
 scoreboard players set current_trunk_layer gm4_gv_gen_data 1
 scoreboard players set current_leaf_layer gm4_gv_gen_data 1
 
-# check clearance
-#scoreboard players set clearance_check gm4_gv_gen_data 1
-#scoreboard players operation clearance_check_loop gm4_gv_gen_data = trunk_layers gm4_gv_gen_data
-#execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["gm4_tree_clearance_checker"]}
-#execute at @s run tp @e[type=area_effect_cloud,tag=gm4_tree_clearance_checker,limit=1,sort=nearest] @s
-#execute at @s run execute as @e[type=area_effect_cloud,tag=gm4_tree_clearance_checker,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/trees/palm_tree/clearance/check
-
 
 
 ########## PRE GENERATION ##########

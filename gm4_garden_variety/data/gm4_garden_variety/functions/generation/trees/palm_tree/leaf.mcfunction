@@ -22,8 +22,8 @@ function gm4_garden_variety:generation/trees/variables/layer/leaf
 
 # summon palm spreader marker and begin generation
 scoreboard players operation palm_spreader_loop gm4_gv_gen_data = adjusted_palm_amount gm4_gv_gen_data
-execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["gm4_tree_palm_spreader"]}
-execute as @e[type=area_effect_cloud,tag=gm4_tree_palm_spreader,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/trees/palm_tree/palm_spreader
+execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["gm4_tree_palm_spreader_marker"]}
+execute as @e[type=area_effect_cloud,tag=gm4_tree_palm_spreader_marker,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/trees/palm_tree/palm_spreader
 
 # generate leaf layer and move forward (first half)
 scoreboard players operation leaf_segment_loop gm4_gv_gen_data = leaf_segments gm4_gv_gen_data

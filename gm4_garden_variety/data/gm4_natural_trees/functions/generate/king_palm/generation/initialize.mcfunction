@@ -2,31 +2,18 @@
 # @s = TREE_TYPE generation AEC marker
 # run from gm4_natural_trees:generate/king_palm/generation
 
-
-
-# set current tree
-scoreboard players reset * gm4_tree_type
-scoreboard players set king_palm gm4_tree_type 1 
-
-# delete sapling
-fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings
-
-# advancement
-advancement grant @a[distance=..15] only gm4:grow_king_palm_tree
-
-# decode
-execute unless score @s gm4_trait_data matches 1.. if score seed_mode gm4_gv_gen_data matches 0 run scoreboard players set @s gm4_trait_data 1444421
-execute if score @s gm4_trait_data matches 1.. run function gm4_garden_variety:data/convert/gv_string_to_scores
-
 # generate seed
 function gm4_garden_variety:data/generate/seed/based_on_mode
 
 # set tree variables
 function gm4_natural_trees:generate/king_palm/generation/variables/tree_default
 
-# convert soil
-execute if score enable_soil_conversion gm4_gv_gen_data matches 1 run function gm4_garden_variety:generation/soil_conversion/initialize
+# check clearance
+scoreboard players set clearance_check gm4_gv_gen_data 1
+scoreboard players operation clearance_check_loop gm4_gv_gen_data = trunk_layers gm4_gv_gen_data
+execute at @s align xyz positioned ~.5 ~ ~.5 run summon area_effect_cloud ~ ~ ~ {Tags:["gm4_gv_clearance_checker_marker"]}
+execute at @s run execute as @e[type=area_effect_cloud,tag=gm4_gv_clearance_checker_marker,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/clearance_checker/check
 
-# align and begin generation
-execute as @s align xyz positioned ~.5 ~ ~.5 run tp @s ~ ~ ~
-execute as @s at @s run function gm4_garden_variety:generation/trees/palm_tree/generate
+# generate if space is available
+execute if score clearance_check gm4_gv_gen_data matches 1 run function gm4_natural_trees:generate/king_palm/generation/generate
+

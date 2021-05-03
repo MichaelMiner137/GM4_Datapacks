@@ -25,9 +25,9 @@ function gm4_garden_variety:generation/trees/variables/layer/trunk
 ########## GENERATION ##########
 
 # summon leaf marker and begin generation
-execute if score leaf_start gm4_gv_gen_data = current_trunk_layer gm4_gv_gen_data at @s run summon area_effect_cloud ~ ~ ~ {Tags:["gm4_tree_leaf"]}
-execute if score leaf_start gm4_gv_gen_data = current_trunk_layer gm4_gv_gen_data at @s run tp @e[type=area_effect_cloud,tag=gm4_tree_leaf,limit=1,sort=nearest] @s
-execute if score leaf_start gm4_gv_gen_data = current_trunk_layer gm4_gv_gen_data at @s run execute as @e[type=area_effect_cloud,tag=gm4_tree_leaf,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/trees/palm_tree/leaf
+execute if score leaf_start gm4_gv_gen_data = current_trunk_layer gm4_gv_gen_data at @s run summon area_effect_cloud ~ ~ ~ {Tags:["gm4_tree_leaf_marker"]}
+execute if score leaf_start gm4_gv_gen_data = current_trunk_layer gm4_gv_gen_data at @s run tp @e[type=area_effect_cloud,tag=gm4_tree_leaf_marker,limit=1,sort=nearest] @s
+execute if score leaf_start gm4_gv_gen_data = current_trunk_layer gm4_gv_gen_data at @s run execute as @e[type=area_effect_cloud,tag=gm4_tree_leaf_marker,limit=1,sort=nearest] at @s run function gm4_garden_variety:generation/trees/palm_tree/leaf
 
 # generate trunk layer and move forward (first half)
 scoreboard players operation trunk_segment_loop gm4_gv_gen_data = trunk_segments gm4_gv_gen_data

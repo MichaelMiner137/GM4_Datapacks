@@ -5,18 +5,7 @@
 
 ##### INITIALIZE #####
 
-# initialize
-playsound minecraft:block.note_block.bell block @a[distance=..10]
-advancement grant @a[distance=..10] only gm4:use_analyzer
-data modify block ~ ~ ~ CookTime set value 0s
-tag @s remove gm4_gv_analyzing
-
-# get trait data
-data modify storage gm4_garden_variety:data/garden_variety_nbt traits set from storage gm4_garden_variety:data/analyzer Items[{Slot:1b}].tag.gm4_garden_variety.traits
-function gm4_garden_variety:data/convert/gv_nbt_to_scores
-
-# copy nbt to storage
-data modify storage gm4_garden_variety:data/analyzer/modify Items set from block ~ ~ ~ Items
+function gm4_garden_variety:analyzer/recipes/complete
 
 # get amount
 scoreboard players operation slot_0_amount_unused gm4_gv_analyze = slot_0_amount gm4_gv_analyze
@@ -34,10 +23,9 @@ data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:1b}].Slo
 
 ### slot 2 ### (sapling)
 # add spacer and header lore
-data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.display.Lore append value '{"text":"             "}'
 data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.display.Lore append value '{"text":"Name Tag","color":"#CFAE6D","italic":false}'
 # append trait lore
-function gm4_garden_variety:data/get/lore/traits
+function gm4_garden_variety:data/get/lore/name_tag_traits
 data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.display.Lore append from storage gm4_garden_variety:data/trait_lore Lore[]
 # add tagged tag
 data modify storage gm4_garden_variety:data/analyzer/modify Items[{Slot:2b}].tag.gm4_garden_variety.analyzer.tagged set value 1b
