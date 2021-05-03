@@ -22,8 +22,14 @@ execute unless score @s gm4_trait_data matches 1.. run scoreboard players set @s
 execute if score @s gm4_trait_data matches 1.. run function gm4_garden_variety:data/convert/gv_string_to_scores
 
 # convert soil
-execute if score enable_soil_conversion gm4_gv_gen_data matches 1 run function gm4_garden_variety:generation/soil_conversion/initialize
+execute if score enable_soil_conversion gm4_gv_gen_data matches 1 unless score generation_mode_orbis gm4_gv_gen_data matches 1 run function gm4_garden_variety:generation/soil_conversion/initialize
 
 # align and begin generation
 execute as @s align xyz positioned ~.5 ~ ~.5 run tp @s ~ ~ ~
 execute as @s at @s run function gm4_garden_variety:generation/trees/palm_tree/generate
+
+# reset generation mode
+scoreboard players set generation_mode_orbis gm4_gv_gen_data 0
+scoreboard players set generation_mode_sapling gm4_gv_gen_data 0
+scoreboard players set generation_mode_command gm4_gv_gen_data 0
+
