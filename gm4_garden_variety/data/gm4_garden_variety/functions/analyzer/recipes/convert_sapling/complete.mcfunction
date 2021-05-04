@@ -21,15 +21,11 @@ scoreboard players operation slot_0_amount_unused gm4_gv_analyze -= slot_1_amoun
 execute store result block ~ ~ ~ Items[{Slot:0b}].Count byte 1 run scoreboard players get slot_0_amount_unused gm4_gv_analyze
 
 ### slot 1 ### (sapling)
+execute if data block ~ ~ ~ Items[{Slot:1b,id:"minecraft:oak_sapling"}] run loot replace block ~ ~ ~ container.1 loot gm4_natural_trees:items/sapling/wild_oak
+execute store result block ~ ~ ~ Items[{Slot:1b}].Count byte 1 run scoreboard players get slot_1_amount gm4_gv_analyze
+
+### slot 1 ### (sapling)
 # move items from slot 1 to slot 2 (paper)
 data modify block ~ ~ ~ Items[{Slot:1b}].Slot set value 2b
 
-### slot 2 ### (sapling)
-# add spacer and header lore
-data modify block ~ ~ ~ Items[{Slot:2b}].tag.display.Lore append value '{"text":"Name Tag","color":"#CFAE6D","italic":false}'
-# append trait lore
-function gm4_garden_variety:data/get/lore/name_tag_traits
-data modify block ~ ~ ~ Items[{Slot:2b}].tag.display.Lore append from storage gm4_garden_variety:data/trait_lore Lore[]
-# add tagged tag
-data modify block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.analyzer.tagged set value 1b
 

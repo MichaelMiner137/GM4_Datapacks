@@ -4,8 +4,12 @@
 
 ##### INITIALIZE #####
 
-# set output item
-function gm4_garden_variety:analyzer/recipes/complete
+# visuals
+playsound minecraft:block.note_block.snare block @a[distance=..20] ~ ~ ~ 1 0
+particle minecraft:angry_villager ~ ~1 ~
+
+# copy nbt to storage
+data modify block ~ ~ ~ Items set from block ~ ~ ~ Items
 
 
 
@@ -19,9 +23,7 @@ data modify block ~ ~ ~ Items[{Slot:0b}].Slot set value 2b
 # delete all lore
 data remove block ~ ~ ~ Items[{Slot:2b}].tag.display.Lore
 # append trait lore
-function gm4_garden_variety:data/get/lore/traits
-data modify block ~ ~ ~ Items[{Slot:2b}].tag.display.Lore append from storage gm4_garden_variety:data/trait_lore Lore[]
+data modify block ~ ~ ~ Items[{Slot:2b}].tag.display.Lore append value '[{"text":"Error: ","color":"gray","italic":false},{"text":"Traits Disabled","color":"gray","italic":false}]'
 # add used tag
 data modify block ~ ~ ~ Items[{Slot:2b}].tag.gm4_garden_variety.analyzer.used set value 1b
-
 
