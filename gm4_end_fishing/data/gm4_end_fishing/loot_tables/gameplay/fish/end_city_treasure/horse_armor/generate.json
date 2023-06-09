@@ -12,13 +12,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "That's some good barding!",
-                    {
-                      "translate": "text.gm4.end_city_horse_armor.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_horse_armor.1",
+                  "fallback": "That's some good barding!",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -26,7 +21,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:10}"
+              "tag": "{CustomModelData:3420010}"
             }
           ]
         },
@@ -39,24 +34,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "There's a horse somewhere",
-                    {
-                      "translate": "text.gm4.end_city_horse_armor.2.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_horse_armor.2.1",
+                  "fallback": "There's a horse somewhere",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "that lost this armour.",
-                    {
-                      "translate": "text.gm4.end_city_horse_armor.2.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_horse_armor.2.2",
+                  "fallback": "that lost this armour.",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -64,7 +49,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:11}"
+              "tag": "{CustomModelData:3420011}"
             }
           ]
         },
@@ -77,24 +62,14 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Floating horses must be",
-                    {
-                      "translate": "text.gm4.end_city_horse_armor.3.1"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_horse_armor.3.1",
+                  "fallback": "Floating horses must be",
                   "color": "dark_gray",
                   "italic": true
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "a thing somewhere, right?",
-                    {
-                      "translate": "text.gm4.end_city_horse_armor.3.2"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_horse_armor.3.2",
+                  "fallback": "a thing somewhere, right?",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -102,7 +77,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:12}"
+              "tag": "{CustomModelData:3420012}"
             }
           ]
         },
@@ -115,13 +90,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Too bad there's no horse weapons.",
-                    {
-                      "translate": "text.gm4.end_city_horse_armor.4"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_horse_armor.4",
+                  "fallback": "Too bad there's no horse weapons.",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -129,7 +99,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:13}"
+              "tag": "{CustomModelData:3420013}"
             }
           ]
         },
@@ -142,13 +112,8 @@
               "replace": false,
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Made with the finest materials known to man",
-                    {
-                      "translate": "text.gm4.end_city_horse_armor.5"
-                    }
-                  ],
+                  "translate": "text.gm4.end_city_horse_armor.5",
+                  "fallback": "Made with the finest materials known to man",
                   "color": "dark_gray",
                   "italic": true
                 }
@@ -156,7 +121,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:14}"
+              "tag": "{CustomModelData:3420014}"
             }
           ]
         }

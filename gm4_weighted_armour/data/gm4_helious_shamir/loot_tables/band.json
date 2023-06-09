@@ -9,20 +9,15 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:103,SkullOwner:{Name:\"[Drop to Fix Item] gm4_helious_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"helious\"}}"
+                            "tag": "{CustomModelData:3420103,SkullOwner:{Name:\"[Drop to Fix Item] gm4_helious_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"helious\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Helious",
-                                        {
-                                            "translate": "item.gm4.shamir.helious"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.helious",
+                                    "fallback": "Helious",
                                     "italic": false,
                                     "color": "gray"
                                 }

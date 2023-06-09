@@ -28,18 +28,13 @@
           "functions": [
             {
               "function": "set_nbt",
-              "tag": "{CustomModelData:1}"
+              "tag": "{CustomModelData:3420001}"
             },
             {
               "function": "set_name",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Bat Leather",
-                  {
-                    "translate": "item.gm4.bat_leather"
-                  }
-                ],
+                "translate": "item.gm4.bat_leather",
+                "fallback": "Bat Leather",
                 "italic": false
               }
             },
@@ -47,24 +42,14 @@
               "function": "set_lore",
               "lore": [
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "Would make for a very strange,",
-                    {
-                      "translate": "text.gm4.bat_leather.1"
-                    }
-                  ],
+                  "translate": "text.gm4.bat_leather.1",
+                  "fallback": "Would make for a very strange,",
                   "italic": true,
                   "color": "dark_gray"
                 },
                 {
-                  "translate": "%1$s%3427655$s",
-                  "with": [
-                    "very tiny jacket",
-                    {
-                      "translate": "text.gm4.bat_leather.2"
-                    }
-                  ],
+                  "translate": "text.gm4.bat_leather.2",
+                  "fallback": "very tiny jacket",
                   "italic": true,
                   "color": "dark_gray"
                 }
@@ -79,5 +64,29 @@
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "minecraft:entities/bat",
+  "__smithed__": {
+    "rules": [
+      {
+        "type": "smithed:append",
+        "target": "pools",
+        "source": {
+          "type": "smithed:reference",
+          "path": "pools[0]"
+        }
+      },
+      {
+        "type": "smithed:append",
+        "target": "pools",
+        "source": {
+          "type": "smithed:reference",
+          "path": "pools[1]"
+        }
+      }
+    ],
+    "priority": {
+      "default": 0
+    }
+  }
 }

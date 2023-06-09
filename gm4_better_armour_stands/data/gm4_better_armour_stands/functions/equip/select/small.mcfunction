@@ -1,7 +1,10 @@
 # @s = armor_stand to be modified
 # at @s
-# run from pose/select
+# run from equip/select
 
-summon minecraft:rabbit ~ ~.75 ~ {Tags:["gm4_bas_detect_part","gm4_bas_head"],NoAI:1b,Silent:1b,Age:-100000}
-execute positioned ~ ~.5 ~ run summon minecraft:rabbit ^.19 ^ ^ {Tags:["gm4_bas_detect_part","gm4_bas_left_arm"],NoAI:1b,Silent:1b,Age:-100000}
-execute positioned ~ ~.5 ~ run summon minecraft:rabbit ^-.19 ^ ^ {Tags:["gm4_bas_detect_part","gm4_bas_right_arm"],NoAI:1b,Silent:1b,Age:-100000}
+# head
+summon minecraft:area_effect_cloud ~ ~.45 ~ {Radius:.08f,Tags:["gm4_bas_head"],Particle:"item armor_stand"}
+
+# arms
+summon minecraft:area_effect_cloud ^.18 ^ ^ {Radius:.09f,Tags:["gm4_bas_left_arm"],Particle:"item armor_stand"}
+summon minecraft:area_effect_cloud ^-.18 ^ ^ {Radius:.09f,Tags:["gm4_bas_right_arm"],Particle:"item armor_stand"}

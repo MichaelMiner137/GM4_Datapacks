@@ -2,11 +2,14 @@
 # at @s
 # run from advancement zauber_cauldrons:use/wormhole
 
+# compatibility with other modules
+function #gm4_zauber_cauldrons:player/wormhole_targeting/prepare_teleport
+
 # revoke advancement for next teleport
 advancement revoke @s only gm4_zauber_cauldrons:use/wormhole
 
 # detect main or offhand warp and prepare target coordinates in fake players
-execute if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_mainhand run function gm4_zauber_cauldrons:player/wormhole_targeting/read_coordinates/mainhand
+execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_mainhand run function gm4_zauber_cauldrons:player/wormhole_targeting/read_coordinates/mainhand
 execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_offhand run function gm4_zauber_cauldrons:player/wormhole_targeting/read_coordinates/offhand
 scoreboard players reset $read_coordinates gm4_zc_data
 

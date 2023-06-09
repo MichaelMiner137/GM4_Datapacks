@@ -1,11 +1,12 @@
 # @s = armor_stand to be modified
 # at @s
-# run from apply_book
+# run from book/apply
+
+scoreboard players set $valid_code gm4_bas_data 1
 
 # store current pose
-data modify storage gm4_better_armour_stands:temp CurrentPose set value {LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f],LeftLeg:[0f,0f,0f],RightLeg:[0f,0f,0f],Head:[0f,0f,0f],Body:[0f,0f,0f]}
-data modify storage gm4_better_armour_stands:temp Pose set value {LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f],LeftLeg:[0f,0f,0f],RightLeg:[0f,0f,0f],Head:[0f,0f,0f],Body:[0f,0f,0f]}
-data modify storage gm4_better_armour_stands:temp CurrentPose merge from entity @s Pose
+data modify storage gm4_better_armour_stands:temp CurrentPose set from entity @s Pose
+data modify storage gm4_better_armour_stands:temp Pose set from storage gm4_better_armour_stands:default Pose
 
 # copy/mirror poses
 data modify storage gm4_better_armour_stands:temp Pose.LeftArm[0] set from storage gm4_better_armour_stands:temp CurrentPose.RightArm[0]
@@ -26,9 +27,12 @@ execute store result storage gm4_better_armour_stands:temp Pose.RightLeg[1] floa
 execute store result storage gm4_better_armour_stands:temp Pose.Head[1] float -1 run data get storage gm4_better_armour_stands:temp CurrentPose.Head[1]
 execute store result storage gm4_better_armour_stands:temp Pose.Body[1] float -1 run data get storage gm4_better_armour_stands:temp CurrentPose.Body[1]
 
-data modify entity @s Pose merge from storage gm4_better_armour_stands:temp Pose
+# apply pose to armor_stand
+data modify entity @s Pose set from storage gm4_better_armour_stands:temp Pose
 
+# reset storage
 data remove storage gm4_better_armour_stands:temp CurrentPose
+data remove storage gm4_better_armour_stands:temp Pose
 
-tag @s add gm4_bas_valid_code
-advancement grant @p[tag=gm4_bas_active] only gm4:better_armour_stands
+# advancement for customizing armor_stand
+advancement grant @a[tag=gm4_bas_active,limit=1] only gm4:better_armour_stands

@@ -1,30 +1,20 @@
 {
     "display": {
         "icon": {
-            "item": "string",
-            "nbt": "{CustomModelData:1}"
+            "item": "minecraft:tripwire_hook",
+            "nbt": "{CustomModelData:3420001}"
         },
         "title": {
-            "translate": "%1$s%3427655$s",
-            "with": [
-                "Almost a Grappling Hook",
-                {
-                    "translate": "advancement.gm4.crossbow_cartridges_string.title"
-                }
-            ]
+            "translate": "advancement.gm4.crossbow_cartridges_string.title",
+            "fallback": "Almost a Grappling Hook"
         },
         "description": {
-            "translate": "%1$s%3427655$s",
-            "with": [
-                "Create a 40-block long tripwire line using a crossbow",
-                {
-                    "translate": "advancement.gm4.crossbow_cartridges_string.description"
-                }
-            ],
+            "translate": "advancement.gm4.crossbow_cartridges_string.description",
+            "fallback": "Create a 40-block long tripwire circuit using a crossbow",
             "color": "gray"
         }
     },
-    "parent": "gm4:crossbow_cartridges_fish",
+    "parent": "gm4:crossbow_cartridges_bucket",
     "criteria": {
         "shoot_fish": {
             "trigger": "minecraft:impossible"

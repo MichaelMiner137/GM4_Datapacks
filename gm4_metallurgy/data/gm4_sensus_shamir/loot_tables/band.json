@@ -9,20 +9,15 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:101,SkullOwner:{Name:\"[Drop to Fix Item] gm4_sensus_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"sensus\"}}"
+                            "tag": "{CustomModelData:3420101,SkullOwner:{Name:\"[Drop to Fix Item] gm4_sensus_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"sensus\"}}"
                         },
                         {
                             "function": "minecraft:set_lore",
                             "replace": false,
                             "lore": [
                                 {
-                                    "translate": "%1$s%3427655$s",
-                                    "with": [
-                                        "Sensus",
-                                        {
-                                            "translate": "item.gm4.shamir.sensus"
-                                        }
-                                    ],
+                                    "translate": "item.gm4.shamir.sensus",
+                                    "fallback": "Sensus",
                                     "italic": false,
                                     "color": "gray"
                                 }

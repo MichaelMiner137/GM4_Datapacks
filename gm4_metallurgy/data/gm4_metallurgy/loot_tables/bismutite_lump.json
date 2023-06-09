@@ -11,13 +11,8 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "translate": "%1$s%3427655$s",
-                "with": [
-                  "Bismutite Lump",
-                  {
-                    "translate": "item.gm4.metallurgy.bismutite_lump"
-                  }
-                ],
+                "translate": "item.gm4.metallurgy.bismutite_lump",
+                "fallback": "Bismutite Lump",
                 "italic": false,
                 "color": "white"
               }
@@ -28,89 +23,50 @@
               "lore": [
                 [
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      {
-                        "text": "Contains "
-                      }
-                    ],
+                    "translate": "text.gm4.metallurgy.contains",
+                    "fallback":"Contains ",
                     "italic": false,
                     "color": "gray"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "B",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.red"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.red",
+                    "fallback": "B",
                     "italic": false,
                     "color": "#F47989"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "i",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.orange"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.orange",
+                    "fallback": "i",
                     "italic": false,
                     "color": "#F5B478"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "s",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.yellow"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.yellow",
+                    "fallback": "s",
                     "italic": false,
                     "color": "#F5DD79"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "m",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.green"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.green",
+                    "fallback": "m",
                     "italic": false,
                     "color": "#78F4AE"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "u",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.blue"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.blue",
+                    "fallback": "u",
                     "italic": false,
                     "color": "#79D6F5"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "t",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.purple"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.purple",
+                    "fallback": "t",
                     "italic": false,
                     "color": "#8378F5"
                   },
                   {
-                    "translate": "%1$s%3427655$s",
-                    "with": [
-                      "h",
-                      {
-                        "translate": "item.gm4.metallurgy.bismuth.magenta"
-                      }
-                    ],
+                    "translate": "item.gm4.metallurgy.bismuth.magenta",
+                    "fallback": "h",
                     "italic": false,
                     "color": "#D579F5"
                   }
@@ -119,7 +75,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"bismuth\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:17,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/bismuth\",Id:[I;140254582,-1151718614,-1277548307,1366135037],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDM0MzA2MCwKICAicHJvZmlsZUlkIiA6ICI0OWIzODUyNDdhMWY0NTM3YjBmN2MwZTFmMTVjMTc2NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJiY2QyMDMzYzYzZWM0YmY4IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2EwODFiMmY2Nzk3ZDk2YzcxMGYyMjk1YmQ2MGJmYjc3NTE5ZDU4Yzk3NGEwYjM0YjViZDcyZmNkNzc3OTYyMWIiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIzNDBjMGUwM2RkMjRhMTFiMTVhOGIzM2MyYTdlOWUzMmFiYjIwNTFiMjQ4MWQwYmE3ZGVmZDYzNWNhN2E5MzMiCiAgICB9CiAgfQp9\"}]}}}"
+              "tag": "{gm4_metallurgy:{metal:{type:\"bismuth\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420017,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/bismuth\",Id:[I;140254582,-1151718614,-1277548307,1366135037],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTYyOTY4NDM0MzA2MCwKICAicHJvZmlsZUlkIiA6ICI0OWIzODUyNDdhMWY0NTM3YjBmN2MwZTFmMTVjMTc2NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJiY2QyMDMzYzYzZWM0YmY4IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2EwODFiMmY2Nzk3ZDk2YzcxMGYyMjk1YmQ2MGJmYjc3NTE5ZDU4Yzk3NGEwYjM0YjViZDcyZmNkNzc3OTYyMWIiCiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIzNDBjMGUwM2RkMjRhMTFiMTVhOGIzM2MyYTdlOWUzMmFiYjIwNTFiMjQ4MWQwYmE3ZGVmZDYzNWNhN2E5MzMiCiAgICB9CiAgfQp9\"}]}}}"
             }
           ]
         }

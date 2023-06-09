@@ -2,25 +2,19 @@
   "display": {
     "icon": {
       "item": "poisonous_potato",
-      "nbt": "{CustomModelData:1}"
+      "nbt": "{CustomModelData:3420001}"
     },
     "title": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Couch Potato",
-        {"translate": "advancement.gm4.chairs.sit.title"}
-      ]
+      "translate": "advancement.gm4.chairs.sit.title",
+      "fallback": "Couch Potato"
     },
     "description": {
-      "translate": "%1$s%3427655$s",
-      "with": [
-        "Sit for over an hour!",
-        {"translate": "advancement.gm4.chairs.sit.description"}
-      ],
+      "translate": "advancement.gm4.chairs.sit.description",
+      "fallback": "Sit for over an hour!",
       "color": "gray"
     },
-    "frame":"goal",
-    "hidden":true
+    "frame": "goal",
+    "hidden": true
   },
   "parent": "gm4:chairs_creation",
   "criteria": {
