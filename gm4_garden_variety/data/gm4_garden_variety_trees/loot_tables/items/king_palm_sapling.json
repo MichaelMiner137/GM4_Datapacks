@@ -23,7 +23,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_garden_variety:{item:{unset:true}}}"
+                            "tag": "{gm4_garden_variety:{item:{}}}"
                         }
                     ]
                 }

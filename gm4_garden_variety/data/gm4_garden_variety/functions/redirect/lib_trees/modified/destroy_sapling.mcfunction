@@ -9,4 +9,4 @@ data modify storage gm4_garden_variety:temp sapling set from entity @s data.gm4_
 function #gm4_garden_variety:destroy_sapling
 
 # store data
-execute as @e[type=item,nbt={Item:{tag:{gm4_garden_variety:{item:{unset:true}}}}},limit=1,dx=0] run data modify entity @s Item.tag.gm4_garden_variety.item set from storage gm4_garden_variety:temp sapling.item
+execute as @e[type=item,nbt={Item:{tag:{gm4_trees:{item:{id:"sapling"}}}}},limit=1,dx=0,nbt={Age:0s}] run data modify entity @s Item.tag.gm4_garden_variety.item set from storage gm4_garden_variety:temp sapling.item

@@ -23,7 +23,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_garden_variety:{item:{mutations:[{name:\"Height\",variant:\"Tall\",value:1}]}}}"
+                            "tag": "{gm4_garden_variety:{item:{mutations:[{name:\"Height\",variant:\"Tall\"}]}}}"
                         }
                     ]
                 }
