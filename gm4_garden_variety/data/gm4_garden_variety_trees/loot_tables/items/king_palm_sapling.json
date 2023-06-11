@@ -20,6 +20,10 @@
                         {
                             "function": "minecraft:set_nbt",
                             "tag": "{CustomModelData:3420004,gm4_trees:{item:{id:\"sapling\",type:\"king_palm\"}},gm4_podzol_rooting_soil:{id:\"king_palm_sapling\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_garden_variety:{item:{unset:true}}}"
                         }
                     ]
                 }

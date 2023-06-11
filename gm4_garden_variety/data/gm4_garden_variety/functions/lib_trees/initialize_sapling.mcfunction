@@ -1,2 +1,3 @@
 
-execute if score gm4_garden_variety load.status matches 1.. if data storage gm4_trees:temp sapling{type:"king_palm"} run function gm4_garden_variety:trees/king_palm/sapling/initialize
+# check if module loaded, and is from garden variety
+execute if score gm4_garden_variety load.status matches 1.. if data entity @s SelectedItem.tag.gm4_garden_variety run function gm4_garden_variety:lib_trees/modified/initialize_sapling
