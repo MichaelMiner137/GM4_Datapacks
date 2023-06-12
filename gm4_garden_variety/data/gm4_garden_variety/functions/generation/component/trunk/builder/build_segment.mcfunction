@@ -1,7 +1,7 @@
 
 # create placeholder (align)
-setblock ~ ~ ~ oak_wood
-#particle happy_villager
+setblock ~ ~ ~ brown_stained_glass
+particle electric_spark ~ ~ ~3
 
 # move forward
 tp @s ^ ^ ^0.1 ~ ~

@@ -1,5 +1,5 @@
 
-tellraw @p ["",{"text":"Generate: ","color":"dark_aqua"},{"nbt":"component.type","storage":"gm4_garden_variety:temp","color":"gold"}]
+#tellraw @p ["",{"text":"Generate: ","color":"dark_aqua"},{"nbt":"component.type","storage":"gm4_garden_variety:temp","color":"gold"}]
 
 # get data and kill current pointer
 data remove storage gm4_garden_variety:temp pointer
