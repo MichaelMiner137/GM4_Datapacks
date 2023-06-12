@@ -5,6 +5,8 @@
 data remove storage gm4_garden_variety:temp sapling
 data modify storage gm4_garden_variety:temp sapling set from entity @s SelectedItem.tag.gm4_garden_variety
 
+# SOON (remove nametag)
+
 # function tag
 function #gm4_garden_variety:initialize_sapling
 

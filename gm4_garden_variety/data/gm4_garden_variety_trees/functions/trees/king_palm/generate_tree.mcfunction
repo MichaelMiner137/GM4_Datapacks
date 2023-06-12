@@ -1,5 +1,5 @@
 
-say generate king palm
+#say generate king palm
 
-execute if block ~ ~-1 ~ grass_block run setblock ~ ~-1 ~ dirt
+fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings
 kill @s
