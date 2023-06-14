@@ -15,4 +15,4 @@ data remove storage gm4_garden_variety:temp generation
 data modify storage gm4_garden_variety:temp generation set from entity @s data.gm4_garden_variety.item.generation
 
 # generate tree
-function gm4_garden_variety:generation/activate
+function gm4_garden_variety:generation/begin_generation

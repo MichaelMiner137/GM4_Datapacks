@@ -6,10 +6,12 @@ scoreboard objectives add gm4_entity_version dummy
 scoreboard objectives add gm4_garden_variety dummy
 scoreboard objectives add gm4_gv_generation dummy
 scoreboard objectives add gm4_gv_component dummy
+scoreboard objectives add gm4_gv_pointer dummy
 
 # constants
 scoreboard players set #-1 gm4_garden_variety -1
 scoreboard players set #1 gm4_garden_variety 1
+scoreboard players set #2 gm4_garden_variety 2
 scoreboard players set #10 gm4_garden_variety 10
 scoreboard players set #100 gm4_garden_variety 100
 scoreboard players set #360 gm4_garden_variety 360
