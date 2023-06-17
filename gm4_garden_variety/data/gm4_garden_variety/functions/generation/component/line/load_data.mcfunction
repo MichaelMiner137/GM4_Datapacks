@@ -5,51 +5,51 @@ scoreboard players reset * gm4_gv_component
 
 # [ Default Settings ]
 
-#scoreboard players set $pointer.target gm4_gv_component 0
-#scoreboard players reset $pointer.identifier gm4_gv_component
-#scoreboard players reset $pointer.location gm4_gv_component
-#
-#scoreboard players set $length.value gm4_gv_component 8
-#scoreboard players reset $length.min gm4_gv_component
-#scoreboard players reset $length.max gm4_gv_component
-#
-#scoreboard players set $thickness.value gm4_gv_component 1
-#scoreboard players set $thickness.quality gm4_gv_component 4
-#scoreboard players set $thickness.rounded gm4_gv_component 1
-#
-#scoreboard players reset $x.rotation.value gm4_gv_component
-#scoreboard players set $x.rotation.min gm4_gv_component 1
-#scoreboard players set $x.rotation.max gm4_gv_component 360
-#
-#scoreboard players reset $x.bend.value gm4_gv_component
-#scoreboard players reset $x.bend.min gm4_gv_component
-#scoreboard players reset $x.bend.max gm4_gv_component
-#scoreboard players reset $x.bend.freq gm4_gv_component
-#scoreboard players reset $x.bend.dir gm4_gv_component
-#
-#scoreboard players reset $x.curl.value gm4_gv_component
-#scoreboard players reset $x.curl.min gm4_gv_component
-#scoreboard players reset $x.curl.max gm4_gv_component
-#scoreboard players reset $x.curl.freq gm4_gv_component
-#scoreboard players reset $x.curl.start gm4_gv_component
-#scoreboard players reset $x.curl.stop gm4_gv_component
-#
-#scoreboard players set $y.rotation.value gm4_gv_component 90
-#scoreboard players reset $y.rotation.min gm4_gv_component
-#scoreboard players reset $y.rotation.max gm4_gv_component
-#
-#scoreboard players reset $y.bend.value gm4_gv_component
-#scoreboard players set $y.bend.min gm4_gv_component 1
-#scoreboard players set $y.bend.max gm4_gv_component 2
-#scoreboard players set $y.bend.freq gm4_gv_component 1
-#scoreboard players set $y.bend.dir gm4_gv_component 1
-#
-#scoreboard players set $y.curl.value gm4_gv_component 1
-#scoreboard players reset $y.curl.min gm4_gv_component
-#scoreboard players reset $y.curl.max gm4_gv_component
-#scoreboard players set $y.curl.freq gm4_gv_component 1
-#scoreboard players set $y.curl.start gm4_gv_component 4
-#scoreboard players reset $y.curl.stop gm4_gv_component
+scoreboard players set $pointer.target gm4_gv_component 0
+scoreboard players reset $pointer.identifier gm4_gv_component
+scoreboard players reset $pointer.location gm4_gv_component
+
+scoreboard players set $length.value gm4_gv_component 8
+scoreboard players reset $length.min gm4_gv_component
+scoreboard players reset $length.max gm4_gv_component
+
+scoreboard players set $thickness.value gm4_gv_component 1
+scoreboard players set $thickness.quality gm4_gv_component 4
+scoreboard players set $thickness.rounded gm4_gv_component 1
+
+scoreboard players reset $x.rotation.value gm4_gv_component
+scoreboard players set $x.rotation.min gm4_gv_component 1
+scoreboard players set $x.rotation.max gm4_gv_component 360
+
+scoreboard players reset $x.bend.value gm4_gv_component
+scoreboard players reset $x.bend.min gm4_gv_component
+scoreboard players reset $x.bend.max gm4_gv_component
+scoreboard players reset $x.bend.freq gm4_gv_component
+scoreboard players reset $x.bend.dir gm4_gv_component
+
+scoreboard players reset $x.curl.value gm4_gv_component
+scoreboard players reset $x.curl.min gm4_gv_component
+scoreboard players reset $x.curl.max gm4_gv_component
+scoreboard players reset $x.curl.freq gm4_gv_component
+scoreboard players reset $x.curl.start gm4_gv_component
+scoreboard players reset $x.curl.stop gm4_gv_component
+
+scoreboard players set $y.rotation.value gm4_gv_component -90
+scoreboard players reset $y.rotation.min gm4_gv_component
+scoreboard players reset $y.rotation.max gm4_gv_component
+
+scoreboard players reset $y.bend.value gm4_gv_component
+scoreboard players set $y.bend.min gm4_gv_component 1
+scoreboard players set $y.bend.max gm4_gv_component 2
+scoreboard players set $y.bend.freq gm4_gv_component 1
+scoreboard players set $y.bend.dir gm4_gv_component 1
+
+scoreboard players set $y.curl.value gm4_gv_component 1
+scoreboard players reset $y.curl.min gm4_gv_component
+scoreboard players reset $y.curl.max gm4_gv_component
+scoreboard players set $y.curl.freq gm4_gv_component 1
+scoreboard players set $y.curl.start gm4_gv_component 4
+scoreboard players reset $y.curl.stop gm4_gv_component
 
 
 # [ Pointer Settings ]
@@ -132,10 +132,10 @@ execute store success score $pattern.overriden gm4_gv_component if data storage 
 
 # override set values when range values provided
 execute if data storage gm4_garden_variety:reference component.length.min if data storage gm4_garden_variety:reference component.length.min run scoreboard players reset $length.value gm4_gv_component
-execute if data storage gm4_garden_variety:reference component.x.rotation.min if data storage gm4_garden_variety:reference component.x.rotation.min run scoreboard players reset $x.bend.value gm4_gv_component
+execute if data storage gm4_garden_variety:reference component.x.rotation.min if data storage gm4_garden_variety:reference component.x.rotation.min run scoreboard players reset $x.rotation.value gm4_gv_component
 execute if data storage gm4_garden_variety:reference component.x.bend.min if data storage gm4_garden_variety:reference component.x.bend.min run scoreboard players reset $x.bend.value gm4_gv_component
 execute if data storage gm4_garden_variety:reference component.x.curl.min if data storage gm4_garden_variety:reference component.x.curl.min run scoreboard players reset $x.curl.value gm4_gv_component
-execute if data storage gm4_garden_variety:reference component.y.rotation.min if data storage gm4_garden_variety:reference component.y.rotation.min run scoreboard players reset $y.bend.value gm4_gv_component
+execute if data storage gm4_garden_variety:reference component.y.rotation.min if data storage gm4_garden_variety:reference component.y.rotation.min run scoreboard players reset $y.rotation.value gm4_gv_component
 execute if data storage gm4_garden_variety:reference component.y.bend.min if data storage gm4_garden_variety:reference component.y.bend.min run scoreboard players reset $y.bend.value gm4_gv_component
 execute if data storage gm4_garden_variety:reference component.y.curl.min if data storage gm4_garden_variety:reference component.y.curl.min run scoreboard players reset $y.curl.value gm4_gv_component
 

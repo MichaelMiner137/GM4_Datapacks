@@ -7,6 +7,7 @@ scoreboard objectives add gm4_garden_variety dummy
 scoreboard objectives add gm4_gv_generation dummy
 scoreboard objectives add gm4_gv_component dummy
 scoreboard objectives add gm4_gv_pointer dummy
+scoreboard objectives add gm4_gv_placeholder dummy
 
 # constants
 scoreboard players set #-1 gm4_garden_variety -1

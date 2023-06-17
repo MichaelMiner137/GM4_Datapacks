@@ -2,6 +2,8 @@
     "values": [
         "#minecraft:logs",
         "#minecraft:bamboo_blocks",
-        "#gm4_garden_variety:replaceable"
+        "#gm4_garden_variety:replaceable",
+        "minecraft:command_block",
+        "minecraft:repeating_command_block"
     ]
 }

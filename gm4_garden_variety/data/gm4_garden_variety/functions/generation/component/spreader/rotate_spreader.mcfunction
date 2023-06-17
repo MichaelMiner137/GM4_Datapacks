@@ -3,10 +3,10 @@
 execute if score $pattern.overriden gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/pattern/current_value
 
 # set placeholder data
-data remove storage gm4_garden_variety:temp placeholder
-execute store result storage gm4_garden_variety:temp placeholder.current_length int 1 run scoreboard players get #builder.length.left gm4_gv_component
-execute store result storage gm4_garden_variety:temp placeholder.length_left int 1 run scoreboard players get #builder.length.left gm4_gv_component
-execute store result storage gm4_garden_variety:temp placeholder.current_pattern int 1 run scoreboard players get #builder.current_pattern gm4_gv_component
+data remove storage gm4_garden_variety:new placeholder
+execute store result storage gm4_garden_variety:new placeholder.current_length int 1 run scoreboard players get #builder.length.left gm4_gv_component
+execute store result storage gm4_garden_variety:new placeholder.length_left int 1 run scoreboard players get #builder.length.left gm4_gv_component
+execute store result storage gm4_garden_variety:new placeholder.current_pattern int 1 run scoreboard players get #builder.current_pattern gm4_gv_component
 
 # build segment
 execute unless score $thickness.quality gm4_gv_component matches 2..6 run scoreboard players set #builder.segment.left gm4_gv_component 1
