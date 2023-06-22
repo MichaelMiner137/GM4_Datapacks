@@ -9,12 +9,12 @@ execute store result storage gm4_garden_variety:new placeholder.length_left int 
 execute store result storage gm4_garden_variety:new placeholder.current_pattern int 1 run scoreboard players get #builder.current_pattern gm4_gv_component
 
 # build segment
-execute unless score $thickness.quality gm4_gv_component matches 2..6 run scoreboard players set #builder.segment.left gm4_gv_component 1
-execute if score $thickness.quality gm4_gv_component matches 2 run scoreboard players set #builder.segment.left gm4_gv_component 2
-execute if score $thickness.quality gm4_gv_component matches 3 run scoreboard players set #builder.segment.left gm4_gv_component 3
-execute if score $thickness.quality gm4_gv_component matches 4 run scoreboard players set #builder.segment.left gm4_gv_component 5
-execute if score $thickness.quality gm4_gv_component matches 5 run scoreboard players set #builder.segment.left gm4_gv_component 10
-execute if score $thickness.quality gm4_gv_component matches 6 run scoreboard players set #builder.segment.left gm4_gv_component 20
+execute unless score $placeholder.quality gm4_gv_component matches 2..6 run scoreboard players set #builder.segment.left gm4_gv_component 1
+execute if score $placeholder.quality gm4_gv_component matches 2 run scoreboard players set #builder.segment.left gm4_gv_component 2
+execute if score $placeholder.quality gm4_gv_component matches 3 run scoreboard players set #builder.segment.left gm4_gv_component 3
+execute if score $placeholder.quality gm4_gv_component matches 4 run scoreboard players set #builder.segment.left gm4_gv_component 5
+execute if score $placeholder.quality gm4_gv_component matches 5 run scoreboard players set #builder.segment.left gm4_gv_component 10
+execute if score $placeholder.quality gm4_gv_component matches 6 run scoreboard players set #builder.segment.left gm4_gv_component 20
 execute at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment
 
 # modify rotation and update

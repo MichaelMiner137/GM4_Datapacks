@@ -13,9 +13,10 @@ scoreboard players set $length.value gm4_gv_component 8
 scoreboard players reset $length.min gm4_gv_component
 scoreboard players reset $length.max gm4_gv_component
 
-scoreboard players set $thickness.value gm4_gv_component 1
-scoreboard players set $thickness.quality gm4_gv_component 4
-scoreboard players set $thickness.rounded gm4_gv_component 1
+scoreboard players set $placeholder.identifier gm4_gv_component 99
+scoreboard players set $placeholder.thickness gm4_gv_component 1
+scoreboard players set $placeholder.quality gm4_gv_component 4
+scoreboard players set $placeholder.rounded gm4_gv_component 1
 
 scoreboard players reset $x.rotation.value gm4_gv_component
 scoreboard players set $x.rotation.min gm4_gv_component 1
@@ -74,9 +75,10 @@ execute if data storage gm4_garden_variety:reference component.length.value stor
 execute if data storage gm4_garden_variety:reference component.length.min store result score $length.min gm4_gv_component run data get storage gm4_garden_variety:reference component.length.min
 execute if data storage gm4_garden_variety:reference component.length.max store result score $length.max gm4_gv_component run data get storage gm4_garden_variety:reference component.length.max
 
-execute if data storage gm4_garden_variety:reference component.thickness.value store result score $thickness.value gm4_gv_component run data get storage gm4_garden_variety:reference component.thickness.value
-execute if data storage gm4_garden_variety:reference component.thickness.quality store result score $thickness.quality gm4_gv_component run data get storage gm4_garden_variety:reference component.thickness.quality
-execute if data storage gm4_garden_variety:reference component.thickness.rounded store result score $thickness.rounded gm4_gv_component run data get storage gm4_garden_variety:reference component.thickness.rounded
+execute if data storage gm4_garden_variety:reference component.placeholder.identifier store result score $placeholder.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.identifier
+execute if data storage gm4_garden_variety:reference component.placeholder.thickness store result score $placeholder.thickness gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.thickness
+execute if data storage gm4_garden_variety:reference component.placeholder.quality store result score $placeholder.quality gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.quality
+execute if data storage gm4_garden_variety:reference component.placeholder.rounded store result score $placeholder.rounded gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.rounded
 
 execute if data storage gm4_garden_variety:reference component.x.rotation.value store result score $x.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference component.x.rotation.value
 execute if data storage gm4_garden_variety:reference component.x.rotation.min store result score $x.rotation.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.rotation.min
@@ -121,7 +123,7 @@ execute if data storage gm4_garden_variety:reference component.pattern.list stor
 execute store success score $target.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.target
 execute store success score $pointer.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.pointer
 execute store success score $length.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.length
-execute store success score $thickness.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.thickness
+execute store success score $placeholder.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.placeholder
 execute store success score $x.rotation.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.x.rotation
 execute store success score $x.bend.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.x.bend
 execute store success score $x.curl.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.x.curl

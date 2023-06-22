@@ -8,12 +8,12 @@ scoreboard players operation #builder.x.bend.direction gm4_gv_component = $x.ben
 scoreboard players operation #builder.y.bend.direction gm4_gv_component = $y.bend.direction gm4_gv_component
 
 # set segment length
-execute unless score $thickness.quality gm4_gv_component matches 2..6 run scoreboard players set #builder.segment.set gm4_gv_component 1
-execute if score $thickness.quality gm4_gv_component matches 2 run scoreboard players set #builder.segment.set gm4_gv_component 2
-execute if score $thickness.quality gm4_gv_component matches 3 run scoreboard players set #builder.segment.set gm4_gv_component 3
-execute if score $thickness.quality gm4_gv_component matches 4 run scoreboard players set #builder.segment.set gm4_gv_component 5
-execute if score $thickness.quality gm4_gv_component matches 5 run scoreboard players set #builder.segment.set gm4_gv_component 10
-execute if score $thickness.quality gm4_gv_component matches 6 run scoreboard players set #builder.segment.set gm4_gv_component 20
+execute unless score $placeholder.quality gm4_gv_component matches 2..6 run scoreboard players set #builder.segment.set gm4_gv_component 1
+execute if score $placeholder.quality gm4_gv_component matches 2 run scoreboard players set #builder.segment.set gm4_gv_component 2
+execute if score $placeholder.quality gm4_gv_component matches 3 run scoreboard players set #builder.segment.set gm4_gv_component 3
+execute if score $placeholder.quality gm4_gv_component matches 4 run scoreboard players set #builder.segment.set gm4_gv_component 5
+execute if score $placeholder.quality gm4_gv_component matches 5 run scoreboard players set #builder.segment.set gm4_gv_component 10
+execute if score $placeholder.quality gm4_gv_component matches 6 run scoreboard players set #builder.segment.set gm4_gv_component 20
 
 # build
 scoreboard players operation #builder.length.left gm4_gv_component = $length.value gm4_gv_component

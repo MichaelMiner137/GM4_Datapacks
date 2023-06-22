@@ -15,6 +15,8 @@ execute if score #builder.facing.abs gm4_gv_component matches ..-1 run scoreboar
 
 # set placeholder data
 data remove storage gm4_garden_variety:new placeholder
+execute store result storage gm4_garden_variety:new placeholder.identifier int 1 run scoreboard players get $placeholder.identifier gm4_gv_component
+execute store result storage gm4_garden_variety:new placeholder.seed int 1 run scoreboard players get $sub_seed gm4_gv_generation
 execute store result storage gm4_garden_variety:new placeholder.current_length int 1 run scoreboard players get #builder.length.left gm4_gv_component
 execute store result storage gm4_garden_variety:new placeholder.length_left int 1 run scoreboard players get #builder.length.left gm4_gv_component
 execute store result storage gm4_garden_variety:new placeholder.current_pattern int 1 run scoreboard players get #builder.current_pattern gm4_gv_component

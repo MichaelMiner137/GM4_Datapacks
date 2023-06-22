@@ -5,20 +5,9 @@ function gm4_garden_variety:generation/placeholder/load_data
 # placed block tracker
 scoreboard players set $placed_block gm4_gv_placeholder 0
 
-# stripped_mangrove_log
-execute if score $placed_block gm4_gv_placeholder matches 0 store success score $placed_block gm4_gv_placeholder if score $axis gm4_gv_placeholder matches 1 if score $surrounded gm4_gv_placeholder matches 1 run setblock ~ ~ ~ stripped_mangrove_log[axis=y]
-execute if score $placed_block gm4_gv_placeholder matches 0 store success score $placed_block gm4_gv_placeholder if score $axis gm4_gv_placeholder matches 2 if score $surrounded gm4_gv_placeholder matches 1 run setblock ~ ~ ~ stripped_mangrove_log[axis=z]
-execute if score $placed_block gm4_gv_placeholder matches 0 store success score $placed_block gm4_gv_placeholder if score $axis gm4_gv_placeholder matches 3 if score $surrounded gm4_gv_placeholder matches 1 run setblock ~ ~ ~ stripped_mangrove_log[axis=x]
-
-# mangrove_log
-execute if score $placed_block gm4_gv_placeholder matches 0 store success score $placed_block gm4_gv_placeholder if score $axis gm4_gv_placeholder matches 1 if score $capped gm4_gv_placeholder matches 1 run setblock ~ ~ ~ mangrove_log[axis=y]
-execute if score $placed_block gm4_gv_placeholder matches 0 store success score $placed_block gm4_gv_placeholder if score $axis gm4_gv_placeholder matches 2 if score $capped gm4_gv_placeholder matches 1 run setblock ~ ~ ~ mangrove_log[axis=z]
-execute if score $placed_block gm4_gv_placeholder matches 0 store success score $placed_block gm4_gv_placeholder if score $axis gm4_gv_placeholder matches 3 if score $capped gm4_gv_placeholder matches 1 run setblock ~ ~ ~ mangrove_log[axis=x]
-
-# mangrove_wood
-execute if score $placed_block gm4_gv_placeholder matches 0 store success score $placed_block gm4_gv_placeholder if score $axis gm4_gv_placeholder matches 1 run setblock ~ ~ ~ mangrove_wood[axis=y]
-execute if score $placed_block gm4_gv_placeholder matches 0 store success score $placed_block gm4_gv_placeholder if score $axis gm4_gv_placeholder matches 2 run setblock ~ ~ ~ mangrove_wood[axis=z]
-execute if score $placed_block gm4_gv_placeholder matches 0 store success score $placed_block gm4_gv_placeholder if score $axis gm4_gv_placeholder matches 3 run setblock ~ ~ ~ mangrove_wood[axis=x]
+# trunk
+execute if score $identifier gm4_gv_placeholder matches 1 run function gm4_garden_variety_trees:trees/king_palm/placeholder/1
+execute if score $identifier gm4_gv_placeholder matches 2 run function gm4_garden_variety_trees:trees/king_palm/placeholder/2
 
 # kill marker
 kill @s
