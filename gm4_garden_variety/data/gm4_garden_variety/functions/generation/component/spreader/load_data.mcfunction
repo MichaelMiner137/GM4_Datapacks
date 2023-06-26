@@ -1,45 +1,42 @@
 
-# pointer data
-data remove storage gm4_garden_variety:reference pointer_raw
-data modify storage gm4_garden_variety:reference pointer_raw set from entity @s
-data remove storage gm4_garden_variety:reference pointer
-data modify storage gm4_garden_variety:reference pointer set from entity @s data.gm4_garden_variety.pointer
-
 # reset
 scoreboard players reset * gm4_gv_component
 
-# [ Load ]
 
-execute store result score $pattern.length gm4_gv_component run data get storage gm4_garden_variety:reference component.pattern.list
+# [ Default Settings]
 
-# [ Flags ]
+#scoreboard players set $pointer.identifier gm4_gv_component -1
+#scoreboard players set $diverge.x gm4_gv_component 0
+#scoreboard players set $diverge.y gm4_gv_component 0
+#scoreboard players set $flip.x gm4_gv_component 0
+#scoreboard players set $flip.y gm4_gv_component 0
 
-# overidden
-execute store success score $pattern.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.pattern
 
-# static
-execute store success score $length.static gm4_gv_component if data storage gm4_garden_variety:reference component.length.value
-execute store success score $x.rotation.static gm4_gv_component if data storage gm4_garden_variety:reference component.x.rotation.value
-execute store success score $x.bend.static gm4_gv_component if data storage gm4_garden_variety:reference component.x.bend.value
-execute store success score $x.curl.static gm4_gv_component if data storage gm4_garden_variety:reference component.x.curl.value
-execute store success score $y.rotation.static gm4_gv_component if data storage gm4_garden_variety:reference component.y.rotation.value
-execute store success score $y.bend.static gm4_gv_component if data storage gm4_garden_variety:reference component.y.bend.value
-execute store success score $y.curl.static gm4_gv_component if data storage gm4_garden_variety:reference component.y.curl.value
+# [ Pointer Settings ]
+
+# pointer data
+data remove storage gm4_garden_variety:reference pointer
+data modify storage gm4_garden_variety:reference pointer set from entity @s data.gm4_garden_variety.pointer
+
+#execute store result score #pointer.x.rotation gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.rotation
+#execute store result score #pointer.y.rotation gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.rotation
+#execute store result score #pointer.x.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.bend.direction
+#execute store result score #pointer.y.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.bend.direction
+
+
+# [ Sapling Settings ]
+
+#execute if data storage gm4_garden_variety:reference component.pointer.identifier store result score $pointer.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.identifier
+#execute if data storage gm4_garden_variety:reference component.diverge.x store result score $diverge.x gm4_gv_component run data get storage gm4_garden_variety:reference component.diverge.x
+#execute if data storage gm4_garden_variety:reference component.diverge.y store result score $diverge.y gm4_gv_component run data get storage gm4_garden_variety:reference component.diverge.y
+#execute if data storage gm4_garden_variety:reference component.flip.x store result score $flip.x gm4_gv_component run data get storage gm4_garden_variety:reference component.flip.x
+#execute if data storage gm4_garden_variety:reference component.flip.y store result score $flip.y gm4_gv_component run data get storage gm4_garden_variety:reference component.flip.y
+
 
 # [ Interpret ]
 
-# generate static values
-execute unless score $length.static gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/calc/length
-execute unless score $x.rotation.static gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/calc/x_rotation
-execute unless score $y.rotation.static gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/calc/y_rotation
-
-# set random bend direction
-execute if score $x.bend.direction gm4_gv_component matches 0 if data storage gm4_garden_variety:reference component.x.bend.direction run function gm4_garden_variety:generation/component/line/calc/x_bend_dir
-execute if score $y.bend.direction gm4_gv_component matches 0 if data storage gm4_garden_variety:reference component.y.bend.direction run function gm4_garden_variety:generation/component/line/calc/y_bend_dir
-
-# [ Pointer Data ]
-
-execute unless score $x.rotation.overriden gm4_gv_component matches 1 store result score $x.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.rotation
-execute unless score $y.rotation.overriden gm4_gv_component matches 1 store result score $y.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.rotation
-execute unless data storage gm4_garden_variety:reference component.x.bend.direction store result score $x.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.bend.direction
-execute unless data storage gm4_garden_variety:reference component.y.bend.direction store result score $y.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.bend.direction
+# diverge / flip
+#execute if score $flip.x gm4_gv_component matches 1 run scoreboard players add #pointer.x.rotation gm4_gv_component 180
+#execute if score $flip.y gm4_gv_component matches 1 run scoreboard players operation #pointer.y.rotation gm4_gv_component *= #-1 gm4_garden_variety
+#execute if score $diverge.x gm4_gv_component matches 1 run scoreboard players operation #pointer.x.bend.direction gm4_gv_component *= #-1 gm4_garden_variety
+#execute if score $diverge.y gm4_gv_component matches 1 run scoreboard players operation #pointer.y.bend.direction gm4_gv_component *= #-1 gm4_garden_variety

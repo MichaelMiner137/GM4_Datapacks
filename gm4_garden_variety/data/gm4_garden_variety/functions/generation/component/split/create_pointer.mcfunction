@@ -11,4 +11,4 @@ execute store result storage gm4_garden_variety:new pointer.x.bend.direction int
 execute store result storage gm4_garden_variety:new pointer.y.bend.direction int 1 run scoreboard players get #pointer.y.bend.direction gm4_gv_component
 
 # store data
-execute as @e[type=marker,tag=gm4_gv_generation_pointer,distance=..0.1,tag=gm4_gv_new] run function gm4_garden_variety:generation/component/split/pointer/new_pointer
+execute as @e[type=marker,tag=gm4_gv_generation_pointer,distance=..0.1,tag=gm4_gv_new] run function gm4_garden_variety:generation/pointer/new_pointer

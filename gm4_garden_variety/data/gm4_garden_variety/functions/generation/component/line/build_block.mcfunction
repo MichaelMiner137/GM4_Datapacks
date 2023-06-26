@@ -44,8 +44,8 @@ scoreboard players add #builder.length.current gm4_gv_component 1
 #tellraw @p [{"score":{"name":"$pointer.overriden","objective":"gm4_gv_component"}},"  >  ",{"score":{"name":"#builder.length.left","objective":"gm4_gv_component"}}," = ",{"score":{"name":"$pointer.location","objective":"gm4_gv_component"}}]
 
 # pointer
-execute if score $pointer.overriden gm4_gv_component matches 1 if score #builder.length.current gm4_gv_component = $pointer.location gm4_gv_component if data storage gm4_garden_variety:reference component.pointer{method:"forwards"} positioned ^ ^ ^1 run function gm4_garden_variety:generation/component/line/pointer/create
-execute if score $pointer.overriden gm4_gv_component matches 1 if score #builder.length.left gm4_gv_component = $pointer.location gm4_gv_component if data storage gm4_garden_variety:reference component.pointer{method:"backwards"} positioned ^ ^ ^1 run function gm4_garden_variety:generation/component/line/pointer/create
+execute if score $pointer.overriden gm4_gv_component matches 1 if score #builder.length.current gm4_gv_component = $pointer.location gm4_gv_component if data storage gm4_garden_variety:reference component.pointer{method:"forwards"} positioned ^ ^ ^1 run function gm4_garden_variety:generation/component/line/create_pointer
+execute if score $pointer.overriden gm4_gv_component matches 1 if score #builder.length.left gm4_gv_component = $pointer.location gm4_gv_component if data storage gm4_garden_variety:reference component.pointer{method:"backwards"} positioned ^ ^ ^1 run function gm4_garden_variety:generation/component/line/create_pointer
 
 # loop
 execute if score #builder.length.left gm4_gv_component matches 1.. at @s if block ~ ~ ~ #gm4_garden_variety:passthrough rotated as @s run function gm4_garden_variety:generation/component/line/build_block
