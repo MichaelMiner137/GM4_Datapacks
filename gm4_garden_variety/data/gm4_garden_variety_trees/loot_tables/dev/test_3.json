@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:birch_sapling",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.gm4.king_palm_sapling",
+                                "fallback": "King Palm Sapling",
+                                "italic": false,
+                                "color": "white"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:3420004,gm4_trees:{item:{id:\"sapling\",type:\"king_palm\"}},gm4_podzol_rooting_soil:{id:\"king_palm_sapling\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_garden_variety:{item:{mutations:[{name:\"Height\",variant:\"Tall\"}]}}}"
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{gm4_garden_variety:{item:{generation:{components:[{type:\"trunk\",target:0,pointer:{identifier:1,method:\"backwards\",location:0},placeholder:{identifier:1,thickness:4,quality:5,rounded:true},length:{value:10},x:{rotation:{min:1,max:360},bend:{min:10,max:14,frequency:1,direction:0}},y:{rotation:{min:45,max:50},bend:{min:1,max:3,frequency:3,direction:-1}}},{type:\"split\",target:1,pointer:{identifier:11},diverge:{x:true,y:true}},{type:\"trunk\",target:1,pointer:{identifier:2,method:\"backwards\",location:0},placeholder:{identifier:1,thickness:3,quality:5,rounded:true},length:{value:10},x:{bend:{min:8,max:12,frequency:1}},y:{bend:{min:2,max:3,frequency:1,direction:1}}},{type:\"split\",target:2,pointer:{identifier:11},diverge:{x:true,y:false}},{type:\"trunk\",target:2,pointer:{identifier:3,method:\"backwards\",location:0},placeholder:{identifier:1,thickness:2,quality:5,rounded:true},length:{value:10},x:{bend:{min:8,max:12,frequency:1}},y:{bend:{min:2,max:3,frequency:1}}},{type:\"split\",target:3,pointer:{identifier:12},diverge:{x:true,y:false}},{type:\"trunk\",target:3,pointer:{identifier:21,method:\"backwards\",location:0},placeholder:{identifier:1,thickness:1,quality:5,rounded:true},length:{value:10},x:{bend:{min:8,max:10,frequency:1}},y:{bend:{min:1,max:2,frequency:1}}},{type:\"trunk\",target:12,pointer:{identifier:21,method:\"backwards\",location:0},placeholder:{identifier:1,thickness:1,quality:5,rounded:true},length:{value:10},x:{bend:{min:8,max:12,frequency:1}},y:{bend:{min:1,max:2,frequency:2},curl:{min:1,max:2,frequency:2}}},{type:\"trunk\",target:11,pointer:{identifier:21,method:\"backwards\",location:0},placeholder:{identifier:1,thickness:1,quality:5,rounded:true},length:{value:10},x:{bend:{min:8,max:12,frequency:1}},y:{bend:{min:1,max:2,frequency:2},curl:{min:1,max:2,frequency:2}}},{type:\"trunk\",target:21,pointer:{identifier:22,method:\"backwards\",location:0},placeholder:{identifier:1,thickness:1,quality:5,rounded:true},length:{value:10},x:{bend:{min:8,max:12,frequency:1},curl:{min:1,max:2,frequency:1}},y:{bend:{min:2,max:4,frequency:1,direction:-1},curl:{min:1,max:2,frequency:1}}}]}}}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
