@@ -1,169 +1,121 @@
 
-# reset
-scoreboard players reset * gm4_gv_component
+# forced
+execute unless data storage gm4_garden_variety:reference component.length.value run scoreboard players set $length.value gm4_gv_component 8
+
+# static
+execute if data storage gm4_garden_variety:reference component.pointer.begin.identifier store result score $pointer.begin.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.identifier
+execute if data storage gm4_garden_variety:reference component.pointer.begin.offset store result score $pointer.begin.offset gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.offset
+execute if data storage gm4_garden_variety:reference component.pointer.middle.identifier store result score $pointer.middle.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.middle.identifier
+execute if data storage gm4_garden_variety:reference component.pointer.middle.offset store result score $pointer.middle.offset gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.middle.offset
+execute if data storage gm4_garden_variety:reference component.pointer.end.identifier store result score $pointer.end.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.end.identifier
+execute if data storage gm4_garden_variety:reference component.pointer.end.offset store result score $pointer.end.offset gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.end.offset
+execute if data storage gm4_garden_variety:reference component.pointer.fill.identifier store result score $pointer.fill.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.identifier
+execute if data storage gm4_garden_variety:reference component.pointer.fill.start store result score $pointer.fill.start gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.start
+execute if data storage gm4_garden_variety:reference component.pointer.fill.stop store result score $pointer.fill.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.stop
+execute if data storage gm4_garden_variety:reference component.placeholder.identifier store result score $placeholder.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.identifier
+execute if data storage gm4_garden_variety:reference component.placeholder.thickness store result score $placeholder.thickness gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.thickness
+execute if data storage gm4_garden_variety:reference component.placeholder.quality store result score $placeholder.quality gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.quality
+execute if data storage gm4_garden_variety:reference component.placeholder.rounded store result score $placeholder.rounded gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.rounded
+execute if data storage gm4_garden_variety:reference component.placeholder.group store result score $placeholder.group gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.group
+execute if data storage gm4_garden_variety:reference component.length.value store result score $length.value gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value
+execute if data storage gm4_garden_variety:reference component.x.rotation.value store result score $x.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference component.x.rotation.value 100
+execute if data storage gm4_garden_variety:reference component.x.bend.value store result score $x.bend.value gm4_gv_component run data get storage gm4_garden_variety:reference component.x.bend.value 100
+execute if data storage gm4_garden_variety:reference component.x.bend.force_direction store result score $x.bend.force_direction gm4_gv_component run data get storage gm4_garden_variety:reference component.x.bend.force_direction
+execute if data storage gm4_garden_variety:reference component.x.curl.value store result score $x.curl.value gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.value 100
+execute if data storage gm4_garden_variety:reference component.x.curl.start store result score $x.curl.start gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.start
+execute if data storage gm4_garden_variety:reference component.x.curl.stop store result score $x.curl.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.stop
+execute if data storage gm4_garden_variety:reference component.y.rotation.value store result score $y.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference component.y.rotation.value 100
+execute if data storage gm4_garden_variety:reference component.y.bend.value store result score $y.bend.value gm4_gv_component run data get storage gm4_garden_variety:reference component.y.bend.value 100
+execute if data storage gm4_garden_variety:reference component.y.bend.random_direction store result score $y.bend.random_direction gm4_gv_component run data get storage gm4_garden_variety:reference component.y.bend.random_direction
+execute if data storage gm4_garden_variety:reference component.y.curl.value store result score $y.curl.value gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.value 100
+execute if data storage gm4_garden_variety:reference component.y.curl.start store result score $y.curl.start gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.start
+execute if data storage gm4_garden_variety:reference component.y.curl.stop store result score $y.curl.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.stop
 
 
-# [ Default Settings ]
+# dynamic
+execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.min store result score $pointer.begin.offset.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.offset.min
+execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.max store result score $pointer.begin.offset.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.offset.max
+execute if data storage gm4_garden_variety:reference component.pointer.middle.offset.min store result score $pointer.middle.offset.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.middle.offset.min
+execute if data storage gm4_garden_variety:reference component.pointer.middle.offset.max store result score $pointer.middle.offset.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.middle.offset.max
+execute if data storage gm4_garden_variety:reference component.pointer.end.offset.min store result score $pointer.end.offset.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.end.offset.min
+execute if data storage gm4_garden_variety:reference component.pointer.end.offset.max store result score $pointer.end.offset.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.end.offset.max
+execute if data storage gm4_garden_variety:reference component.pointer.fill.start.min store result score $pointer.fill.start.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.start.min
+execute if data storage gm4_garden_variety:reference component.pointer.fill.start.max store result score $pointer.fill.start.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.start.max
+execute if data storage gm4_garden_variety:reference component.pointer.fill.stop.min store result score $pointer.fill.stop.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.stop.min
+execute if data storage gm4_garden_variety:reference component.pointer.fill.stop.max store result score $pointer.fill.stop.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.stop.max
+execute if data storage gm4_garden_variety:reference component.length.value.min store result score $length.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value.min
+execute if data storage gm4_garden_variety:reference component.length.value.max store result score $length.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value.max
+execute if data storage gm4_garden_variety:reference component.x.rotation.value.min store result score $x.rotation.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.rotation.value.min 100
+execute if data storage gm4_garden_variety:reference component.x.rotation.value.max store result score $x.rotation.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.x.rotation.value.max 100
+execute if data storage gm4_garden_variety:reference component.x.bend.value.min store result score $x.bend.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.bend.value.min 100
+execute if data storage gm4_garden_variety:reference component.x.bend.value.max store result score $x.bend.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.x.bend.value.max 100
+execute if data storage gm4_garden_variety:reference component.x.curl.value.min store result score $x.curl.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.value.min 100
+execute if data storage gm4_garden_variety:reference component.x.curl.value.max store result score $x.curl.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.value.max 100
+execute if data storage gm4_garden_variety:reference component.x.curl.start.min store result score $x.curl.start.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.start.min
+execute if data storage gm4_garden_variety:reference component.x.curl.start.max store result score $x.curl.start.max gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.start.max
+execute if data storage gm4_garden_variety:reference component.x.curl.stop.min store result score $x.curl.stop.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.stop.min
+execute if data storage gm4_garden_variety:reference component.x.curl.stop.max store result score $x.curl.stop.max gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.stop.max
+execute if data storage gm4_garden_variety:reference component.y.rotation.value.min store result score $y.rotation.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.y.rotation.value.min 100
+execute if data storage gm4_garden_variety:reference component.y.rotation.value.max store result score $y.rotation.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.y.rotation.value.max 100
+execute if data storage gm4_garden_variety:reference component.y.bend.value.min store result score $y.bend.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.y.bend.value.min 100
+execute if data storage gm4_garden_variety:reference component.y.bend.value.max store result score $y.bend.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.y.bend.value.max 100
+execute if data storage gm4_garden_variety:reference component.y.curl.value.min store result score $y.curl.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.value.min 100
+execute if data storage gm4_garden_variety:reference component.y.curl.value.max store result score $y.curl.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.value.max 100
+execute if data storage gm4_garden_variety:reference component.y.curl.start.min store result score $y.curl.start.min gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.start.min
+execute if data storage gm4_garden_variety:reference component.y.curl.start.max store result score $y.curl.start.max gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.start.max
+execute if data storage gm4_garden_variety:reference component.y.curl.stop.min store result score $y.curl.stop.min gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.stop.min
+execute if data storage gm4_garden_variety:reference component.y.curl.stop.max store result score $y.curl.stop.max gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.stop.max
 
-scoreboard players set $pointer.target gm4_gv_component 0
-scoreboard players reset $pointer.identifier gm4_gv_component
-scoreboard players reset $pointer.location gm4_gv_component
+# flag counters
+execute if data storage gm4_garden_variety:reference component.pointer.full.identifiers store result score $pointer.full.identifiers gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.full.identifiers
+execute if data storage gm4_garden_variety:reference component.placeholder.pattern store result score $placeholder.pattern gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.pattern
 
-scoreboard players set $length.value gm4_gv_component 8
-scoreboard players reset $length.min gm4_gv_component
-scoreboard players reset $length.max gm4_gv_component
+# calculate ranges
+execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-begin-value
+execute if data storage gm4_garden_variety:reference component.pointer.middle.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-middle-value
+execute if data storage gm4_garden_variety:reference component.pointer.end.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-end-value
+execute if data storage gm4_garden_variety:reference component.pointer.fill.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-fill-value
+execute if data storage gm4_garden_variety:reference component.length.value.max run function gm4_garden_variety:generation/component/line/calculate/length-value
+execute if data storage gm4_garden_variety:reference component.x.rotation.value.max run function gm4_garden_variety:generation/component/line/calculate/x-rotation-value
+execute if data storage gm4_garden_variety:reference component.x.bend.value.max run function gm4_garden_variety:generation/component/line/calculate/x-bend-value
+execute if data storage gm4_garden_variety:reference component.x.curl.value.max run function gm4_garden_variety:generation/component/line/calculate/x-curl-value
+execute if data storage gm4_garden_variety:reference component.x.curl.start.max run function gm4_garden_variety:generation/component/line/calculate/x-curl-start
+execute if data storage gm4_garden_variety:reference component.x.curl.stop.max run function gm4_garden_variety:generation/component/line/calculate/x-curl-stop
+execute if data storage gm4_garden_variety:reference component.y.rotation.value.max run function gm4_garden_variety:generation/component/line/calculate/y-rotation-value
+execute if data storage gm4_garden_variety:reference component.y.bend.value.max run function gm4_garden_variety:generation/component/line/calculate/y-bend-value
+execute if data storage gm4_garden_variety:reference component.y.curl.value.max run function gm4_garden_variety:generation/component/line/calculate/y-curl-value
+execute if data storage gm4_garden_variety:reference component.y.curl.start.max run function gm4_garden_variety:generation/component/line/calculate/y-curl-start
+execute if data storage gm4_garden_variety:reference component.y.curl.stop.max run function gm4_garden_variety:generation/component/line/calculate/y-curl-stop
 
-scoreboard players set $placeholder.identifier gm4_gv_component 99
-scoreboard players set $placeholder.thickness gm4_gv_component 1
-scoreboard players set $placeholder.quality gm4_gv_component 4
-scoreboard players set $placeholder.rounded gm4_gv_component 1
+# set range flags
+execute store result score $x.bend.value.range_flag gm4_gv_component if data storage gm4_garden_variety:reference component.x.bend.value.max 
+execute store result score $y.bend.value.range_flag gm4_gv_component if data storage gm4_garden_variety:reference component.y.bend.value.max
 
-scoreboard players reset $x.rotation.value gm4_gv_component
-scoreboard players set $x.rotation.min gm4_gv_component 1
-scoreboard players set $x.rotation.max gm4_gv_component 360
+# bend direction
+execute if score $x.bend.force_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/correction/x-bend-force_direction
+execute unless score $x.bend.force_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/correction/x-bend-random_direction
+execute if score $y.bend.random_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/correction/y-bend-random_direction
+execute unless score $y.bend.random_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/correction/y-bend-force_direction
 
-scoreboard players reset $x.bend.value gm4_gv_component
-scoreboard players reset $x.bend.min gm4_gv_component
-scoreboard players reset $x.bend.max gm4_gv_component
-scoreboard players reset $x.bend.freq gm4_gv_component
-scoreboard players reset $x.bend.dir gm4_gv_component
 
-scoreboard players reset $x.curl.value gm4_gv_component
-scoreboard players reset $x.curl.min gm4_gv_component
-scoreboard players reset $x.curl.max gm4_gv_component
-scoreboard players reset $x.curl.freq gm4_gv_component
-scoreboard players reset $x.curl.start gm4_gv_component
-scoreboard players reset $x.curl.stop gm4_gv_component
 
-scoreboard players set $y.rotation.value gm4_gv_component -90
-scoreboard players reset $y.rotation.min gm4_gv_component
-scoreboard players reset $y.rotation.max gm4_gv_component
 
-scoreboard players reset $y.bend.value gm4_gv_component
-scoreboard players set $y.bend.min gm4_gv_component 1
-scoreboard players set $y.bend.max gm4_gv_component 2
-scoreboard players set $y.bend.freq gm4_gv_component 1
-scoreboard players set $y.bend.dir gm4_gv_component 1
 
-scoreboard players set $y.curl.value gm4_gv_component 1
-scoreboard players reset $y.curl.min gm4_gv_component
-scoreboard players reset $y.curl.max gm4_gv_component
-scoreboard players set $y.curl.freq gm4_gv_component 1
-scoreboard players set $y.curl.start gm4_gv_component 4
-scoreboard players reset $y.curl.stop gm4_gv_component
+
+
+
 
 
 # [ Pointer Settings ]
 
 # pointer data
-data remove storage gm4_garden_variety:reference pointer
-data modify storage gm4_garden_variety:reference pointer set from entity @s data.gm4_garden_variety.pointer
-
-execute if data storage gm4_garden_variety:reference pointer.x.rotation store result score $x.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.rotation
-execute if data storage gm4_garden_variety:reference pointer.y.rotation store result score $y.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.rotation
-execute if data storage gm4_garden_variety:reference pointer.x.bend.direction store result score $x.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.bend.direction
-execute if data storage gm4_garden_variety:reference pointer.y.bend.direction store result score $y.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.bend.direction
-
-
-# [ Sapling Settings ]
-
-execute if data storage gm4_garden_variety:reference component.target store result score $pointer.target gm4_gv_component run data get storage gm4_garden_variety:reference component.target
-execute if data storage gm4_garden_variety:reference component.pointer.identifier store result score $pointer.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.identifier
-execute if data storage gm4_garden_variety:reference component.pointer.location store result score $pointer.location gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.location
-
-execute if data storage gm4_garden_variety:reference component.length.value store result score $length.value gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value
-execute if data storage gm4_garden_variety:reference component.length.min store result score $length.min gm4_gv_component run data get storage gm4_garden_variety:reference component.length.min
-execute if data storage gm4_garden_variety:reference component.length.max store result score $length.max gm4_gv_component run data get storage gm4_garden_variety:reference component.length.max
-
-execute if data storage gm4_garden_variety:reference component.placeholder.identifier store result score $placeholder.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.identifier
-execute if data storage gm4_garden_variety:reference component.placeholder.thickness store result score $placeholder.thickness gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.thickness
-execute if data storage gm4_garden_variety:reference component.placeholder.quality store result score $placeholder.quality gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.quality
-execute if data storage gm4_garden_variety:reference component.placeholder.rounded store result score $placeholder.rounded gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.rounded
-
-execute if data storage gm4_garden_variety:reference component.x.rotation.value store result score $x.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference component.x.rotation.value
-execute if data storage gm4_garden_variety:reference component.x.rotation.min store result score $x.rotation.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.rotation.min
-execute if data storage gm4_garden_variety:reference component.x.rotation.max store result score $x.rotation.max gm4_gv_component run data get storage gm4_garden_variety:reference component.x.rotation.max
-
-execute if data storage gm4_garden_variety:reference component.x.bend.value store result score $x.bend.value gm4_gv_component run data get storage gm4_garden_variety:reference component.x.bend.value
-execute if data storage gm4_garden_variety:reference component.x.bend.min store result score $x.bend.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.bend.min
-execute if data storage gm4_garden_variety:reference component.x.bend.max store result score $x.bend.max gm4_gv_component run data get storage gm4_garden_variety:reference component.x.bend.max
-execute if data storage gm4_garden_variety:reference component.x.bend.frequency store result score $x.bend.frequency gm4_gv_component run data get storage gm4_garden_variety:reference component.x.bend.frequency
-execute if data storage gm4_garden_variety:reference component.x.bend.direction store result score $x.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference component.x.bend.direction
-
-execute if data storage gm4_garden_variety:reference component.x.curl.value store result score $x.curl.value gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.value
-execute if data storage gm4_garden_variety:reference component.x.curl.min store result score $x.curl.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.min
-execute if data storage gm4_garden_variety:reference component.x.curl.max store result score $x.curl.max gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.max
-execute if data storage gm4_garden_variety:reference component.x.curl.frequency store result score $x.curl.frequency gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.frequency
-execute if data storage gm4_garden_variety:reference component.x.curl.start store result score $x.curl.start gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.start
-execute if data storage gm4_garden_variety:reference component.x.curl.stop store result score $x.curl.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.x.curl.stop
-
-execute if data storage gm4_garden_variety:reference component.y.rotation.value store result score $y.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference component.y.rotation.value
-execute if data storage gm4_garden_variety:reference component.y.rotation.min store result score $y.rotation.min gm4_gv_component run data get storage gm4_garden_variety:reference component.y.rotation.min
-execute if data storage gm4_garden_variety:reference component.y.rotation.max store result score $y.rotation.max gm4_gv_component run data get storage gm4_garden_variety:reference component.y.rotation.max
-
-execute if data storage gm4_garden_variety:reference component.y.bend.value store result score $y.bend.value gm4_gv_component run data get storage gm4_garden_variety:reference component.y.bend.value
-execute if data storage gm4_garden_variety:reference component.y.bend.min store result score $y.bend.min gm4_gv_component run data get storage gm4_garden_variety:reference component.y.bend.min
-execute if data storage gm4_garden_variety:reference component.y.bend.max store result score $y.bend.max gm4_gv_component run data get storage gm4_garden_variety:reference component.y.bend.max
-execute if data storage gm4_garden_variety:reference component.y.bend.frequency store result score $y.bend.frequency gm4_gv_component run data get storage gm4_garden_variety:reference component.y.bend.frequency
-execute if data storage gm4_garden_variety:reference component.y.bend.direction store result score $y.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference component.y.bend.direction
-
-execute if data storage gm4_garden_variety:reference component.y.curl.value store result score $y.curl.value gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.value
-execute if data storage gm4_garden_variety:reference component.y.curl.min store result score $y.curl.min gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.min
-execute if data storage gm4_garden_variety:reference component.y.curl.max store result score $y.curl.max gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.max
-execute if data storage gm4_garden_variety:reference component.y.curl.frequency store result score $y.curl.frequency gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.frequency
-execute if data storage gm4_garden_variety:reference component.y.curl.start store result score $y.curl.start gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.start
-execute if data storage gm4_garden_variety:reference component.y.curl.stop store result score $y.curl.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.stop
-
-execute if data storage gm4_garden_variety:reference component.pattern.list store result score $pattern.length gm4_gv_component run data get storage gm4_garden_variety:reference component.pattern.list
-
-
-# [ Flags ]
-
-# overidden
-execute store success score $target.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.target
-execute store success score $pointer.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.pointer
-execute store success score $length.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.length
-execute store success score $placeholder.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.placeholder
-execute store success score $x.rotation.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.x.rotation
-execute store success score $x.bend.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.x.bend
-execute store success score $x.curl.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.x.curl
-execute store success score $y.rotation.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.y.rotation
-execute store success score $y.bend.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.y.bend
-execute store success score $y.curl.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.y.curl
-execute store success score $pattern.overriden gm4_gv_component if data storage gm4_garden_variety:reference component.pattern
-
-# override set values when range values provided
-execute if data storage gm4_garden_variety:reference component.length.min if data storage gm4_garden_variety:reference component.length.min run scoreboard players reset $length.value gm4_gv_component
-execute if data storage gm4_garden_variety:reference component.x.rotation.min if data storage gm4_garden_variety:reference component.x.rotation.min run scoreboard players reset $x.rotation.value gm4_gv_component
-execute if data storage gm4_garden_variety:reference component.x.bend.min if data storage gm4_garden_variety:reference component.x.bend.min run scoreboard players reset $x.bend.value gm4_gv_component
-execute if data storage gm4_garden_variety:reference component.x.curl.min if data storage gm4_garden_variety:reference component.x.curl.min run scoreboard players reset $x.curl.value gm4_gv_component
-execute if data storage gm4_garden_variety:reference component.y.rotation.min if data storage gm4_garden_variety:reference component.y.rotation.min run scoreboard players reset $y.rotation.value gm4_gv_component
-execute if data storage gm4_garden_variety:reference component.y.bend.min if data storage gm4_garden_variety:reference component.y.bend.min run scoreboard players reset $y.bend.value gm4_gv_component
-execute if data storage gm4_garden_variety:reference component.y.curl.min if data storage gm4_garden_variety:reference component.y.curl.min run scoreboard players reset $y.curl.value gm4_gv_component
-
-# static
-execute store success score $length.static gm4_gv_component if score $length.value gm4_gv_component matches ..99999
-execute store success score $x.rotation.static gm4_gv_component if score $x.rotation.value gm4_gv_component matches ..99999
-execute store success score $x.bend.static gm4_gv_component if score $x.bend.value gm4_gv_component matches ..99999
-execute store success score $x.curl.static gm4_gv_component if score $x.curl.value gm4_gv_component matches ..99999
-execute store success score $y.rotation.static gm4_gv_component if score $y.rotation.value gm4_gv_component matches ..99999
-execute store success score $y.bend.static gm4_gv_component if score $y.bend.value gm4_gv_component matches ..99999
-execute store success score $y.curl.static gm4_gv_component if score $y.curl.value gm4_gv_component matches ..99999
-
-# [ Interpret ]
-
-
-# generate static values
-execute unless score $length.static gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/calc/length
-execute unless score $x.rotation.static gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/calc/x_rotation
-execute unless score $y.rotation.static gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/calc/y_rotation
-
-# set random bend direction
-execute if score $x.bend.direction gm4_gv_component matches 0 if data storage gm4_garden_variety:reference component.x.bend.direction run function gm4_garden_variety:generation/component/line/calc/x_bend_dir
-execute if score $y.bend.direction gm4_gv_component matches 0 if data storage gm4_garden_variety:reference component.y.bend.direction run function gm4_garden_variety:generation/component/line/calc/y_bend_dir
-
-
-
+#data remove storage gm4_garden_variety:reference pointer
+#data modify storage gm4_garden_variety:reference pointer set from entity @s data.gm4_garden_variety.pointer
+#
+#execute if data storage gm4_garden_variety:reference pointer.x.rotation store result score $x.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.rotation
+#execute if data storage gm4_garden_variety:reference pointer.y.rotation store result score $y.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.rotation
+#execute if data storage gm4_garden_variety:reference pointer.x.bend.direction store result score $x.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.bend.direction
+#execute if data storage gm4_garden_variety:reference pointer.y.bend.direction store result score $y.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.bend.direction
 
 # debug
 #tellraw @p [{"nbt":"component.type","storage":"gm4_garden_variety:temp"}]

@@ -1,0 +1,99 @@
+{
+    "components": {
+
+        "line": {
+            "chance": 100,
+            "pointer": {
+                "begin": {
+                    "offset": 0,
+                    "identifier": -1
+                },
+                "end": {
+                    "offset": 0,
+                    "identifier": 1
+                },
+                "full": {
+                    "identifier": [-1,-1,501]
+                }
+            },
+            "placeholder": {
+                "thickness": 1,
+                "quality": 3,
+                "rounded": true,
+                "identifier": 1,
+                "group": 1,
+                "pattern": [1,1,2]
+            },
+            "length": {
+                "value": { "min": 8, "max": 10}
+            },
+            "x": {
+                "rotation": {
+                    "value": { "min": 0, "max": 360}
+                },
+                "bend": {
+                    "value": { "min": 5, "max": 10},
+                    "frequency": 1,
+                    "direction": 0
+                },
+                "curl": {
+                    "value": { "min": 3, "max": 5},
+                    "frequency": 1,
+                    "direction": 0,
+                    "start": 0,
+                    "stop": 999
+                }
+            },
+            "y": {
+                "rotation": {
+                    "value": { "min": 80, "max": 90}
+                },
+                "bend": {
+                    "value": { "min": 1, "max": 2},
+                    "frequency": 1,
+                    "direction": 1
+                },
+                "curl": {
+                    "value": { "min": 1, "max": 2},
+                    "frequency": 1,
+                    "direction": 1,
+                    "start": 0,
+                    "stop": 999
+                }
+            }
+
+        },
+        "split": {
+            "chance": 100,
+            "pointer": {
+                "identifier": 101
+            },
+            "x": {
+                "diverge": true,
+                "flip": true
+            },
+            "y": {
+                "diverge": false,
+                "flip": false
+            }
+        },
+        "spreader": {
+            "chance": 100,
+            "method": "alternate",
+            "pointers": [
+                {
+                    "amount": { "min": 5, "max": 6},
+                    "identifer": 301,
+                    "x": {
+                        "offset": { "min": 0, "max": 10}
+                    },
+                    "y": {
+                        "rotation": { "min": 0, "max": 10},
+                        "offset": { "min": 20, "max": 30}
+                    }
+                }
+            ]
+        }
+
+    }
+}

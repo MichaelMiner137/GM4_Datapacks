@@ -29,23 +29,26 @@ scoreboard players operation #builder.segment.left gm4_gv_component = #builder.s
 execute at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment
 
 # modify rotation and update
-execute if score $y.curl.overriden gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/mod/y_curl
-execute if score $y.bend.overriden gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/mod/y_bend
-execute if score $x.curl.overriden gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/mod/x_curl
-execute if score $x.bend.overriden gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/mod/x_bend
-execute store result entity @s Rotation[0] float 1 run scoreboard players get #builder.x.rotation gm4_gv_component
-execute store result entity @s Rotation[1] float 1 run scoreboard players get #builder.y.rotation gm4_gv_component
+execute unless score $y.curl.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/y-curl
+execute unless score $y.bend.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/y-bend
+execute unless score $x.curl.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/x-curl
+execute unless score $x.bend.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/x-bend
+execute store result entity @s Rotation[0] float 0.01 run scoreboard players get #builder.x.rotation gm4_gv_component
+execute store result entity @s Rotation[1] float 0.01 run scoreboard players get #builder.y.rotation gm4_gv_component
+
+# debug
+#tellraw @p [{"score":{"name":"$pointer.overriden","objective":"gm4_gv_component"}},"  >  ",{"score":{"name":"#builder.length.left","objective":"gm4_gv_component"}}," = ",{"score":{"name":"$pointer.location","objective":"gm4_gv_component"}}]
+#tellraw @p [{"score":{"name":"#builder.length.current","objective":"gm4_gv_component"}}," >     X: ",{"score":{"name":"$x.bend.value","objective":"gm4_gv_component"}}," += ",{"score":{"name":"#builder.x.rotation","objective":"gm4_gv_component"}},"     Y: ",{"score":{"name":"$y.bend.value","objective":"gm4_gv_component"}}," += ",{"score":{"name":"#builder.y.rotation","objective":"gm4_gv_component"}}]
 
 # counters
 scoreboard players remove #builder.length.left gm4_gv_component 1
 scoreboard players add #builder.length.current gm4_gv_component 1
 
-# debug
-#tellraw @p [{"score":{"name":"$pointer.overriden","objective":"gm4_gv_component"}},"  >  ",{"score":{"name":"#builder.length.left","objective":"gm4_gv_component"}}," = ",{"score":{"name":"$pointer.location","objective":"gm4_gv_component"}}]
-
 # pointer
-execute if score $pointer.overriden gm4_gv_component matches 1 if score #builder.length.current gm4_gv_component = $pointer.location gm4_gv_component if data storage gm4_garden_variety:reference component.pointer{method:"forwards"} positioned ^ ^ ^1 run function gm4_garden_variety:generation/component/line/create_pointer
-execute if score $pointer.overriden gm4_gv_component matches 1 if score #builder.length.left gm4_gv_component = $pointer.location gm4_gv_component if data storage gm4_garden_variety:reference component.pointer{method:"backwards"} positioned ^ ^ ^1 run function gm4_garden_variety:generation/component/line/create_pointer
+execute if score $pointer.begin.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/begin
+execute if score $pointer.middle.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/middle
+execute if score $pointer.end.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/end
+execute if score $pointer.fill.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/fill
 
 # loop
 execute if score #builder.length.left gm4_gv_component matches 1.. at @s if block ~ ~ ~ #gm4_garden_variety:passthrough rotated as @s run function gm4_garden_variety:generation/component/line/build_block

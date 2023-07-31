@@ -27,7 +27,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_garden_variety:{item:{generation:{components:[{type:\"trunk\",target:0,pointer:{identifier:1,method:\"backwards\",location:1},placeholder:{identifier:1,thickness:1,quality:6},length:{min:8,max:11},x:{rotation:{min:1,max:360},bend:{min:2,max:5,frequency:1,direction:0},curl:{min:0,max:2,frequency:1,start:5}},y:{rotation:{min:85,max:90},bend:{min:1,max:2,frequency:1,direction:1},curl:{min:0,max:1,frequency:1,start:5}}},{type:\"spreader\",target:1,spread:{method:\"alternate\"},pointer:{list:[[{identifier:2,x_rotation_offset:{}},{},{}],[{},{},{}],[{},{},{}]]}}]}}}}"
+                            "tag": "{gm4_garden_variety:{item:{generation:{components:[{type:\"line\",chance:100,pointer:{begin:{identifier:101,offset:0},middle:{identifier:102,offset:0},end:{identifier:103,offset:0},fill:{identifier:104,start:3,stop:6},full:{identifier:[-1,-1,109]}},placeholder:{identifier:1,thickness:1,quality:3,rounded:true,group:1,pattern:[1,1,2]},length:{value:{min:25,max:30}},x:{rotation:{value:{min:0,max:360}},bend:{value:10,force_direction:false},curl:{value:1.5,start:0,stop:999}},y:{rotation:{value:-75},bend:{value:0.5,random_direction:false},curl:{value:0.2,start:0,stop:999}}}]}}}}"
                         }
                     ]
                 }
