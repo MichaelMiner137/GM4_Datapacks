@@ -1,8 +1,16 @@
 
 # forced
 execute unless data storage gm4_garden_variety:reference component.length.value run scoreboard players set $length.value gm4_gv_component 8
+execute unless data storage gm4_garden_variety:reference component.target run scoreboard players set $length.value gm4_gv_component 0
+
+# pointer (pre)
+data remove storage gm4_garden_variety:reference pointer
+data modify storage gm4_garden_variety:reference pointer set from entity @s data.gm4_garden_variety.pointer
+execute if data storage gm4_garden_variety:reference pointer.x.rotation store result score $x.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.rotation
+execute if data storage gm4_garden_variety:reference pointer.y.rotation store result score $y.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.rotation
 
 # static
+execute if data storage gm4_garden_variety:reference component.target store result score $target gm4_gv_component run data get storage gm4_garden_variety:reference component.target
 execute if data storage gm4_garden_variety:reference component.pointer.begin.identifier store result score $pointer.begin.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.identifier
 execute if data storage gm4_garden_variety:reference component.pointer.begin.offset store result score $pointer.begin.offset gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.offset
 execute if data storage gm4_garden_variety:reference component.pointer.middle.identifier store result score $pointer.middle.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.middle.identifier
@@ -67,8 +75,8 @@ execute if data storage gm4_garden_variety:reference component.y.curl.stop.min s
 execute if data storage gm4_garden_variety:reference component.y.curl.stop.max store result score $y.curl.stop.max gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.stop.max
 
 # flag counters
-execute if data storage gm4_garden_variety:reference component.pointer.full.identifiers store result score $pointer.full.identifiers gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.full.identifiers
-execute if data storage gm4_garden_variety:reference component.placeholder.pattern store result score $placeholder.pattern gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.pattern
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.identifiers store result score $pointer.pattern.identifiers gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.pattern.identifiers
+execute if data storage gm4_garden_variety:reference component.placeholder.pattern store result score $placeholder.patterns gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.pattern
 
 # calculate ranges
 execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-begin-value
@@ -97,23 +105,7 @@ execute unless score $x.bend.force_direction gm4_gv_component matches 1 run func
 execute if score $y.bend.random_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/correction/y-bend-random_direction
 execute unless score $y.bend.random_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/correction/y-bend-force_direction
 
-
-
-
-
-
-
-
-
-
-# [ Pointer Settings ]
-
-# pointer data
-#data remove storage gm4_garden_variety:reference pointer
-#data modify storage gm4_garden_variety:reference pointer set from entity @s data.gm4_garden_variety.pointer
-#
-#execute if data storage gm4_garden_variety:reference pointer.x.rotation store result score $x.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.rotation
-#execute if data storage gm4_garden_variety:reference pointer.y.rotation store result score $y.rotation.value gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.rotation
+# pointer (override)
 #execute if data storage gm4_garden_variety:reference pointer.x.bend.direction store result score $x.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.x.bend.direction
 #execute if data storage gm4_garden_variety:reference pointer.y.bend.direction store result score $y.bend.direction gm4_gv_component run data get storage gm4_garden_variety:reference pointer.y.bend.direction
 
@@ -121,4 +113,3 @@ execute unless score $y.bend.random_direction gm4_gv_component matches 1 run fun
 #tellraw @p [{"nbt":"component.type","storage":"gm4_garden_variety:temp"}]
 #tellraw @p ["X___:   V: ",{"score":{"name":"$y.rotation.value","objective":"gm4_gv_component"}},", MN: ",{"score":{"name":"$y.rotation.min","objective":"gm4_gv_component"}},", MX: ",{"score":{"name":"$y.rotation.max","objective":"gm4_gv_component"}}]
 #tellraw @p ["X___:   x: ",{"score":{"name":"$x.bend.direction","objective":"gm4_gv_component"}},", y: ",{"score":{"name":"$x.bend.direction","objective":"gm4_gv_component"}},", ?: ",{"score":{"name":"","objective":"gm4_gv_component"}}]
-
