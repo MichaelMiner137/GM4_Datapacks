@@ -20,6 +20,12 @@ execute if data storage gm4_garden_variety:reference component.pointer.end.offse
 execute if data storage gm4_garden_variety:reference component.pointer.fill.identifier store result score $pointer.fill.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.identifier
 execute if data storage gm4_garden_variety:reference component.pointer.fill.start store result score $pointer.fill.start gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.start
 execute if data storage gm4_garden_variety:reference component.pointer.fill.stop store result score $pointer.fill.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.stop
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.start store result score $pointer.pattern.start gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.pattern.start
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.stop store result score $pointer.pattern.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.pattern.stop
+execute if data storage gm4_garden_variety:reference component.pointer.random.identifier store result score $pointer.random.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.identifier
+execute if data storage gm4_garden_variety:reference component.pointer.random.chance store result score $pointer.random.chance gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.chance
+execute if data storage gm4_garden_variety:reference component.pointer.random.start store result score $pointer.random.start gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.start
+execute if data storage gm4_garden_variety:reference component.pointer.random.stop store result score $pointer.random.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.stop
 execute if data storage gm4_garden_variety:reference component.placeholder.identifier store result score $placeholder.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.identifier
 execute if data storage gm4_garden_variety:reference component.placeholder.thickness store result score $placeholder.thickness gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.thickness
 execute if data storage gm4_garden_variety:reference component.placeholder.quality store result score $placeholder.quality gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.quality
@@ -39,7 +45,6 @@ execute if data storage gm4_garden_variety:reference component.y.curl.value stor
 execute if data storage gm4_garden_variety:reference component.y.curl.start store result score $y.curl.start gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.start
 execute if data storage gm4_garden_variety:reference component.y.curl.stop store result score $y.curl.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.y.curl.stop
 
-
 # dynamic
 execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.min store result score $pointer.begin.offset.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.offset.min
 execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.max store result score $pointer.begin.offset.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.offset.max
@@ -51,6 +56,14 @@ execute if data storage gm4_garden_variety:reference component.pointer.fill.star
 execute if data storage gm4_garden_variety:reference component.pointer.fill.start.max store result score $pointer.fill.start.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.start.max
 execute if data storage gm4_garden_variety:reference component.pointer.fill.stop.min store result score $pointer.fill.stop.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.stop.min
 execute if data storage gm4_garden_variety:reference component.pointer.fill.stop.max store result score $pointer.fill.stop.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.fill.stop.max
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.start.min store result score $pointer.pattern.start.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.pattern.start.min
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.start.max store result score $pointer.pattern.start.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.pattern.start.max
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.stop.min store result score $pointer.pattern.stop.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.pattern.stop.min
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.stop.max store result score $pointer.pattern.stop.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.pattern.stop.max
+execute if data storage gm4_garden_variety:reference component.pointer.random.start.min store result score $pointer.random.start.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.start.min
+execute if data storage gm4_garden_variety:reference component.pointer.random.start.max store result score $pointer.random.start.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.start.max
+execute if data storage gm4_garden_variety:reference component.pointer.random.stop.min store result score $pointer.random.stop.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.stop.min
+execute if data storage gm4_garden_variety:reference component.pointer.random.stop.max store result score $pointer.random.stop.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.stop.max
 execute if data storage gm4_garden_variety:reference component.length.value.min store result score $length.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value.min
 execute if data storage gm4_garden_variety:reference component.length.value.max store result score $length.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value.max
 execute if data storage gm4_garden_variety:reference component.x.rotation.value.min store result score $x.rotation.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.x.rotation.value.min 100
@@ -82,7 +95,12 @@ execute if data storage gm4_garden_variety:reference component.placeholder.patte
 execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-begin-value
 execute if data storage gm4_garden_variety:reference component.pointer.middle.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-middle-value
 execute if data storage gm4_garden_variety:reference component.pointer.end.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-end-value
-execute if data storage gm4_garden_variety:reference component.pointer.fill.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-fill-value
+execute if data storage gm4_garden_variety:reference component.pointer.fill.start.max run function gm4_garden_variety:generation/component/line/calculate/pointer-fill-start
+execute if data storage gm4_garden_variety:reference component.pointer.fill.stop.max run function gm4_garden_variety:generation/component/line/calculate/pointer-fill-stop
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.start.max run function gm4_garden_variety:generation/component/line/calculate/pointer-pattern-start
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.stop.max run function gm4_garden_variety:generation/component/line/calculate/pointer-pattern-stop
+execute if data storage gm4_garden_variety:reference component.pointer.random.start.max run function gm4_garden_variety:generation/component/line/calculate/pointer-random-start
+execute if data storage gm4_garden_variety:reference component.pointer.random.stop.max run function gm4_garden_variety:generation/component/line/calculate/pointer-random-stop
 execute if data storage gm4_garden_variety:reference component.length.value.max run function gm4_garden_variety:generation/component/line/calculate/length-value
 execute if data storage gm4_garden_variety:reference component.x.rotation.value.max run function gm4_garden_variety:generation/component/line/calculate/x-rotation-value
 execute if data storage gm4_garden_variety:reference component.x.bend.value.max run function gm4_garden_variety:generation/component/line/calculate/x-bend-value
@@ -95,9 +113,10 @@ execute if data storage gm4_garden_variety:reference component.y.curl.value.max 
 execute if data storage gm4_garden_variety:reference component.y.curl.start.max run function gm4_garden_variety:generation/component/line/calculate/y-curl-start
 execute if data storage gm4_garden_variety:reference component.y.curl.stop.max run function gm4_garden_variety:generation/component/line/calculate/y-curl-stop
 
-# set range flags
-execute store result score $x.bend.value.range_flag gm4_gv_component if data storage gm4_garden_variety:reference component.x.bend.value.max 
-execute store result score $y.bend.value.range_flag gm4_gv_component if data storage gm4_garden_variety:reference component.y.bend.value.max
+#tellraw @p {"nbt":"component.pointer.random.start","storage":"gm4_garden_variety:reference"}
+#tellraw @p {"score":{"name":"$pointer.random.start","objective":"gm4_gv_component"}}
+#tellraw @p {"nbt":"component.pointer.random.stop","storage":"gm4_garden_variety:reference"}
+#tellraw @p {"score":{"name":"$pointer.random.stop","objective":"gm4_gv_component"}}
 
 # bend direction
 execute if score $x.bend.force_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/correction/x-bend-force_direction

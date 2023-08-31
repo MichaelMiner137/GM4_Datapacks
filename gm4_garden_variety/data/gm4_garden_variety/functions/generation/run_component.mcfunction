@@ -15,9 +15,11 @@ execute if data storage gm4_garden_variety:reference component.chance store resu
 function gm4_garden_variety:generation/seed/next_seed
 scoreboard players operation #random_chance gm4_garden_variety = $sub_seed gm4_gv_generation
 scoreboard players operation #random_chance gm4_garden_variety %= #100 gm4_garden_variety
+scoreboard players add #random_chance gm4_garden_variety 1
 execute store success score #component_success gm4_garden_variety if score #random_chance gm4_garden_variety <= $chance gm4_gv_component
 
 # components
+execute if score #component_success gm4_garden_variety matches 1 run function #gm4_garden_variety:custom_component
 execute if score #component_success gm4_garden_variety matches 1 if data storage gm4_garden_variety:reference component{type:"line"} run function gm4_garden_variety:generation/component/line/init_component
 execute if score #component_success gm4_garden_variety matches 1 if data storage gm4_garden_variety:reference component{type:"split"} run function gm4_garden_variety:generation/component/split/init_component
 execute if score #component_success gm4_garden_variety matches 1 if data storage gm4_garden_variety:reference component{type:"spreader"} run function gm4_garden_variety:generation/component/spreader/init_component

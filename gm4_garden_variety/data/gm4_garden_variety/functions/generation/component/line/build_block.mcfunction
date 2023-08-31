@@ -26,6 +26,7 @@ execute if score $pointer.middle.identifier gm4_gv_component matches 1.. run fun
 execute if score $pointer.end.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/end/check
 execute if score $pointer.fill.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/fill/check
 execute if score $pointer.pattern.identifiers gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/pattern/check
+execute if score $pointer.random.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/random/check
 
 # counters and loop
 scoreboard players remove #line_marker.length_left gm4_gv_component 1

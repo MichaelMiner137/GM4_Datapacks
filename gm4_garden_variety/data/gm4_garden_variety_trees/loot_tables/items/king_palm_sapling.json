@@ -27,7 +27,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{gm4_garden_variety:{item:{generation:{components:[{type:\"line\",chance:100,target:0,pointer:{begin:{identifier:101,offset:0},middle:{identifier:102,offset:0},end:{identifier:103,offset:0},fill:{identifier:104,start:3,stop:6},pattern:{identifiers:[-1,-1,105]}},placeholder:{identifier:1,thickness:1,quality:3,rounded:true,group:1,pattern:[1,1,2]},length:{value:15},x:{rotation:{value:{min:0,max:360}},bend:{value:5}},y:{rotation:{value:-75},bend:{value:1}}},{type:\"line\",chance:100,target:105,placeholder:{identifier:2,thickness:1,quality:1,rounded:true,group:2,pattern:[1,2]},length:{value:8},x:{rotation:{value:{min:0,max:360}},bend:{value:-5},y:{bend:{value:1}}}}]}}}}"
+                            "tag": "{gm4_garden_variety:{item:{custom:true,generation:{components:[{type:\"line\",chance:100,target:0,pointer:{begin:{identifier:101,offset:0},middle:{identifier:-102,offset:0},end:{identifier:103,offset:0},fill:{identifier:-104,start:1,stop:999},pattern:{identifiers:[-1,-1,-105],start:1,stop:999},random:{identifier:106,chance:50,start:1,stop:999}},placeholder:{identifier:1,thickness:1,quality:3,rounded:true,group:1,pattern:[1,1,2]},length:{value:15},x:{rotation:{value:{min:0,max:360}},bend:{value:5}},y:{rotation:{value:-75},bend:{value:1}}},{type:\"line\",chance:100,target:106,placeholder:{identifier:2,thickness:1,quality:1,rounded:true,group:2,pattern:[1,2]},length:{value:8},x:{rotation:{value:{min:0,max:360}},bend:{value:-5},y:{bend:{value:1}}}}]}}}}"
                         }
                     ]
                 }
