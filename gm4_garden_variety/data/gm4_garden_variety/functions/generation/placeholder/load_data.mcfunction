@@ -10,7 +10,7 @@ execute store result score $length_left gm4_gv_placeholder run data get storage 
 execute store result score $current_pattern gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.current_pattern
 execute store result score $facing gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.facing
 execute store result score $axis gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.axis
-execute store result score $group gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.group
+execute store result score $composite_group gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.composite_group
 execute store result score $pointer_id gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.pointer_id
 execute store result score $capped gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.capped
 execute store result score $surrounded gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.surrounded

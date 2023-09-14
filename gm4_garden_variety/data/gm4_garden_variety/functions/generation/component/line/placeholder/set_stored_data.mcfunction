@@ -7,5 +7,5 @@ execute store result storage gm4_garden_variety:new placeholder.length_left int 
 execute store result storage gm4_garden_variety:new placeholder.current_pattern int 1 run scoreboard players get #line_marker.placeholder.current_pattern gm4_gv_component
 execute store result storage gm4_garden_variety:new placeholder.facing int 1 run scoreboard players get #line_marker.facing_direction gm4_gv_component
 execute store result storage gm4_garden_variety:new placeholder.axis int 1 run scoreboard players get #line_marker.facing_direction.absolute gm4_gv_component
-execute store result storage gm4_garden_variety:new placeholder.group int 1 run scoreboard players get $placeholder.group gm4_gv_component
+execute store result storage gm4_garden_variety:new placeholder.composite_group int 1 run scoreboard players get $placeholder.composite_group gm4_gv_component
 execute store result storage gm4_garden_variety:new placeholder.pointer_id int 1 run scoreboard players get @s gm4_gv_pointer

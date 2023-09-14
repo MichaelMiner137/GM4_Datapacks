@@ -19,7 +19,7 @@ data modify storage gm4_garden_variety:process components set from storage gm4_g
 execute if data storage gm4_garden_variety:process components[0] run function gm4_garden_variety:generation/read_component_array
 
 # additional placeholder processing
-execute as @e[type=marker,tag=gm4_gv_generation_placeholder] at @s run function gm4_garden_variety:generation/placeholder/group_data
+execute as @e[type=marker,tag=gm4_gv_generation_placeholder] at @s run function gm4_garden_variety:generation/placeholder/composite_group/init
 
 # fill in placeholder blocks
 function #gm4_garden_variety:generate_tree
