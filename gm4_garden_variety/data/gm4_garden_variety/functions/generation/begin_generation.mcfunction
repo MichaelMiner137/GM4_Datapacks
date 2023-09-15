@@ -7,9 +7,6 @@ kill @e[type=marker,tag=gm4_gv_generation_pointer]
 summon marker ~ ~ ~ {Rotation:[0F,-90F],Tags:["gm4_gv_generation_pointer"],data:{gm4_garden_variety:{}}}
 scoreboard players set @e[type=marker,tag=gm4_gv_generation_pointer] gm4_gv_pointer 0
 
-# debug
-#say =====
-
 # remove sapling
 fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings
 

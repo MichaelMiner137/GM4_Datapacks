@@ -16,10 +16,6 @@ execute unless score $x.bend.value gm4_gv_component matches 0 run function gm4_g
 execute store result entity @s Rotation[0] float 0.01 run scoreboard players get #line_marker.x_rotation gm4_gv_component
 execute store result entity @s Rotation[1] float 0.01 run scoreboard players get #line_marker.y_rotation gm4_gv_component
 
-# debug
-#tellraw @p [{"score":{"name":"$pointer.overriden","objective":"gm4_gv_component"}},"  >  ",{"score":{"name":"#line_marker.length_left","objective":"gm4_gv_component"}}," = ",{"score":{"name":"$pointer.location","objective":"gm4_gv_component"}}]
-#tellraw @p [{"score":{"name":"#line_marker.length_current","objective":"gm4_gv_component"}}," >     X: ",{"score":{"name":"$x.bend.value","objective":"gm4_gv_component"}}," += ",{"score":{"name":"#line_marker.x_rotation","objective":"gm4_gv_component"}},"     Y: ",{"score":{"name":"$y.bend.value","objective":"gm4_gv_component"}}," += ",{"score":{"name":"#line_marker.y_rotation","objective":"gm4_gv_component"}}]
-
 # pointer
 execute if score $pointer.begin.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/begin/check
 execute if score $pointer.middle.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/middle/check
