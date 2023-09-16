@@ -25,5 +25,3 @@ execute if score #seed gm4_garden_variety matches ..0 run scoreboard players ope
 schedule function gm4_garden_variety:main 10t
 
 #$moduleUpdateList
-
-#

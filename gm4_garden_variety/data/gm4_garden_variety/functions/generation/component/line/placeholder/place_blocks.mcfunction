@@ -1,6 +1,6 @@
 
 # debug
-particle electric_spark ~ ~ ~4
+execute at @s run particle electric_spark ~ ~ ~4
 
 # direction
 execute if score $placeholder.thickness gm4_gv_component matches 1 positioned ^-0.0 ^-0.0 ^ run function gm4_garden_variety:generation/component/line/placeholder/thickness/1

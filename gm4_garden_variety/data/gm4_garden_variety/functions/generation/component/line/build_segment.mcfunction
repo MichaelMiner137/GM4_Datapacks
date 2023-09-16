@@ -8,5 +8,5 @@ execute unless score $placeholder.quality gm4_gv_component matches 4..6 run func
 execute if score $placeholder.quality gm4_gv_component matches 4..6 run function gm4_garden_variety:generation/component/line/segment_move/quality_4-6
 
 # loop
-scoreboard players remove #line_marker.segments_left gm4_gv_component 1
-execute if score #line_marker.segments_left gm4_gv_component matches 1.. at @s run function gm4_garden_variety:generation/component/line/build_segment
+scoreboard players remove #line_generator.segments_left gm4_gv_component 1
+execute if score #line_generator.segments_left gm4_gv_component matches 1.. at @s run function gm4_garden_variety:generation/component/line/build_segment

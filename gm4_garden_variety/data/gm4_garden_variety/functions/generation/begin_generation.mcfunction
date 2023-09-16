@@ -1,4 +1,6 @@
 
+data remove storage gm4_garden_variety:debug path
+
 # get seed
 function gm4_garden_variety:generation/seed/generate_seed_position
 
@@ -21,10 +23,10 @@ execute as @e[type=marker,tag=gm4_gv_generation_placeholder] at @s run function 
 # fill in placeholder blocks
 function #gm4_garden_variety:generate_tree
 
-# debug
-execute at @e[type=marker,tag=gm4_gv_generation_pointer] run particle flame ~ ~ ~4
-
 # clean up
 kill @s
 kill @e[type=marker,tag=gm4_gv_generation_pointer]
 kill @e[type=marker,tag=gm4_gv_generation_placeholder]
+
+tellraw @p ""
+tellraw @p {"nbt":"path","storage":"gm4_garden_variety:debug","interpret":true}

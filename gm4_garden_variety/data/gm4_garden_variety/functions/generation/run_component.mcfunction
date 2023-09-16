@@ -5,7 +5,7 @@ function gm4_garden_variety:generation/seed/next_seed
 function gm4_garden_variety:generation/seed/next_seed
 
 # reset pointer counters
-scoreboard players reset #counter.pointer.total gm4_gv_generation
+scoreboard players reset #pointer_counter.total gm4_gv_generation
 
 # reset component data
 scoreboard players reset * gm4_gv_component

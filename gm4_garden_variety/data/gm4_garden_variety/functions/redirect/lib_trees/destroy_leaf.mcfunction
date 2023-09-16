@@ -1,3 +1,3 @@
 
 # check if module loaded, and is from garden variety
-execute if score gm4_garden_variety load.status matches 1.. if data entity @s data.gm4_garden_variety run function gm4_garden_variety:redirect/lib_trees/modified/destroy_leaf
+execute if score gm4_garden_variety load.status matches 1.. if data entity @s data.gm4_garden_variety run function gm4_garden_variety:passthrough/lib_trees/destroy_leaf
