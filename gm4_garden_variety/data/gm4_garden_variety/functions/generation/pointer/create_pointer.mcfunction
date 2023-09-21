@@ -1,5 +1,5 @@
 
-particle flame ~ ~ ~4
+particle flame ~ ~ ~15
 
 #execute at @s run particle sculk_soul ^2 ^ ^0
 #execute at @s run particle soul_fire_flame ^2 ^ ^0.1

@@ -13,6 +13,7 @@ scoreboard players set @e[type=marker,tag=gm4_gv_generation_pointer] gm4_gv_poin
 fill ~ ~ ~ ~ ~ ~ air replace #minecraft:saplings
 
 # compile components and generate
+data remove storage gm4_garden_variety:reference component
 data remove storage gm4_garden_variety:process components
 data modify storage gm4_garden_variety:process components set from storage gm4_garden_variety:reference generation.components
 execute if data storage gm4_garden_variety:process components[0] run function gm4_garden_variety:generation/read_component_array

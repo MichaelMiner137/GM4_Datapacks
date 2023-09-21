@@ -14,9 +14,13 @@ scoreboard players set #-1 gm4_garden_variety -1
 scoreboard players set #1 gm4_garden_variety 1
 scoreboard players set #2 gm4_garden_variety 2
 scoreboard players set #10 gm4_garden_variety 10
+scoreboard players set #16 gm4_garden_variety 16
+scoreboard players set #20 gm4_garden_variety 20
 scoreboard players set #100 gm4_garden_variety 100
 scoreboard players set #360 gm4_garden_variety 360
+scoreboard players set #9000 gm4_garden_variety 9000
 scoreboard players set #10000 gm4_garden_variety 10000
+scoreboard players set #36000 gm4_garden_variety 36000
 scoreboard players set #100000 gm4_garden_variety 100000
 execute store result score #seed gm4_garden_variety run seed
 execute if score #seed gm4_garden_variety matches ..0 run scoreboard players operation #seed gm4_garden_variety *= #-1 gm4_garden_variety

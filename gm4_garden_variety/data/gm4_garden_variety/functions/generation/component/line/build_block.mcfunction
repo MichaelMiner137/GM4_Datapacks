@@ -7,14 +7,20 @@ execute if score $placeholder.identifier gm4_gv_component matches 1.. run functi
 execute if score $placeholder.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/placeholder/set_stored_data
 
 # build segment
+### FUTURE MACRO ###
 scoreboard players operation #line_generator.segments_left gm4_gv_component = #line_generator.segments_set gm4_gv_component 
-execute at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment
+execute unless score $placeholder.quality gm4_gv_component matches 2..6 at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment/quality_1
+execute if score $placeholder.quality gm4_gv_component matches 2 at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment/quality_2
+execute if score $placeholder.quality gm4_gv_component matches 3 at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment/quality_3
+execute if score $placeholder.quality gm4_gv_component matches 4 at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment/quality_4
+execute if score $placeholder.quality gm4_gv_component matches 5 at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment/quality_5
+execute if score $placeholder.quality gm4_gv_component matches 6 at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment/quality_6
 
 # modify rotation and update
-execute unless score $y.curl.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/y-curl
-execute unless score $y.bend.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/y-bend
-execute unless score $x.curl.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/x-curl
-execute unless score $x.bend.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/x-bend
+execute unless score $curl.y.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/y-curl
+execute unless score $bend.y.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/y-bend
+execute unless score $curl.x.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/x-curl
+execute unless score $bend.x.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/x-bend
 execute store result entity @s Rotation[0] float 0.01 run scoreboard players get #line_generator.x_rotation gm4_gv_component
 execute store result entity @s Rotation[1] float 0.01 run scoreboard players get #line_generator.y_rotation gm4_gv_component
 

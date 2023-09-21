@@ -1,7 +1,7 @@
 
-scoreboard players operation #x.curl.value.checked gm4_gv_component = $x.curl.value gm4_gv_component
+scoreboard players operation #curl.x.value.checked gm4_gv_component = $curl.x.value gm4_gv_component
 
-execute if score $x.curl.start gm4_gv_component matches 1.. if score #line_generator.length_current gm4_gv_component < $x.curl.start gm4_gv_component run scoreboard players set #x.curl.value.checked gm4_gv_component 0
-execute if score $x.curl.stop gm4_gv_component matches 1.. if score #line_generator.length_current gm4_gv_component > $x.curl.stop gm4_gv_component run scoreboard players set #x.curl.value.checked gm4_gv_component 0
+execute if score $curl.x.start gm4_gv_component matches 1.. if score #line_generator.length_current gm4_gv_component < $curl.x.start gm4_gv_component run scoreboard players set #curl.x.value.checked gm4_gv_component 0
+execute if score $curl.x.stop gm4_gv_component matches 1.. if score #line_generator.length_current gm4_gv_component > $curl.x.stop gm4_gv_component run scoreboard players set #curl.x.value.checked gm4_gv_component 0
 
-scoreboard players operation $x.bend.value gm4_gv_component += #x.curl.value.checked gm4_gv_component
+scoreboard players operation $bend.x.value gm4_gv_component += #curl.x.value.checked gm4_gv_component

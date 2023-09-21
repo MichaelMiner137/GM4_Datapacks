@@ -1,0 +1,8 @@
+
+# move forward
+execute unless score $placeholder.quality gm4_gv_component matches 2..3 run tp @s ^ ^ ^1 ~ ~
+execute if score $placeholder.quality gm4_gv_component matches 2 run tp @s ^ ^ ^0.5 ~ ~
+execute if score $placeholder.quality gm4_gv_component matches 3 run tp @s ^ ^ ^0.333 ~ ~
+execute if score $placeholder.quality gm4_gv_component matches 4 run tp @s ^ ^ ^0.2 ~ ~
+execute if score $placeholder.quality gm4_gv_component matches 5 run tp @s ^ ^ ^0.1 ~ ~
+execute if score $placeholder.quality gm4_gv_component matches 6 run tp @s ^ ^ ^0.05 ~ ~
