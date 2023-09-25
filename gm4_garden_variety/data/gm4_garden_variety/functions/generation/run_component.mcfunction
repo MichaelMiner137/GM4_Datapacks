@@ -14,7 +14,6 @@ scoreboard players reset * gm4_gv_component
 execute unless data storage gm4_garden_variety:reference component.chance run scoreboard players set $chance gm4_gv_component 100
 execute if data storage gm4_garden_variety:reference component.chance store result score $chance gm4_gv_component run data get storage gm4_garden_variety:reference component.chance
 
-### FUTURE RANDOM ###
 # check for chance
 function gm4_garden_variety:generation/seed/next_seed
 scoreboard players operation #random_chance gm4_garden_variety = $sub_seed gm4_gv_generation
@@ -27,3 +26,4 @@ execute if score #component_success gm4_garden_variety matches 1 run function #g
 execute if score #component_success gm4_garden_variety matches 1 if data storage gm4_garden_variety:reference component{type:"garden_variety:line"} run function gm4_garden_variety:generation/component/line/init_component
 execute if score #component_success gm4_garden_variety matches 1 if data storage gm4_garden_variety:reference component{type:"garden_variety:pivot"} run function gm4_garden_variety:generation/component/pivot/init_component
 execute if score #component_success gm4_garden_variety matches 1 if data storage gm4_garden_variety:reference component{type:"garden_variety:spreader"} run function gm4_garden_variety:generation/component/spreader/init_component
+execute if score #component_success gm4_garden_variety matches 1 if data storage gm4_garden_variety:reference component{type:"garden_variety:clearance"} run function gm4_garden_variety:generation/component/clearance/init_component

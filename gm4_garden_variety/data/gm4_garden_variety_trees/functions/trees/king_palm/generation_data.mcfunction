@@ -1,102 +1,66 @@
 # reset
 data remove storage gm4_garden_variety:new sapling
 
-# component 0
+# component
 data remove storage gm4_garden_variety:new component
 data modify storage gm4_garden_variety:new component.type set value "garden_variety:pivot"
 data modify storage gm4_garden_variety:new component.target set value 0
 data modify storage gm4_garden_variety:new component.pointer set value {identifier:101}
-data modify storage gm4_garden_variety:new component.absolute set value {x:{min:0,max:360},y:{min:-90,max:-85}}
+data modify storage gm4_garden_variety:new component.absolute set value {x:{min:0,max:360},y:{min:-90,max:-80}}
 data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
 
-# component 1
+# component
 data remove storage gm4_garden_variety:new component
 data modify storage gm4_garden_variety:new component.type set value "garden_variety:line"
 data modify storage gm4_garden_variety:new component.target set value 101
-data modify storage gm4_garden_variety:new component.pointer.end set value {identifier:102,offset:0}
-data modify storage gm4_garden_variety:new component.pointer.pattern set value {identifiers:[-1,-1,-1,-1,2],start:1,stop:999}
-data modify storage gm4_garden_variety:new component.placeholder set value {identifier:1,thickness:4,quality:3,rounded:true,composite_group:1,pattern:[1]}
-data modify storage gm4_garden_variety:new component.length set value {value:{min:18,max:22}}
-data modify storage gm4_garden_variety:new component.bend set value {x:{value:5,force_direction:false},y:{value:0.25,random_direction:false}}
-data modify storage gm4_garden_variety:new component.curl set value {x:{value:0,start:1,stop:999},y:{value:0.1,start:1,stop:999}}
+data modify storage gm4_garden_variety:new component.pointer.end set value {identifier:1,offset:0}
+data modify storage gm4_garden_variety:new component.placeholder set value {identifier:1,thickness:2,rounded:true,composite_group:1,pattern:[1,1,2]}
+data modify storage gm4_garden_variety:new component.length set value {value:{min:12,max:15},segments:3}
+data modify storage gm4_garden_variety:new component.bend set value {x:{value:{min:3,max:5},force_direction:false},y:{value:2,random_direction:false}}
 data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
 
-# component 2
+# component
+data remove storage gm4_garden_variety:new component
+data modify storage gm4_garden_variety:new component.type set value "garden_variety:clearance"
+data modify storage gm4_garden_variety:new component.target set value 1
+data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
+
+# component
 data remove storage gm4_garden_variety:new component
 data modify storage gm4_garden_variety:new component.type set value "garden_variety:pivot"
-data modify storage gm4_garden_variety:new component.target set value 2
-data modify storage gm4_garden_variety:new component.pointer set value {identifier:102}
-data modify storage gm4_garden_variety:new component.relative set value {x:{offset:90,direction:"pointer/pattern"},y:{offset:{min:30,max:50},direction:"forced"}}
-data modify storage gm4_garden_variety:new component.diverge set value {x:false,y:false}
+data modify storage gm4_garden_variety:new component.target set value 1
+data modify storage gm4_garden_variety:new component.pointer set value {identifier:2}
+data modify storage gm4_garden_variety:new component.absolute set value {x:0,y:0}
 data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
 
-# component 3
+# component
+data remove storage gm4_garden_variety:new component
+data modify storage gm4_garden_variety:new component.type set value "garden_variety:spreader"
+data modify storage gm4_garden_variety:new component.target set value 2
+data modify storage gm4_garden_variety:new component.primary set value {separation:"alternate"}
+data modify storage gm4_garden_variety:new component.layers append value {}
+data modify storage gm4_garden_variety:new component.layers[0].offset set value {relative:false,x:0,y:{min:0,max:-10}}
+data modify storage gm4_garden_variety:new component.layers[0].pointers set value {identifier:102,amount:8}
+data modify storage gm4_garden_variety:new component.layers[0].pointers.offset set value {x:{min:0,max:10},y:{min:0,max:10}}
+data modify storage gm4_garden_variety:new component.layers append value {}
+data modify storage gm4_garden_variety:new component.layers[1].offset set value {relative:true,x:0,y:{min:-30,max:-40}}
+data modify storage gm4_garden_variety:new component.layers[1].pointers set value {identifier:102,amount:8}
+data modify storage gm4_garden_variety:new component.layers[1].pointers.offset set value {x:{min:0,max:10},y:{min:0,max:10}}
+data modify storage gm4_garden_variety:new component.layers append value {}
+data modify storage gm4_garden_variety:new component.layers[2].offset set value {relative:true,x:0,y:{min:-30,max:-40}}
+data modify storage gm4_garden_variety:new component.layers[2].pointers set value {identifier:102,amount:8}
+data modify storage gm4_garden_variety:new component.layers[2].pointers.offset set value {x:{min:0,max:10},y:{min:0,max:10}}
+data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
+
+# component
 data remove storage gm4_garden_variety:new component
 data modify storage gm4_garden_variety:new component.type set value "garden_variety:line"
 data modify storage gm4_garden_variety:new component.target set value 102
 data modify storage gm4_garden_variety:new component.pointer.end set value {identifier:3,offset:0}
-data modify storage gm4_garden_variety:new component.placeholder set value {identifier:1,thickness:3,quality:3,rounded:true,composite_group:1,pattern:[1,1,2]}
-data modify storage gm4_garden_variety:new component.length set value {value:{min:8,max:10}}
-data modify storage gm4_garden_variety:new component.bend set value {x:{value:5,force_direction:false},y:{value:0.5,random_direction:false}}
+data modify storage gm4_garden_variety:new component.placeholder set value {identifier:2,thickness:1,rounded:true,composite_group:1,pattern:[2]}
+data modify storage gm4_garden_variety:new component.length set value {value:8,segments:1}
+data modify storage gm4_garden_variety:new component.bend set value {x:{value:{min:1,max:2},force_direction:false},y:{value:{min:2,max:4},random_direction:false}}
 data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
-
-# component 4
-data remove storage gm4_garden_variety:new component
-data modify storage gm4_garden_variety:new component.type set value "garden_variety:pivot"
-data modify storage gm4_garden_variety:new component.target set value 3
-data modify storage gm4_garden_variety:new component.pointer set value {identifier:103}
-data modify storage gm4_garden_variety:new component.relative set value {x:{offset:{min:30,max:70},direction:"forced"},y:{offset:0,direction:"forced"}}
-data modify storage gm4_garden_variety:new component.diverge set value {x:true,y:false}
-data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
-
-# component 5
-data remove storage gm4_garden_variety:new component
-data modify storage gm4_garden_variety:new component.type set value "garden_variety:pivot"
-data modify storage gm4_garden_variety:new component.target set value 3
-data modify storage gm4_garden_variety:new component.pointer set value {identifier:103}
-data modify storage gm4_garden_variety:new component.relative set value {x:{offset:{min:-70,max:-30},direction:"forced"},y:{offset:0,direction:"forced"}}
-data modify storage gm4_garden_variety:new component.diverge set value {x:false,y:false}
-data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
-
-# component 6
-data remove storage gm4_garden_variety:new component
-data modify storage gm4_garden_variety:new component.type set value "garden_variety:line"
-data modify storage gm4_garden_variety:new component.target set value 103
-data modify storage gm4_garden_variety:new component.pointer.end set value {identifier:4,offset:0}
-data modify storage gm4_garden_variety:new component.placeholder set value {identifier:1,thickness:2,quality:3,rounded:true,composite_group:1,pattern:[1,2]}
-data modify storage gm4_garden_variety:new component.length set value {value:{min:8,max:10}}
-data modify storage gm4_garden_variety:new component.bend set value {x:{value:5,force_direction:false},y:{value:0.5,random_direction:false}}
-data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
-
-# component 7
-data remove storage gm4_garden_variety:new component
-data modify storage gm4_garden_variety:new component.type set value "garden_variety:pivot"
-data modify storage gm4_garden_variety:new component.target set value 4
-data modify storage gm4_garden_variety:new component.pointer set value {identifier:104}
-data modify storage gm4_garden_variety:new component.relative set value {x:{offset:{min:30,max:70},direction:"forced"},y:{offset:0,direction:"forced"}}
-data modify storage gm4_garden_variety:new component.diverge set value {x:true,y:false}
-data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
-
-# component 8
-data remove storage gm4_garden_variety:new component
-data modify storage gm4_garden_variety:new component.type set value "garden_variety:pivot"
-data modify storage gm4_garden_variety:new component.target set value 4
-data modify storage gm4_garden_variety:new component.pointer set value {identifier:104}
-data modify storage gm4_garden_variety:new component.relative set value {x:{offset:{min:-70,max:-30},direction:"forced"},y:{offset:0,direction:"forced"}}
-data modify storage gm4_garden_variety:new component.diverge set value {x:false,y:false}
-data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
-
-# component 9
-data remove storage gm4_garden_variety:new component
-data modify storage gm4_garden_variety:new component.type set value "garden_variety:line"
-data modify storage gm4_garden_variety:new component.target set value 104
-data modify storage gm4_garden_variety:new component.pointer.end set value {identifier:5,offset:0}
-data modify storage gm4_garden_variety:new component.placeholder set value {identifier:1,thickness:1,quality:3,rounded:true,composite_group:1,pattern:[2]}
-data modify storage gm4_garden_variety:new component.length set value {value:{min:8,max:10}}
-data modify storage gm4_garden_variety:new component.bend set value {x:{value:5,force_direction:false},y:{value:0.5,random_direction:false}}
-data modify storage gm4_garden_variety:new sapling.item.generation.components append from storage gm4_garden_variety:new component
-
-
 
 # store
 data modify entity @s data.gm4_garden_variety.item set from storage gm4_garden_variety:new sapling.item

@@ -37,22 +37,22 @@ execute store result score $diverge.y gm4_gv_component run data get storage gm4_
 
 ###### INTERPRET SETTINGS #####
 
-#### FUTURE MACRO ###
 # calculate ranges
-execute if data storage gm4_garden_variety:reference component.absolute.x.max run function gm4_garden_variety:generation/component/pivot/calculate/absolute-x
-execute if data storage gm4_garden_variety:reference component.absolute.y.max run function gm4_garden_variety:generation/component/pivot/calculate/absolute-y
-execute if data storage gm4_garden_variety:reference component.relative.x.offset.max run function gm4_garden_variety:generation/component/pivot/calculate/relative-x-offset
-execute if data storage gm4_garden_variety:reference component.relative.y.offset.max run function gm4_garden_variety:generation/component/pivot/calculate/relative-y-offset
+execute if data storage gm4_garden_variety:reference component.absolute.x.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$absolute.x.min gm4_gv_component",input_max:"$absolute.x.max gm4_gv_component",output:"$absolute.x gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.absolute.y.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$absolute.y.min gm4_gv_component",input_max:"$absolute.y.max gm4_gv_component",output:"$absolute.y gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.relative.x.offset.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$relative.x.offset.min gm4_gv_component",input_max:"$relative.x.offset.max gm4_gv_component",output:"$relative.x.offset gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.relative.y.offset.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$relative.y.offset.min gm4_gv_component",input_max:"$relative.y.offset.max gm4_gv_component",output:"$relative.y.offset gm4_gv_component"}
 
 # relative offset direction
-execute unless data storage gm4_garden_variety:reference component.relative.x run data modify storage gm4_garden_variety:reference component.relative.x.direction set value "random"
+# future macro
+execute unless data storage gm4_garden_variety:reference component.relative.x.direction run data modify storage gm4_garden_variety:reference component.relative.x.direction set value "random"
 execute if data storage gm4_garden_variety:reference component.relative.x{direction:"random"} run function gm4_garden_variety:generation/component/pivot/calculate/relative-x-direction/random
 execute if data storage gm4_garden_variety:reference component.relative.x{direction:"forced"} run function gm4_garden_variety:generation/component/pivot/calculate/relative-x-direction/forced
 execute if data storage gm4_garden_variety:reference component.relative.x{direction:"pointer/total"} run function gm4_garden_variety:generation/component/pivot/calculate/relative-x-direction/pointer-total
 execute if data storage gm4_garden_variety:reference component.relative.x{direction:"pointer/fill"} run function gm4_garden_variety:generation/component/pivot/calculate/relative-x-direction/pointer-fill
 execute if data storage gm4_garden_variety:reference component.relative.x{direction:"pointer/pattern"} run function gm4_garden_variety:generation/component/pivot/calculate/relative-x-direction/pointer-pattern
 execute if data storage gm4_garden_variety:reference component.relative.x{direction:"pointer/random"} run function gm4_garden_variety:generation/component/pivot/calculate/relative-x-direction/pointer-random
-execute unless data storage gm4_garden_variety:reference component.relative.y run data modify storage gm4_garden_variety:reference component.relative.y.direction set value "forced"
+execute unless data storage gm4_garden_variety:reference component.relative.y.direction run data modify storage gm4_garden_variety:reference component.relative.y.direction set value "forced"
 execute if data storage gm4_garden_variety:reference component.relative.y{direction:"random"} run function gm4_garden_variety:generation/component/pivot/calculate/relative-y-direction/random
 execute if data storage gm4_garden_variety:reference component.relative.y{direction:"forced"} run function gm4_garden_variety:generation/component/pivot/calculate/relative-y-direction/forced
 execute if data storage gm4_garden_variety:reference component.relative.y{direction:"pointer/total"} run function gm4_garden_variety:generation/component/pivot/calculate/relative-y-direction/pointer-total
@@ -75,4 +75,3 @@ execute unless score $relative.y.offset gm4_gv_component matches 0 run function 
 # diverge
 execute if score $diverge.x gm4_gv_component matches 1 run scoreboard players operation #active_pointer.bend.x.direction gm4_gv_component *= #-1 gm4_garden_variety
 execute if score $diverge.y gm4_gv_component matches 1 run scoreboard players operation #active_pointer.bend.y.direction gm4_gv_component *= #-1 gm4_garden_variety
-

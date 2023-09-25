@@ -1,8 +1,10 @@
 
 ##### LOAD SETTINGS #####
 
+# reset macro storage
+data remove storage gm4_garden_variety:reference component_macro
+
 # inherit from pointer
-data remove storage gm4_garden_variety:reference pointer
 data modify storage gm4_garden_variety:reference pointer set from entity @s data.gm4_garden_variety.pointer
 execute store result score #line_generator.x_rotation gm4_gv_component run data get storage gm4_garden_variety:reference pointer.rotation.x
 execute store result score #line_generator.y_rotation gm4_gv_component run data get storage gm4_garden_variety:reference pointer.rotation.y
@@ -46,6 +48,7 @@ execute store result score $pointer.random.identifier gm4_gv_component run data 
 execute store result score $pointer.random.chance gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.chance
 execute store result score $pointer.random.start gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.start
 execute store result score $pointer.random.stop gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.stop
+execute store result score $pointer.random.maximum gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.maximum
 execute if data storage gm4_garden_variety:reference component.pointer.random.start.min store result score $pointer.random.start.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.start.min
 execute if data storage gm4_garden_variety:reference component.pointer.random.start.max store result score $pointer.random.start.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.start.max
 execute if data storage gm4_garden_variety:reference component.pointer.random.stop.min store result score $pointer.random.stop.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.random.stop.min
@@ -53,18 +56,24 @@ execute if data storage gm4_garden_variety:reference component.pointer.random.st
 # placeholder
 execute store result score $placeholder.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.identifier
 execute store result score $placeholder.thickness gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.thickness
-execute store result score $placeholder.quality gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.quality
 execute store result score $placeholder.rounded gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.rounded
 execute store result score $placeholder.composite_group gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.composite_group
 # length
 execute store result score $length.value gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value
+scoreboard players set $length.segments gm4_gv_component 1
+execute if data storage gm4_garden_variety:reference component.length.segments store result score $length.segments gm4_gv_component run data get storage gm4_garden_variety:reference component.length.segments
+execute store result score $length.cushion gm4_gv_component run data get storage gm4_garden_variety:reference component.length.cushion
 execute if data storage gm4_garden_variety:reference component.length.value.min store result score $length.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value.min
 execute if data storage gm4_garden_variety:reference component.length.value.max store result score $length.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value.max
 # bend
 execute store result score $bend.x.value gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.value 100
 execute store result score $bend.x.force_direction gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.force_direction
+execute store result score $bend.x.minimum gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.minimum 100
+execute store result score $bend.x.maximum gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.maximum 100
 execute store result score $bend.y.value gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.y.value 100
 execute store result score $bend.y.random_direction gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.y.random_direction
+execute store result score $bend.y.minimum gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.y.minimum 100
+execute store result score $bend.y.maximum gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.y.maximum 100
 execute if data storage gm4_garden_variety:reference component.bend.x.value.min store result score $bend.x.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.value.min 100
 execute if data storage gm4_garden_variety:reference component.bend.x.value.max store result score $bend.x.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.value.max 100
 execute if data storage gm4_garden_variety:reference component.bend.y.value.min store result score $bend.y.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.y.value.min 100
@@ -97,26 +106,23 @@ execute if data storage gm4_garden_variety:reference component.placeholder.patte
 
 ##### INTERPRET SETTINGS #####
 
-### FUTURE MACRO ###
 # calculate ranges (combine with the getter)
-execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-begin-value
-execute if data storage gm4_garden_variety:reference component.pointer.middle.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-middle-value
-execute if data storage gm4_garden_variety:reference component.pointer.end.offset.max run function gm4_garden_variety:generation/component/line/calculate/pointer-end-value
-execute if data storage gm4_garden_variety:reference component.pointer.fill.start.max run function gm4_garden_variety:generation/component/line/calculate/pointer-fill-start
-execute if data storage gm4_garden_variety:reference component.pointer.fill.stop.max run function gm4_garden_variety:generation/component/line/calculate/pointer-fill-stop
-execute if data storage gm4_garden_variety:reference component.pointer.pattern.start.max run function gm4_garden_variety:generation/component/line/calculate/pointer-pattern-start
-execute if data storage gm4_garden_variety:reference component.pointer.pattern.stop.max run function gm4_garden_variety:generation/component/line/calculate/pointer-pattern-stop
-execute if data storage gm4_garden_variety:reference component.pointer.random.start.max run function gm4_garden_variety:generation/component/line/calculate/pointer-random-start
-execute if data storage gm4_garden_variety:reference component.pointer.random.stop.max run function gm4_garden_variety:generation/component/line/calculate/pointer-random-stop
-execute if data storage gm4_garden_variety:reference component.length.value.max run function gm4_garden_variety:generation/component/line/calculate/length-value
-execute if data storage gm4_garden_variety:reference component.bend.x.value.max run function gm4_garden_variety:generation/component/line/calculate/x-bend-value
-execute if data storage gm4_garden_variety:reference component.curl.x.value.max run function gm4_garden_variety:generation/component/line/calculate/x-curl-value
-execute if data storage gm4_garden_variety:reference component.curl.x.start.max run function gm4_garden_variety:generation/component/line/calculate/x-curl-start
-execute if data storage gm4_garden_variety:reference component.curl.x.stop.max run function gm4_garden_variety:generation/component/line/calculate/x-curl-stop
-execute if data storage gm4_garden_variety:reference component.bend.y.value.max run function gm4_garden_variety:generation/component/line/calculate/y-bend-value
-execute if data storage gm4_garden_variety:reference component.curl.y.value.max run function gm4_garden_variety:generation/component/line/calculate/y-curl-value
-execute if data storage gm4_garden_variety:reference component.curl.y.start.max run function gm4_garden_variety:generation/component/line/calculate/y-curl-start
-execute if data storage gm4_garden_variety:reference component.curl.y.stop.max run function gm4_garden_variety:generation/component/line/calculate/y-curl-stop
+execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.begin.value.min gm4_gv_component",input_max:"$pointer.begin.value.max gm4_gv_component",output:"$pointer.begin.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.pointer.middle.offset.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.middle.value.min gm4_gv_component",input_max:"$pointer.middle.value.max gm4_gv_component",output:"$pointer.middle.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.pointer.end.offset.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.end.value.min gm4_gv_component",input_max:"$pointer.end.value.max gm4_gv_component",output:"$pointer.end.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.pointer.fill.start.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.fill.start.min gm4_gv_component",input_max:"$pointer.fill.start.max gm4_gv_component",output:"$pointer.fill.start gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.pointer.fill.stop.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.fill.stop.min gm4_gv_component",input_max:"$pointer.fill.stop.max gm4_gv_component",output:"$pointer.fill.start gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.start.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.pattern.start.min gm4_gv_component",input_max:"$pointer.pattern.start.max gm4_gv_component",output:"$pointer.pattern.start gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.pointer.pattern.stop.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.pattern.stop.min gm4_gv_component",input_max:"$pointer.pattern.stop.max gm4_gv_component",output:"$pointer.pattern.stop gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.length.value.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$length.value.min gm4_gv_component",input_max:"$length.value.max gm4_gv_component",output:"$length.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.bend.x.value.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$bend.x.value.min gm4_gv_component",input_max:"$bend.x.value.max gm4_gv_component",output:"$bend.x.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.curl.x.value.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$curl.x.value.min gm4_gv_component",input_max:"$curl.x.value.max gm4_gv_component",output:"$curl.x.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.curl.x.start.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$curl.x.start.min gm4_gv_component",input_max:"$curl.x.start.max gm4_gv_component",output:"$curl.x.start gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.curl.x.stop.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$curl.x.stop.min gm4_gv_component",input_max:"$curl.x.stop.max gm4_gv_component",output:"$curl.x.stop gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.bend.y.value.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$bend.y.value.min gm4_gv_component",input_max:"$bend.y.value.max gm4_gv_component",output:"$bend.y.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.curl.y.value.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$curl.y.value.min gm4_gv_component",input_max:"$curl.y.value.max gm4_gv_component",output:"$curl.y.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.curl.y.start.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$curl.y.start.min gm4_gv_component",input_max:"$curl.y.start.max gm4_gv_component",output:"$curl.y.start gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.curl.y.stop.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$curl.y.stop.min gm4_gv_component",input_max:"$curl.y.stop.max gm4_gv_component",output:"$curl.y.stop gm4_gv_component"}
 
 # set initial bend direction based on direction mode and pointer inheritance
 execute if score $bend.x.force_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/calculate/x-bend-force_direction
@@ -132,13 +138,31 @@ execute if score $bend.y.random_direction gm4_gv_component matches 0 unless scor
 
 ##### WORKING DATA #####
 
-# set segment length
-execute unless score $placeholder.quality gm4_gv_component matches 2..6 run scoreboard players set #line_generator.segments_set gm4_gv_component 1
-execute if score $placeholder.quality gm4_gv_component matches 2 run scoreboard players set #line_generator.segments_set gm4_gv_component 2
-execute if score $placeholder.quality gm4_gv_component matches 3 run scoreboard players set #line_generator.segments_set gm4_gv_component 3
-execute if score $placeholder.quality gm4_gv_component matches 4 run scoreboard players set #line_generator.segments_set gm4_gv_component 5
-execute if score $placeholder.quality gm4_gv_component matches 5 run scoreboard players set #line_generator.segments_set gm4_gv_component 10
-execute if score $placeholder.quality gm4_gv_component matches 6 run scoreboard players set #line_generator.segments_set gm4_gv_component 20
+# [macro] segment attempts
+scoreboard players set #line_generator.segment_increment gm4_gv_component 10000
+scoreboard players operation #line_generator.segment_increment gm4_gv_component /= $length.segments gm4_gv_component
+data remove storage gm4_garden_variety:macro build_segment
+execute store result storage gm4_garden_variety:macro build_segment.increment float 0.0001 run scoreboard players get #line_generator.segment_increment gm4_gv_component
+
+# [macro] placeholder thickness
+data remove storage gm4_garden_variety:macro place_blocks
+execute if score $placeholder.thickness gm4_gv_component matches 1 run data modify storage gm4_garden_variety:macro place_blocks.thickness_command set value "execute positioned ^-0.0 ^-0.0 ^ run function gm4_garden_variety:generation/component/line/placeholder/thickness/1"
+execute if score $placeholder.thickness gm4_gv_component matches 2 run data modify storage gm4_garden_variety:macro place_blocks.thickness_command set value "execute positioned ^-0.5 ^-0.5 ^ run function gm4_garden_variety:generation/component/line/placeholder/thickness/2"
+execute if score $placeholder.thickness gm4_gv_component matches 3 run data modify storage gm4_garden_variety:macro place_blocks.thickness_command set value "execute positioned ^-1.0 ^-1.0 ^ run function gm4_garden_variety:generation/component/line/placeholder/thickness/3"
+execute if score $placeholder.thickness gm4_gv_component matches 4 run data modify storage gm4_garden_variety:macro place_blocks.thickness_command set value "execute positioned ^-1.5 ^-1.5 ^ run function gm4_garden_variety:generation/component/line/placeholder/thickness/4"
+
+# [macro] length cushion
+data remove storage gm4_garden_variety:macro build_block
+execute store result storage gm4_garden_variety:macro build_block.cushion int 1 run scoreboard players get $length.cushion gm4_gv_component
+
+# [macro] placeholder set block
+data remove storage gm4_garden_variety:macro place_placeholder
+execute unless score $placeholder.composite_group gm4_gv_component matches 2..6 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "up"
+execute if score $placeholder.composite_group gm4_gv_component matches 2 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "down"
+execute if score $placeholder.composite_group gm4_gv_component matches 3 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "north"
+execute if score $placeholder.composite_group gm4_gv_component matches 4 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "south"
+execute if score $placeholder.composite_group gm4_gv_component matches 5 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "east"
+execute if score $placeholder.composite_group gm4_gv_component matches 6 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "west"
 
 # init pattern in storage for processing
 execute if score $placeholder.patterns gm4_gv_component matches 1.. run data modify storage gm4_garden_variety:process placeholder_pattern set from storage gm4_garden_variety:reference component.placeholder.pattern

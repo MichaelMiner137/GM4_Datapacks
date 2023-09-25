@@ -2,7 +2,7 @@
 data modify storage gm4_garden_variety:debug path append value "(Pivot: "
 
 # load data
-function gm4_garden_variety:generation/component/pivot/load_data
+function gm4_garden_variety:generation/component/pivot/load_component_data
 
 # generate
 summon marker ~ ~ ~ {Tags:["gm4_gv_generation_pivot"]}
