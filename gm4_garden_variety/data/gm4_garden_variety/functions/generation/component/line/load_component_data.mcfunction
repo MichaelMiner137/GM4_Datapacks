@@ -13,8 +13,8 @@ execute store result score #active_pointer.bend.y.direction gm4_gv_component run
 
 # target
 execute store result score $target gm4_gv_component run data get storage gm4_garden_variety:reference component.target
-execute store result score $pointer.begin.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.identifier
 # pointer (begin)
+execute store result score $pointer.begin.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.identifier
 execute store result score $pointer.begin.offset gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.offset
 execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.min store result score $pointer.begin.offset.min gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.offset.min
 execute if data storage gm4_garden_variety:reference component.pointer.begin.offset.max store result score $pointer.begin.offset.max gm4_gv_component run data get storage gm4_garden_variety:reference component.pointer.begin.offset.max
@@ -67,11 +67,9 @@ execute if data storage gm4_garden_variety:reference component.length.value.min 
 execute if data storage gm4_garden_variety:reference component.length.value.max store result score $length.value.max gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value.max
 # bend
 execute store result score $bend.x.value gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.value 100
-execute store result score $bend.x.force_direction gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.force_direction
 execute store result score $bend.x.minimum gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.minimum 100
 execute store result score $bend.x.maximum gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.maximum 100
 execute store result score $bend.y.value gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.y.value 100
-execute store result score $bend.y.random_direction gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.y.random_direction
 execute store result score $bend.y.minimum gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.y.minimum 100
 execute store result score $bend.y.maximum gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.y.maximum 100
 execute if data storage gm4_garden_variety:reference component.bend.x.value.min store result score $bend.x.value.min gm4_gv_component run data get storage gm4_garden_variety:reference component.bend.x.value.min 100
@@ -111,7 +109,7 @@ execute if data storage gm4_garden_variety:reference component.pointer.begin.off
 execute if data storage gm4_garden_variety:reference component.pointer.middle.offset.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.middle.value.min gm4_gv_component",input_max:"$pointer.middle.value.max gm4_gv_component",output:"$pointer.middle.value gm4_gv_component"}
 execute if data storage gm4_garden_variety:reference component.pointer.end.offset.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.end.value.min gm4_gv_component",input_max:"$pointer.end.value.max gm4_gv_component",output:"$pointer.end.value gm4_gv_component"}
 execute if data storage gm4_garden_variety:reference component.pointer.fill.start.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.fill.start.min gm4_gv_component",input_max:"$pointer.fill.start.max gm4_gv_component",output:"$pointer.fill.start gm4_gv_component"}
-execute if data storage gm4_garden_variety:reference component.pointer.fill.stop.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.fill.stop.min gm4_gv_component",input_max:"$pointer.fill.stop.max gm4_gv_component",output:"$pointer.fill.start gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.pointer.fill.stop.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.fill.stop.min gm4_gv_component",input_max:"$pointer.fill.stop.max gm4_gv_component",output:"$pointer.fill.stop gm4_gv_component"}
 execute if data storage gm4_garden_variety:reference component.pointer.pattern.start.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.pattern.start.min gm4_gv_component",input_max:"$pointer.pattern.start.max gm4_gv_component",output:"$pointer.pattern.start gm4_gv_component"}
 execute if data storage gm4_garden_variety:reference component.pointer.pattern.stop.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointer.pattern.stop.min gm4_gv_component",input_max:"$pointer.pattern.stop.max gm4_gv_component",output:"$pointer.pattern.stop gm4_gv_component"}
 execute if data storage gm4_garden_variety:reference component.length.value.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$length.value.min gm4_gv_component",input_max:"$length.value.max gm4_gv_component",output:"$length.value gm4_gv_component"}
@@ -125,14 +123,26 @@ execute if data storage gm4_garden_variety:reference component.curl.y.start.max 
 execute if data storage gm4_garden_variety:reference component.curl.y.stop.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$curl.y.stop.min gm4_gv_component",input_max:"$curl.y.stop.max gm4_gv_component",output:"$curl.y.stop gm4_gv_component"}
 
 # set initial bend direction based on direction mode and pointer inheritance
-execute if score $bend.x.force_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/calculate/x-bend-force_direction
-execute if score $bend.y.random_direction gm4_gv_component matches 1 run function gm4_garden_variety:generation/component/line/calculate/y-bend-random_direction
-execute if score $bend.x.force_direction gm4_gv_component matches -1 run function gm4_garden_variety:generation/component/line/calculate/x-bend-random_direction
-execute if score $bend.y.random_direction gm4_gv_component matches -1 run function gm4_garden_variety:generation/component/line/calculate/y-bend-force_direction
-execute if score $bend.x.force_direction gm4_gv_component matches 0 if score #active_pointer.bend.x.direction gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/calculate/x-bend-random_direction
-execute if score $bend.y.random_direction gm4_gv_component matches 0 if score #active_pointer.bend.y.direction gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/calculate/y-bend-force_direction
-execute if score $bend.x.force_direction gm4_gv_component matches 0 unless score #active_pointer.bend.x.direction gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/calculate/x-bend-inherit_direction
-execute if score $bend.y.random_direction gm4_gv_component matches 0 unless score #active_pointer.bend.y.direction gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/calculate/y-bend-inherit_direction
+execute unless data storage gm4_garden_variety:reference component.bend.x.direction run data modify storage gm4_garden_variety:reference component.bend.x.direction set value "default"
+#execute if data storage gm4_garden_variety:reference component.bend.x{direction:"default"} if score #active_pointer.bend.x.direction gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/calculate/x-bend-random_direction
+#execute if data storage gm4_garden_variety:reference component.bend.x{direction:"default"} unless score #active_pointer.bend.x.direction gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/calculate/x-bend-inherit_direction
+#execute if data storage gm4_garden_variety:reference component.bend.x{direction:"set"} run function gm4_garden_variety:generation/component/line/calculate/x-bend-set_direction
+#execute if data storage gm4_garden_variety:reference component.bend.x{direction:"random"} run function gm4_garden_variety:generation/component/line/calculate/x-bend-random_direction
+execute if data storage gm4_garden_variety:reference component.bend.x{direction:"default"} if score #active_pointer.bend.x.direction gm4_gv_component matches 0 run function gm4_garden_variety:utility/calculate_direction/random {input:"#line_generator.x_bend_direction gm4_gv_component",output:"#line_generator.x_bend_direction gm4_gv_component",fix_sign:"$bend.x.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.bend.x{direction:"default"} unless score #active_pointer.bend.x.direction gm4_gv_component matches 0 run function gm4_garden_variety:utility/calculate_direction/set {input:"#active_pointer.bend.x.direction gm4_gv_component",output:"#line_generator.x_bend_direction gm4_gv_component",fix_sign:"$bend.x.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.bend.x{direction:"set"} run function gm4_garden_variety:utility/calculate_direction/set {input:"$bend.x.value gm4_gv_component",output:"#line_generator.x_bend_direction gm4_gv_component",fix_sign:"$bend.x.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.bend.x{direction:"random"} run function gm4_garden_variety:utility/calculate_direction/random {output:"#line_generator.x_bend_direction gm4_gv_component",fix_sign:"$bend.x.value gm4_gv_component"}
+
+execute unless data storage gm4_garden_variety:reference component.bend.y.direction run data modify storage gm4_garden_variety:reference component.bend.y.direction set value "default"
+#execute if data storage gm4_garden_variety:reference component.bend.y{direction:"default"} if score #active_pointer.bend.y.direction gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/calculate/y-bend-set_direction
+#execute if data storage gm4_garden_variety:reference component.bend.y{direction:"default"} unless score #active_pointer.bend.y.direction gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/calculate/y-bend-inherit_direction
+#execute if data storage gm4_garden_variety:reference component.bend.y{direction:"set"} run function gm4_garden_variety:generation/component/line/calculate/y-bend-set_direction
+#execute if data storage gm4_garden_variety:reference component.bend.y{direction:"random"} run function gm4_garden_variety:generation/component/line/calculate/y-bend-random_direction
+execute if data storage gm4_garden_variety:reference component.bend.y{direction:"default"} if score #active_pointer.bend.y.direction gm4_gv_component matches 0 run function gm4_garden_variety:utility/calculate_direction/set {input:"$bend.y.value gm4_gv_component",output:"#line_generator.y_bend_direction gm4_gv_component",fix_sign:"$bend.y.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.bend.y{direction:"default"} unless score #active_pointer.bend.y.direction gm4_gv_component matches 0 run function gm4_garden_variety:utility/calculate_direction/set {input:"#active_pointer.bend.y.direction gm4_gv_component",output:"#line_generator.y_bend_direction gm4_gv_component",fix_sign:"$bend.y.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.bend.y{direction:"set"} run function gm4_garden_variety:utility/calculate_direction/set {input:"$bend.y.value gm4_gv_component",output:"#line_generator.y_bend_direction gm4_gv_component",fix_sign:"$bend.y.value gm4_gv_component"}
+execute if data storage gm4_garden_variety:reference component.bend.y{direction:"random"} run function gm4_garden_variety:utility/calculate_direction/random {output:"#line_generator.y_bend_direction gm4_gv_component",fix_sign:"$bend.y.value gm4_gv_component"}
+
 
 
 

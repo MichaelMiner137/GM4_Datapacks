@@ -2,7 +2,7 @@
 data remove storage gm4_garden_variety:debug path
 
 # get seed
-function gm4_garden_variety:generation/seed/generate_seed_uuid
+function gm4_garden_variety:generation/seed/generate_seed_position
 
 # clearance reset
 scoreboard players set $clearance gm4_gv_generation 0

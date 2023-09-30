@@ -42,8 +42,8 @@ execute if data storage gm4_garden_variety:reference layer.offset.span.max run f
 execute if data storage gm4_garden_variety:reference layer.pointers.amount.max run function gm4_garden_variety:utility/calculate_range/activate {input_min:"$pointers.amount.min gm4_gv_component",input_max:"$pointers.amount.max gm4_gv_component",output:"$pointers.amount gm4_gv_component"}
 
 # offset direction
-function gm4_garden_variety:generation/component/spreader/calculate/offset-x-direction
-function gm4_garden_variety:generation/component/spreader/calculate/offset-y-direction
+function gm4_garden_variety:utility/calculate_direction/set {input:"$offset.x gm4_gv_component",output:"$offset.x.direction gm4_gv_component",fix_sign:"$offset.x gm4_gv_component"}
+function gm4_garden_variety:utility/calculate_direction/set {input:"$offset.y gm4_gv_component",output:"$offset.y.direction gm4_gv_component",fix_sign:"$offset.y gm4_gv_component"}
 
 # get staircase interval
 scoreboard players operation #spreader_generator.staircase_interval gm4_gv_component = $offset.span gm4_gv_component
