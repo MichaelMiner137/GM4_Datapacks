@@ -147,11 +147,11 @@ data remove storage gm4_garden_variety:macro build_segment
 execute store result storage gm4_garden_variety:macro build_segment.increment float 0.0001 run scoreboard players get #line_generator.segment_increment gm4_gv_component
 
 # [macro] placeholder thickness
-data remove storage gm4_garden_variety:macro place_blocks
-execute if score $placeholder.thickness gm4_gv_component matches 1 run data modify storage gm4_garden_variety:macro place_blocks.thickness_command set value "execute positioned ^-0.0 ^-0.0 ^ run function gm4_garden_variety:generation/component/line/placeholder/thickness/1"
-execute if score $placeholder.thickness gm4_gv_component matches 2 run data modify storage gm4_garden_variety:macro place_blocks.thickness_command set value "execute positioned ^-0.5 ^-0.5 ^ run function gm4_garden_variety:generation/component/line/placeholder/thickness/2"
-execute if score $placeholder.thickness gm4_gv_component matches 3 run data modify storage gm4_garden_variety:macro place_blocks.thickness_command set value "execute positioned ^-1.0 ^-1.0 ^ run function gm4_garden_variety:generation/component/line/placeholder/thickness/3"
-execute if score $placeholder.thickness gm4_gv_component matches 4 run data modify storage gm4_garden_variety:macro place_blocks.thickness_command set value "execute positioned ^-1.5 ^-1.5 ^ run function gm4_garden_variety:generation/component/line/placeholder/thickness/4"
+data remove storage gm4_garden_variety:macro place_block
+execute if score $placeholder.thickness gm4_gv_component matches 1 run data modify storage gm4_garden_variety:macro place_block.thickness_command set value "execute positioned ^-0.0 ^-0.0 ^ run function gm4_garden_variety:generation/component/line/placeholder/place_block/thickness_1"
+execute if score $placeholder.thickness gm4_gv_component matches 2 run data modify storage gm4_garden_variety:macro place_block.thickness_command set value "execute positioned ^-0.5 ^-0.5 ^ run function gm4_garden_variety:generation/component/line/placeholder/place_block/thickness_2"
+execute if score $placeholder.thickness gm4_gv_component matches 3 run data modify storage gm4_garden_variety:macro place_block.thickness_command set value "execute positioned ^-1.0 ^-1.0 ^ run function gm4_garden_variety:generation/component/line/placeholder/place_block/thickness_3"
+execute if score $placeholder.thickness gm4_gv_component matches 4 run data modify storage gm4_garden_variety:macro place_block.thickness_command set value "execute positioned ^-1.5 ^-1.5 ^ run function gm4_garden_variety:generation/component/line/placeholder/place_block/thickness_4"
 
 # [macro] length cushion
 data remove storage gm4_garden_variety:macro build_block
@@ -165,6 +165,9 @@ execute if score $placeholder.composite_group gm4_gv_component matches 3 run dat
 execute if score $placeholder.composite_group gm4_gv_component matches 4 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "south"
 execute if score $placeholder.composite_group gm4_gv_component matches 5 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "east"
 execute if score $placeholder.composite_group gm4_gv_component matches 6 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "west"
+
+# set placeholder to use compositing
+scoreboard players set $placeholder.composite_enabled gm4_gv_component 1
 
 # init pattern in storage for processing
 execute if score $placeholder.patterns gm4_gv_component matches 1.. run data modify storage gm4_garden_variety:process placeholder_pattern set from storage gm4_garden_variety:reference component.placeholder.pattern

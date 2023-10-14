@@ -1,6 +1,6 @@
 
 # additional placeholder processing
-execute as @e[type=marker,tag=gm4_gv_generation_placeholder] at @s run function gm4_garden_variety:generation/placeholder/init_placeholder
+execute as @e[type=marker,tag=gm4_gv_generation_placeholder,tag=gm4_gv_placeholder_composite_enabled] at @s run function gm4_garden_variety:generation/placeholder/compositing/add_data
 
 # fill in placeholder blocks
 execute run function #gm4_garden_variety:generate_tree

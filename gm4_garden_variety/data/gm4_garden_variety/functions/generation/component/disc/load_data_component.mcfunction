@@ -10,7 +10,6 @@ execute store result score #active_pointer.counted.total gm4_gv_component run da
 execute store result score #active_pointer.counted.fill gm4_gv_component run data get storage gm4_garden_variety:reference pointer.counted.fill
 execute store result score #active_pointer.counted.pattern gm4_gv_component run data get storage gm4_garden_variety:reference pointer.counted.pattern
 execute store result score #active_pointer.counted.random gm4_gv_component run data get storage gm4_garden_variety:reference pointer.counted.random
-
 # radius
 execute store result score $radius.length gm4_gv_component run data get storage gm4_garden_variety:reference component.radius.length
 execute store result score $radius.draws gm4_gv_component run data get storage gm4_garden_variety:reference component.radius.draws
@@ -21,10 +20,6 @@ execute store result score $radius.repeat gm4_gv_component run data get storage 
 # placeholder
 execute store result score $placeholder.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.identifier
 execute store result score $placeholder.composite_group gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.composite_group
-
-
-scoreboard players set $rotations.value gm4_gv_component 90
-
 
 
 

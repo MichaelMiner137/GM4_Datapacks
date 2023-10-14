@@ -1,6 +1,6 @@
 
 # load data
-function gm4_garden_variety:generation/component/line/load_component_data
+function gm4_garden_variety:generation/component/line/data/load_component
 
 data modify storage gm4_garden_variety:debug path append value "(Line: "
 

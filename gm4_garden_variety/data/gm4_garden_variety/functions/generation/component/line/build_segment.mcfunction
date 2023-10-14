@@ -1,6 +1,6 @@
 
 # fill placeholder blocks
-execute if score $placeholder.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/placeholder/place_blocks with storage gm4_garden_variety:macro place_blocks
+execute if score $placeholder.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/placeholder/place_block with storage gm4_garden_variety:macro place_block
 
 # move forward
 $tp @s ^ ^ ^$(increment) ~ ~

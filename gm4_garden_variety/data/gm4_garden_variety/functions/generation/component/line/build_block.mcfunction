@@ -1,10 +1,8 @@
 
 data modify storage gm4_garden_variety:debug path append value "|"
 
-# get current pattern value, facing direction, and set stored placeholder data
-execute if score $placeholder.patterns gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/placeholder/get_pattern_value
-execute if score $placeholder.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/placeholder/get_facing_direction
-execute if score $placeholder.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/placeholder/set_stored_data
+# set new placeholder data
+execute if score $placeholder.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/placeholder/new_data
 
 # build segment
 scoreboard players operation #line_generator.segments_left gm4_gv_component = $length.segments gm4_gv_component
