@@ -11,6 +11,7 @@ scoreboard objectives add gm4_gv_placeholder dummy
 
 # constants
 scoreboard players set #-1 gm4_garden_variety -1
+scoreboard players set #0 gm4_garden_variety 0
 scoreboard players set #1 gm4_garden_variety 1
 scoreboard players set #2 gm4_garden_variety 2
 scoreboard players set #10 gm4_garden_variety 10
