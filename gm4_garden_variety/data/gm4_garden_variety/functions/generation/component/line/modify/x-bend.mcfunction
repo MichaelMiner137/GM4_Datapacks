@@ -7,3 +7,6 @@ execute if score #line_generator.x_rotation gm4_gv_component matches ..-18001 ru
 
 execute unless score $bend.x.minimum gm4_gv_component matches 0 if score #line_generator.x_rotation gm4_gv_component < $bend.x.minimum gm4_gv_component run scoreboard players operation #line_generator.x_rotation gm4_gv_component = $bend.x.minimum gm4_gv_component
 execute unless score $bend.x.maximum gm4_gv_component matches 0 if score #line_generator.x_rotation gm4_gv_component > $bend.x.maximum gm4_gv_component run scoreboard players operation #line_generator.x_rotation gm4_gv_component = $bend.x.maximum gm4_gv_component
+
+execute store result entity @s Rotation[0] float 0.01 run scoreboard players get #line_generator.x_rotation gm4_gv_component
+

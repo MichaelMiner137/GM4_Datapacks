@@ -1,4 +1,7 @@
 
+particle electric_spark ~ ~ ~15
+execute positioned ^ ^ ^.1 run particle electric_spark ~ ~ ~15
+
 # fill placeholder blocks
 execute if score $placeholder.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/disc/placeholder/place_block
 

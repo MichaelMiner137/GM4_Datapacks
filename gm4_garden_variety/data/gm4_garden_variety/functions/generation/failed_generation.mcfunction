@@ -1,7 +1,4 @@
 
-# cleanup
-execute at @e[type=marker,tag=gm4_gv_generation_placeholder] run setblock ~ ~ ~ air
-
 # replace sapling
 execute if score $sapling gm4_gv_generation matches 1 run setblock ~ ~ ~ oak_sapling
 execute if score $sapling gm4_gv_generation matches 2 run setblock ~ ~ ~ birch_sapling

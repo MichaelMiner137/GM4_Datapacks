@@ -1,7 +1,5 @@
 
 # load data
-scoreboard players reset * gm4_gv_placeholder
-data modify storage gm4_garden_variety:reference placeholder set from entity @s data.gm4_garden_variety.placeholder
 execute store result score $identifier gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.identifier
 execute store result score $sub_seed gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.seed
 execute store result score $length gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.length
@@ -15,4 +13,3 @@ execute store result score $pointer_id gm4_gv_placeholder run data get storage g
 execute store result score $capped gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.capped
 execute store result score $surrounded gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.surrounded
 execute store result score $waterlogged gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.waterlogged
-execute store result score $number gm4_gv_placeholder run data get storage gm4_garden_variety:reference placeholder.number

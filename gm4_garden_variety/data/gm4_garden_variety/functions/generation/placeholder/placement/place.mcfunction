@@ -1,4 +1,7 @@
 
+# track placeholders
+scoreboard players add $placeholders gm4_gv_generation 1
+
 # new data
 function gm4_garden_variety:generation/placeholder/placement/new_data
 

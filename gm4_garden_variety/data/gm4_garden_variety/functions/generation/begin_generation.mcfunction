@@ -4,8 +4,10 @@ data remove storage gm4_garden_variety:debug path
 # get seed
 function gm4_garden_variety:generation/seed/generate_seed_position
 
-# clearance reset
+# reset trackers
 scoreboard players set $clearance gm4_gv_generation 0
+scoreboard players set $placeholders gm4_gv_generation 0
+scoreboard players set $stat.placeholder_attempts gm4_gv_generation 0
 
 # get sapling
 scoreboard players set $sapling gm4_gv_generation 0
@@ -34,9 +36,12 @@ execute if data storage gm4_garden_variety:process components[0] run function gm
 execute if score $clearance gm4_gv_generation matches 1 run function gm4_garden_variety:generation/passed_generation
 execute if score $clearance gm4_gv_generation matches 0 run function gm4_garden_variety:generation/failed_generation
 
+# remove placeholder blocks
+execute at @e[type=marker,tag=gm4_gv_generation_placeholder] run setblock ~ ~ ~ air
+
 # clean up
 kill @e[type=marker,tag=gm4_gv_generation_pointer]
-kill @e[type=marker,tag=gm4_gv_generation_placeholder]
+#kill @e[type=marker,tag=gm4_gv_generation_placeholder]
 
 tellraw @p ""
 tellraw @p {"nbt":"path","storage":"gm4_garden_variety:debug","interpret":true}

@@ -14,6 +14,13 @@ scoreboard players set #-1 gm4_garden_variety -1
 scoreboard players set #0 gm4_garden_variety 0
 scoreboard players set #1 gm4_garden_variety 1
 scoreboard players set #2 gm4_garden_variety 2
+scoreboard players set #3 gm4_garden_variety 3
+scoreboard players set #4 gm4_garden_variety 4
+scoreboard players set #5 gm4_garden_variety 5
+scoreboard players set #6 gm4_garden_variety 6
+scoreboard players set #7 gm4_garden_variety 7
+scoreboard players set #8 gm4_garden_variety 8
+scoreboard players set #9 gm4_garden_variety 9
 scoreboard players set #10 gm4_garden_variety 10
 scoreboard players set #16 gm4_garden_variety 16
 scoreboard players set #20 gm4_garden_variety 20

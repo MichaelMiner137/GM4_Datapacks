@@ -4,17 +4,16 @@ data modify storage gm4_garden_variety:debug path append value "|"
 # set new placeholder data
 execute if score $placeholder.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/placeholder/new_data
 
-# build segment
+# build segment and move forward
 scoreboard players operation #line_generator.segments_left gm4_gv_component = $length.segments gm4_gv_component
 execute at @s rotated as @s run function gm4_garden_variety:generation/component/line/build_segment with storage gm4_garden_variety:macro build_segment
+execute at @s rotated as @s run tp @s ^ ^ ^1 ~ ~
 
-# modify rotation and update
+# modify rotation
 execute unless score $curl.y.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/y-curl
 execute unless score $bend.y.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/y-bend
 execute unless score $curl.x.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/x-curl
 execute unless score $bend.x.value gm4_gv_component matches 0 run function gm4_garden_variety:generation/component/line/modify/x-bend
-execute store result entity @s Rotation[0] float 0.01 run scoreboard players get #line_generator.x_rotation gm4_gv_component
-execute store result entity @s Rotation[1] float 0.01 run scoreboard players get #line_generator.y_rotation gm4_gv_component
 
 # pointer
 execute if score $pointer.begin.identifier gm4_gv_component matches 1.. run function gm4_garden_variety:generation/component/line/pointer/begin/check

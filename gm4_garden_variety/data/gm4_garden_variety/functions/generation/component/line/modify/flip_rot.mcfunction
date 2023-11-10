@@ -16,3 +16,5 @@ execute if score #line_generator.x_rotation gm4_gv_component matches ..-18001 ru
 # flip y direction
 scoreboard players operation #line_generator.y_bend_direction gm4_gv_component *= #-1 gm4_garden_variety
 scoreboard players operation #line_generator.x_bend_direction gm4_gv_component *= #-1 gm4_garden_variety
+
+execute store result entity @s Rotation[0] float 0.01 run scoreboard players get #line_generator.x_rotation gm4_gv_component

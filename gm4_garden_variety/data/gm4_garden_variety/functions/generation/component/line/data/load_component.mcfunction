@@ -57,7 +57,11 @@ execute if data storage gm4_garden_variety:reference component.pointer.random.st
 execute store result score $placeholder.identifier gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.identifier
 execute store result score $placeholder.thickness gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.thickness
 execute store result score $placeholder.rounded gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.rounded
-execute store result score $placeholder.composite_group gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.composite_group
+execute store result score $placeholder.composite_group gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.composite.group
+scoreboard players set $placeholder.composite_enabled gm4_gv_component 1
+execute if data storage gm4_garden_variety:reference component.placeholder.composite.enabled store result score $placeholder.composite_enabled gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.composite.enabled
+execute store result score $placeholder.generation_speed gm4_gv_component run data get storage gm4_garden_variety:reference component.placeholder.generation_speed
+
 # length
 execute store result score $length.value gm4_gv_component run data get storage gm4_garden_variety:reference component.length.value
 scoreboard players set $length.segments gm4_gv_component 1
@@ -165,9 +169,6 @@ execute if score $placeholder.composite_group gm4_gv_component matches 3 run dat
 execute if score $placeholder.composite_group gm4_gv_component matches 4 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "south"
 execute if score $placeholder.composite_group gm4_gv_component matches 5 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "east"
 execute if score $placeholder.composite_group gm4_gv_component matches 6 run data modify storage gm4_garden_variety:macro place_placeholder.direction set value "west"
-
-# set placeholder to use compositing
-scoreboard players set $placeholder.composite_enabled gm4_gv_component 1
 
 # init pattern in storage for processing
 execute if score $placeholder.patterns gm4_gv_component matches 1.. run data modify storage gm4_garden_variety:process placeholder_pattern set from storage gm4_garden_variety:reference component.placeholder.pattern
