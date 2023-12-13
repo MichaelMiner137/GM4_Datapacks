@@ -1,1 +1,0 @@
-scoreboard objectives add gm4_lore dummy

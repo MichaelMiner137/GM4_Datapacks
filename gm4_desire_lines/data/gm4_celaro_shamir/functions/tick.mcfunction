@@ -1,1 +1,0 @@
-execute if predicate gm4_celaro_shamir:shamir_active run function gm4_celaro_shamir:active
