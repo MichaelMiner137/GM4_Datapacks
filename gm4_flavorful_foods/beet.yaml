@@ -1,0 +1,29 @@
+id: gm4_flavorful_foods
+name: Flavorful Foods
+version: 1.0.X
+
+data_pack:
+  load: .
+
+resource_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: 
+        - main
+        - tick
+    website:
+      description: Spice up your life with a revamped food system.
+      recommended:
+        - gm4_resource_pack
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Flavorful_Foods
+    credits:
+      Creators:
+        - MichaelModulo
