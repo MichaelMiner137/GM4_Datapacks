@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "group": "vegetable_bowl",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    [
+      {
+        "item": "minecraft:carrot"
+      },
+      {
+        "item": "minecraft:potato"
+      },
+      {
+        "item": "minecraft:beetroot"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:carrot"
+      },
+      {
+        "item": "minecraft:potato"
+      },
+      {
+        "item": "minecraft:beetroot"
+      }
+    ]
+  ],
+  "result": {
+    "id": "vegetable_bowl",
+    "amount": 1,
+    "components": {
+      "minecraft:item_name": "{\"text\":\"Vegetable Bowl\"}",
+      "minecraft:food": {
+        "nutrition": 4,
+        "saturation": 0.0,
+        "can_always_eat": true,
+        "eat_seconds": 2.0
+      }
+    }
+  }
+}

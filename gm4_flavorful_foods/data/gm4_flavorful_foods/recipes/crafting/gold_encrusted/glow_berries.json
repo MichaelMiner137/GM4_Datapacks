@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "food",
+  "group": "gold_encrusted",
+  "pattern": [
+    "xxx",
+    "xox",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:gold_nugget"
+    },
+    "o": {
+      "item": "minecraft:glow_berries"
+    }
+  },
+  "result": {
+    "id": "minecraft:glow_berries",
+    "amount": 1,
+    "components": {
+      "minecraft:item_name": "{\"text\":\"Golden Glow Berries\"}",
+      "minecraft:food": {
+        "nutrition": 1,
+        "saturation": 1,
+        "can_always_eat": true,
+        "eat_seconds": 0.5
+      },
+      "minecraft:enchantment_glint_override": true
+    }
+  }
+}

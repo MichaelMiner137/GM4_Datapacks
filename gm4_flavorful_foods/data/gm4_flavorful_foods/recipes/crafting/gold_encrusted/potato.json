@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "food",
+  "group": "gold_encrusted",
+  "pattern": [
+    "xxx",
+    "xox",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:gold_nugget"
+    },
+    "o": {
+      "item": "minecraft:potato"
+    }
+  },
+  "result": {
+    "id": "minecraft:potato",
+    "amount": 1,
+    "components": {
+      "minecraft:item_name": "{\"text\":\"Golden Potato\"}",
+      "minecraft:food": {
+        "nutrition": 2,
+        "saturation": 1.0,
+        "can_always_eat": true,
+        "eat_seconds": 1.5
+      }
+    }
+  }
+}

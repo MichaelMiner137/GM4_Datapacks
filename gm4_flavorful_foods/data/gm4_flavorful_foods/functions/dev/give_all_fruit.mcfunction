@@ -1,0 +1,10 @@
+loot give @s loot gm4_flavorful_foods:item/food/apple
+loot give @s loot gm4_flavorful_foods:item/food/golden_apple
+loot give @s loot gm4_flavorful_foods:item/food/melon_slice
+loot give @s loot gm4_flavorful_foods:item/food/golden_melon_slice
+loot give @s loot gm4_flavorful_foods:item/food/sweet_berries
+loot give @s loot gm4_flavorful_foods:item/food/golden_sweet_berries
+loot give @s loot gm4_flavorful_foods:item/food/glow_berries
+loot give @s loot gm4_flavorful_foods:item/food/golden_glow_berries
+loot give @s loot gm4_flavorful_foods:item/food/chorus_fruit
+loot give @s loot gm4_flavorful_foods:item/food/golden_chorus_fruit

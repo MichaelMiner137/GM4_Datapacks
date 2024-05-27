@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "group": "fruit_salad",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    [
+      {
+        "item": "minecraft:apple"
+      },
+      {
+        "item": "minecraft:melon_slice"
+      },
+      {
+        "item": "minecraft:sweet_berries"
+      },
+      {
+        "item": "minecraft:glow_berries"
+      },
+      {
+        "item": "minecraft:chorus_fruit"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:apple"
+      },
+      {
+        "item": "minecraft:melon_slice"
+      },
+      {
+        "item": "minecraft:sweet_berries"
+      },
+      {
+        "item": "minecraft:glow_berries"
+      },
+      {
+        "item": "minecraft:chorus_fruit"
+      }
+    ]
+  ],
+  "result": {
+    "id": "fruit_salad",
+    "amount": 1,
+    "components": {
+      "minecraft:item_name": "{\"text\":\"Fruit Salad\"}",
+      "minecraft:food": {
+        "nutrition": 3,
+        "saturation": 1.0,
+        "can_always_eat": true,
+        "eat_seconds": 2.0
+      }
+    }
+  }
+}

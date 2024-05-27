@@ -1,0 +1,32 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cooked_chicken",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": "{\"text\":\"Cooked Chicken\"}",
+                "minecraft:food": {
+                  "nutrition": 3,
+                  "saturation": 0.0,
+                  "can_always_eat": true,
+                  "eat_seconds": 2.0
+                },
+                "minecraft:max_stack_size": 8
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

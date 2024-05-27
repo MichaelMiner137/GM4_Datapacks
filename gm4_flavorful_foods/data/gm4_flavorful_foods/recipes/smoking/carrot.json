@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "group": "cooked",
+  "ingredient": {
+    "item": "minecraft:carrot"
+  },
+  "result": {
+    "id": "minecraft:carrot",
+    "amount": 1,
+    "components": {
+      "minecraft:item_name": "{\"text\":\"Roasted Carrot\"}",
+      "minecraft:food": {
+        "nutrition": 2,
+        "saturation": 0.0,
+        "can_always_eat": true,
+        "eat_seconds": 1.0
+      }
+    }
+  }
+}

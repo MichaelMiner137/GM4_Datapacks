@@ -1,0 +1,33 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": "{\"text\":\"Golden Apple\"}",
+                "minecraft:food": {
+                  "nutrition": 1,
+                  "saturation": 1.0,
+                  "can_always_eat": true,
+                  "eat_seconds": 1.0
+                },
+                "minecraft:rarity": "uncommon",
+                "minecraft:max_stack_size": 32
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 32
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
