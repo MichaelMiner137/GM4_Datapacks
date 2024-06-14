@@ -4,5 +4,6 @@
 	"datapack.lint.stringQuote": ["hint", true],
 	"datapack.lint.nbtStringQuoteType": ["hint", "prefer double"],
 	"files.insertFinalNewline": true,
-	"files.trimFinalNewlines": true
+	"files.trimFinalNewlines": true,
+	"workbench.iconTheme": "mc-dp-icons"
 }

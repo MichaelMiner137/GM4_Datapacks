@@ -1,0 +1,22 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text": "+ ",
+          "color": "#058237",
+          "italic": false
+        },
+        {
+          "nbt": "liquids[0].name",
+          "storage": "gm4_potion_tipping:process",
+          "interpret": true,
+          "italic": false
+        }
+      ]
+    ],
+    "mode": "replace_all"
+  }
+]
