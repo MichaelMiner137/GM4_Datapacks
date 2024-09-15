@@ -1,0 +1,35 @@
+id: gm4_garden_variety
+name: Garden Variety
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.include.lib_lore
+  - gm4.plugins.include.lib_trees
+  - gm4.plugins.include.lib_trades
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      required:
+        lib_lore: 1.2.0
+        lib_trees: 1.2.0
+        lib_trades: 1.5.0
+      schedule_loops:
+        - main
+    website:
+      description: Introduces a variety of new trees that can be mutated in many different ways!
+      recommended:
+        - gm4_resource_pack
+        - gm4_orbis
+        - gm4_arborenda
+        - gm4_podzol_rooting_soil
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Metallurgy/Garden_Variety
+    credits:
+      Creators:
+        - MichaelModulo
